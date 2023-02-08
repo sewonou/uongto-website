@@ -1,0 +1,122 @@
+<!-- BEGIN: Main Menu-->
+
+<div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-fixed navbar-dark navbar-without-dd-arrow navbar-shadow" role="navigation" data-menu="menu-wrapper">
+    <div class="navbar-container main-menu-content" data-menu="menu-container">
+        <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ path('app_admin_board') }}">
+                    <i class="la la-bank"></i><span>Tableau de bord</span>
+                </a>
+            </li>
+            <li class="dropdown nav-item" data-menu="dropdown-post">
+                <a class="nav-link" href="#" data-toggle="dropdown-post">
+                    <i class="la la-edit"></i><span>Article</span>
+                    <span class="badge badge badge-pill badge-warning float-right mt-0">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_post') }}" data-toggle=""><i class="la la-paragraph"></i><span data-i18n="Cards">Tous les articles</span></a></li>
+                    <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_post_add') }}" data-toggle="dropdown"><i class="la la-plus-circle"></i><span data-i18n="Cards">Ajouter</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown nav-item" data-menu="dropdown-tools">
+                <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown-tools">
+                    <i class="la la-gear"></i><span>Outils</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_param') }}" data-toggle=""><i class="la la-gears"></i><span data-i18n="Cards">Général</span></a></li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-paperclip"></i><span data-i18n="Cards">Page</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_page') }}" data-toggle=""><span data-i18n="Toutes les pages">Toutes les pages</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_page_add') }}" data-toggle=""><span data-i18n="Ajouter">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-paint-brush"></i><span data-i18n="Cards">Menu</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_menu') }}" data-toggle=""><span data-i18n="Toutes les pages">Tous les menus</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_menu_add') }}" data-toggle=""><span data-i18n="Ajouter">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-pencil"></i><span data-i18n="Cards">Catégorie</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_category') }}" data-toggle=""><span data-i18n="Toutes les pages">Toutes les Catégories</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_category_add') }}" data-toggle=""><span data-i18n="Ajouter">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-pencil"></i><span data-i18n="Cards">Type</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_type') }}" data-toggle=""><span data-i18n="Toutes les pages">Tous les Types</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_type_add') }}" data-toggle=""><span data-i18n="Ajouter">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-photo"></i><span data-i18n="Cards">Media</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_media') }}" data-toggle=""><span data-i18n="Tous les medias">Tous les médias</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_media_add') }}" data-toggle=""><span data-i18n="Ajouter">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-comments"></i><span data-i18n="Cards">Commentaires</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_comment') }}" data-toggle=""><span data-i18n="Tous les medias">Tous les commentaires</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_comment_add') }}" data-toggle=""><span data-i18n="Ajouter">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="{{ path('app_admin_user') }}"><i class="la la-users"></i><span>Les utilisateurs</span></a></li>
+            <li class="dropdown nav-item" data-menu><a href="" class="dropdown-toggle nav-link" data-toggle="dropdown-admin"><i class="la la-home"></i><span>Admin Panel</span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les régions</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Bootstrap">Toutes les régions</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les ONG</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_member') }}" data-toggle=""><span data-i18n="Bootstrap">Toutes les ONG</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_member_add') }}" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les Thématiques</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Bootstrap">Tous les thématiques</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    {#<li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-server"></i><span data-i18n="Components">Les ONG</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Alerts">Toutes les ONG</span></a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Callout">Ajouter</span></a>
+                            </li>
+                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><span data-i18n="Buttons">Buttons</span></a>
+                                <ul class="dropdown-menu">
+                                    <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Basic Buttons">Basic Buttons</span></a>
+                                    </li>
+                                    <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Extended Buttons">Extended Buttons</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Carousel">Carousel</span></a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Collapse">Collapse</span></a>
+                            </li>
+                        </ul>
+                    </li>#}
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- END: Main Menu-->

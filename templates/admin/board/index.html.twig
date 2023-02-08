@@ -1,0 +1,77 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title 'Tableau de bord' %}
+{% block body %}
+    <!-- Statistics with grouped cards -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col border-right-blue-grey border-right-lighten-4">
+                            <div class="card-body text-center">
+                                <h1 class="display-4"><i class="ft-chevron-down fs-2 danger"></i> 26</h1>
+                                <span>New Ticket</span>
+                            </div>
+                        </div>
+                        <div class="col border-right-blue-grey border-right-lighten-4">
+                            <div class="card-body text-center">
+                                <h1 class="display-4"><i class="ft-chevron-up fs-2 success"></i> 8</h1>
+                                <span>Responses</span>
+                            </div>
+                        </div>
+                        <div class="col border-right-blue-grey border-right-lighten-4">
+                            <div class="card-body text-center">
+                                <h1 class="display-4"><i class="ft-chevron-up fs-2 success"></i> 6h</h1>
+                                <span>Response Time</span>
+                            </div>
+                        </div>
+                        <div class="col border-right-blue-grey border-right-lighten-4">
+                            <div class="card-body text-center">
+                                <h1 class="display-4">10</h1>
+                                <span>Liked Comment</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body text-center">
+                                <h1 class="display-4">22</h1>
+                                <span>Closed Ticket</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MONTHLY ANALYTICS -->
+    <div class="row match-height">
+        <div class="col-12" id="ecommerceChartView">
+            <div class="card card-shadow">
+                <div class="card-header card-header-transparent py-20">
+                    <div class="btn-group dropdown">
+                        <a href="#" class="text-body dropdown-toggle blue-grey-700" data-toggle="dropdown">Statistiques</a>
+                        <div class="dropdown-menu animate" role="menu">
+                            <a class="dropdown-item" href="#scoreLineToDay" role="menuitem">Quotidiennes</a>
+                            <a class="dropdown-item" href="#scoreLineToWeek" role="menuitem">Hebdomadaires</a>
+                            <a class="dropdown-item" href="#scoreLineToMonth" role="menuitem">Mensuelles</a>
+                            <a class="dropdown-item" href="#scoreLineToDay1" role="menuitem">Annuelles</a>
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills nav-pills-rounded chart-action float-right btn-group" role="group">
+                        <li class="nav-item"><a class="active nav-link" data-toggle="tab" href="#scoreLineToDay">Visites</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#scoreLineToWeek">Les commentaires</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#scoreLineToDay">Autres</a></li>
+                    </ul>
+                </div>
+                <div class="widget-content tab-content bg-white p-20">
+                    <div class="ct-chart tab-pane active scoreLineShadow" id="scoreLineToDay"></div>
+                    <div class="ct-chart tab-pane scoreLineShadow" id="scoreLineToWeek"></div>
+                    <div class="ct-chart tab-pane scoreLineShadow" id="scoreLineToMonth"></div>
+                    <div class="ct-chart tab-pane scoreLineShadow" id="scoreLineToDay1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

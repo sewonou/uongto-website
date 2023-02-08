@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta name="description" content="Fondée en 1993, l’Union des ONG du Togo (UONGTO) est une faitière apolitique et à but non lucratif qui vise à coordonner les actions entre ses membres et à promouvoir le partenariat entre ceux-ci et les organisations nationales et internationales de développement.">
+        <meta name="keywords" content="UONGTO, union, ONG, Togo, Promouvoir, Membre, Social, réseautage, réseau">
+        <meta name="author" content="Djanta Dev">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="apple-touch-icon" href="{{ asset('app-assets/images/ico/apple-icon-120.png') }}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('app-assets/images/ico/favicon.ico') }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
+
+        <!--slider revolution-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/rs-plugin/css/settings.css') }}">
+        <!--style-->
+        <link href='//fonts.googleapis.com/css?family=Raleway:300,400,500&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/reset.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/superfish.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/prettyPhoto.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/jquery.qtip.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/animations.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/responsive.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/odometer-theme-default.css') }}">
+        <!--fonts-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/features/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/template/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/social/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/social/main.css') }}">
+
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="wide overlay with-topbar">
+    <div class="site-container wide">
+        <div class="transparent-header-container overlay height-auto">
+            {{ include('website/_partials/top-header.html.twig') }}
+            {{ include('website/_partials/navbar.html.twig') }}
+        </div>
+
+
+
+
+        {% block body %}{% endblock %}
+        {{ include('website/_partials/footer.html.twig') }}
+        {{ include('website/_partials/bottom-footer.html.twig') }}
+
+    </div>
+    <a href="#top" class="scroll-top animated-element template-arrow-vertical-3" title="Scroll to top"></a>
+    <div class="background-overlay"></div>
+    <!--js-->
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+    <!--slider revolution-->
+    <script type="text/javascript" src="{{ asset('assets/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.ba-bbq.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-ui-1.12.1.custom.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.ui.touch-punch.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.isotope.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.easing.1.4.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.carouFredSel-6.2.1-packed.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.touchSwipe.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.transit.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.timeago.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.hint.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.costCalculator.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.parallax.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.prettyPhoto.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.qtip.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.blockUI.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.imagesloaded-packed.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/odometer.min.js') }}"></script>
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+    </body>
+</html>

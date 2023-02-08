@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'features';
+  src:  url('fonts/features.eot');
+  src:  url('fonts/features.eot#iefix') format('embedded-opentype'),
+    url('fonts/features.ttf') format('truetype'),
+    url('fonts/features.woff') format('woff'),
+    url('fonts/features.svg#features') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="features-"]::before, [class*=" features-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'features';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  direction: ltr;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.features-task:before {
+  content: "\3c";
+}
+.features-baby-stroller:before {
+  content: "\7c";
+}
+.features-gift:before {
+  content: "\22";
+}
+.features-shirt-2:before {
+  content: "\3a";
+}
+.features-shirt-1:before {
+  content: "\7d";
+}
+.features-cooking:before {
+  content: "\7b";
+}
+.features-chef-hat:before {
+  content: "\2f";
+}
+.features-cooking-gloves:before {
+  content: "\2e";
+}
+.features-cc-camera:before {
+  content: "\2c";
+}
+.features-lamp:before {
+  content: "\5c";
+}
+.features-diamond:before {
+  content: "\27";
+}
+.features-spray-bottle:before {
+  content: "\5d";
+}
+.features-bathroom:before {
+  content: "\5b";
+}
+.features-vacuum-cleaner:before {
+  content: "\2b";
+}
+.features-washing-machine:before {
+  content: "\5f";
+}
+.features-gardening:before {
+  content: "\3d";
+}
+.features-wrench:before {
+  content: "\2d";
+}
+.features-armchair:before {
+  content: "\29";
+}
+.features-cupboard:before {
+  content: "\28";
+}
+.features-lamp-cabinet:before {
+  content: "\2a";
+}
+.features-toilet-sink:before {
+  content: "\26";
+}
+.features-cat:before {
+  content: "\5e";
+}
+.features-pet-tray:before {
+  content: "\25";
+}
+.features-construction:before {
+  content: "\24";
+}
+.features-car:before {
+  content: "\23";
+}
+.features-carwash:before {
+  content: "\40";
+}
+.features-eco:before {
+  content: "\21";
+}
+.features-flower:before {
+  content: "\7e";
+}
+.features-leaf:before {
+  content: "\60";
+}
+.features-plant:before {
+  content: "\30";
+}
+.features-recycle:before {
+  content: "\39";
+}
+.features-water:before {
+  content: "\37";
+}
+.features-watering-can:before {
+  content: "\36";
+}
+.features-spa-2:before {
+  content: "\35";
+}
+.features-spa-1:before {
+  content: "\34";
+}
+.features-bath-tub:before {
+  content: "\33";
+}
+.features-bedroom:before {
+  content: "\32";
+}
+.features-cloth:before {
+  content: "\31";
+}
+.features-food:before {
+  content: "\5a";
+}
+.features-pet:before {
+  content: "\59";
+}
+.features-toilet:before {
+  content: "\58";
+}
+.features-home-5:before {
+  content: "\4a";
+}
+.features-home-4:before {
+  content: "\38";
+}
+.features-home-3:before {
+  content: "\57";
+}
+.features-office-2:before {
+  content: "\56";
+}
+.features-office-1:before {
+  content: "\55";
+}
+.features-factory:before {
+  content: "\54";
+}
+.features-home-2:before {
+  content: "\53";
+}
+.features-home-1:before {
+  content: "\52";
+}
+.features-barn:before {
+  content: "\51";
+}
+.features-location-2:before {
+  content: "\50";
+}
+.features-location-1:before {
+  content: "\4f";
+}
+.features-map:before {
+  content: "\4e";
+}
+.features-credit-card:before {
+  content: "\4d";
+}
+.features-bank:before {
+  content: "\4c";
+}
+.features-wallet:before {
+  content: "\4b";
+}
+.features-box:before {
+  content: "\49";
+}
+.features-trolley:before {
+  content: "\48";
+}
+.features-delivery:before {
+  content: "\47";
+}
+.features-calculator:before {
+  content: "\46";
+}
+.features-bag:before {
+  content: "\45";
+}
+.features-store:before {
+  content: "\44";
+}
+.features-umbrella:before {
+  content: "\3b";
+}
+.features-video:before {
+  content: "\43";
+}
+.features-image:before {
+  content: "\42";
+}
+.features-picture:before {
+  content: "\41";
+}
+.features-pin:before {
+  content: "\7a";
+}
+.features-bucket:before {
+  content: "\79";
+}
+.features-paint:before {
+  content: "\78";
+}
+.features-paintroll:before {
+  content: "\77";
+}
+.features-spray:before {
+  content: "\76";
+}
+.features-recurring:before {
+  content: "\75";
+}
+.features-megaphone:before {
+  content: "\74";
+}
+.features-time:before {
+  content: "\73";
+}
+.features-lock:before {
+  content: "\72";
+}
+.features-click:before {
+  content: "\71";
+}
+.features-support:before {
+  content: "\70";
+}
+.features-call:before {
+  content: "\6f";
+}
+.features-phone:before {
+  content: "\6e";
+}
+.features-bubble:before {
+  content: "\6d";
+}
+.features-chat:before {
+  content: "\6c";
+}
+.features-bellboy:before {
+  content: "\6b";
+}
+.features-businessman:before {
+  content: "\6a";
+}
+.features-maid:before {
+  content: "\69";
+}
+.features-lady:before {
+  content: "\68";
+}
+.features-man:before {
+  content: "\67";
+}
+.features-operator:before {
+  content: "\3e";
+}
+.features-person:before {
+  content: "\3f";
+}
+.features-team:before {
+  content: "\66";
+}
+.features-email:before {
+  content: "\65";
+}
+.features-clock:before {
+  content: "\64";
+}
+.features-key:before {
+  content: "\63";
+}
+.features-toolbox:before {
+  content: "\62";
+}
+.features-check:before {
+  content: "\61";
+}
+
