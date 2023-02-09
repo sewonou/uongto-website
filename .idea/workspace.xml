@@ -2,15 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/1920x1200/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/1920x400/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/260x260/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/370x246/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/480x320/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/480x480/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/480x693/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/640x480/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/870x400/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/90x90/users/image_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/samples/960x750/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/_partials/bottom-footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/bottom-footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/_partials/footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/footer.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/about/team.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/about/team.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/_partials/top-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/top-header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +254,7 @@
       <workItem from="1675669440272" duration="25604000" />
       <workItem from="1675704848092" duration="29525000" />
       <workItem from="1675805590193" duration="10400000" />
-      <workItem from="1675841449131" duration="29873000" />
+      <workItem from="1675841449131" duration="37630000" />
     </task>
     <servers />
   </component>
@@ -256,10 +274,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1675812348676" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1675933602387">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1675965551440">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1675933602387" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1675965551440" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

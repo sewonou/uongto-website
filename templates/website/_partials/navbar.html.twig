@@ -3,7 +3,7 @@
     <div class="header clearfix">
         <div class="logo">
             <h1>
-                <a href="#" title="Union des ONG du Togo">
+                <a href="{{ path('app_home_page') }}" title="Union des ONG du Togo">
                     <img src="{{ asset('app-assets/images/ico/apple-icon-60.png') }}" srcset="{{ asset('app-assets/images/logo/logo.png') }} 2x" class="" alt="logo">
                     <span class="logo-text">U.ONG.TO</span>
                 </a>
@@ -18,11 +18,11 @@
         <div class="menu-container clearfix">
             <nav>
                 <ul class="sf-menu">
-                    <li class="selected"><a href="#" title="Accueil">Accueil</a></li>
+                    <li class="selected"><a href="{{ path('app_home_page') }}" title="Accueil">Accueil</a></li>
                     <li >
                         <a href="#" title="Actualités">Actualités</a>
                         <ul>
-                            <li><a href="{{ path('app_news_page') }}" title="Actualités">Actualités</a></li>
+                            <li><a href="{{ path('app_new_page') }}" title="Actualités">Actualités</a></li>
                             <li><a href="{{ path('app_announcement_page') }}" title="Annonces">Annonces</a></li>
                             <li><a href="{{ path('app_tender_page') }}" title="Appels d'offres">Appels d'offres</a></li>
                             <li><a href="{{ path('app_event_page') }}" title="Evènements à venir">Evènements à venir</a></li>
@@ -76,10 +76,10 @@
                         <li><a class="template-arrow-vertical-3" href="#">&nbsp;</a></li>
                         <li class="selected"><a href="#" title="Accueil">Accueil</a></li>
                         <li >
-                            <a href="?page=about" title="Actualités">Actualités</a>
+                            <a href="#" title="Actualités">Actualités</a>
                             <a href="#" class="template-arrow-menu"></a>
                             <ul>
-                                <li><a href="{{ path('app_news_page') }}" title="Actualités">Actualités</a></li>
+                                <li><a href="{{ path('app_new_page') }}" title="Actualités">Actualités</a></li>
                                 <li><a href="{{ path('app_announcement_page') }}" title="Annonces">Annonces</a></li>
                                 <li><a href="{{ path('app_tender_page') }}" title="Appels d'offres">Appels d'offres</a></li>
                                 <li><a href="{{ path('app_event_page') }}" title="Evènements à venir">Evènements à venir</a></li>
@@ -88,7 +88,7 @@
                         </li>
 
                         <li>
-                            <a href="?page=services" title="A propos">A propos</a>
+                            <a href="#" title="A propos">A propos</a>
                             <a href="#" class="template-arrow-menu"></a>
                             <ul>
                                 <li><a href="{{ path('app_about_page') }}" title="Qui sommes nous">Qui sommes nous</a></li>
@@ -111,7 +111,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="" title="Publications">Publications</a>
+                            <a href="#" title="Publications">Publications</a>
                             <a href="#" class="template-arrow-menu"></a>
                             <ul>
                                 <li><a href="{{ path('app_publication_page') }}" title="Publications de UONGTO">Publications de UONGTO</a></li>

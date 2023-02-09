@@ -1,4 +1,7 @@
 /* --- general --- */
+.transform{
+	text-transform: uppercase;
+}
 .clearfix:after
 {
     font-size: 0px;
@@ -2770,20 +2773,20 @@ body .background-6
 }
 .parallax-1
 {
-	background-image: url('../images/samples/1920x1200/placeholder.jpg');
+	background-image: url('../images/samples/pattern-1.jpg');
 }
 .parallax.parallax-2
 {
 	background-attachment: fixed;
-	background-image: url('../images/samples/1920x1200/placeholder.jpg');
+	background-image: url('../images/samples/pattern-2.jpg');
 }
 .parallax-3
 {
-	background-image: url('../images/samples/1920x1200/placeholder.jpg');
+	background-image: url('../images/samples/pattern-3.jpg');
 }
 .parallax-4
 {
-	background-image: url('../images/samples/1920x1200/placeholder.jpg');
+	background-image: url('../images/samples/pattern-4.jpg');
 }
 .parallax,
 .parallax h2,

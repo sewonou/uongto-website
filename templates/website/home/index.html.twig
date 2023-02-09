@@ -10,7 +10,7 @@
                 <!-- SLIDE 1 -->
                 <li data-transition="fade" data-masterspeed="500" data-slotamount="1" data-delay="6000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{ asset('assets/images/slider/placeholder.jpg') }}" alt="slidebg1" data-bgfit="cover">
+                    <img src="{{ asset('assets/images/img/slide-03.jpg') }}" alt="slidebg1" data-bgfit="cover">
                     <!-- LAYERS -->
                     <!-- LAYER 01 -->
                     <div class="tp-caption"
@@ -26,7 +26,7 @@
                          data-x="center"
                          data-y="['273', '313', '200', '260']"
                     >
-                        <h2><a href="?page=service_calculator" title="Estimate Total Costs">ESTIMATE TOTAL COSTS</a></h2>
+                        <h2><a href="{{ path('app_new_single_page') }}" title="Estimate Total Costs">ESTIMATE TOTAL COSTS</a></h2>
                     </div>
                     <!-- LAYER 03 -->
                     <div class="tp-caption"
@@ -51,7 +51,7 @@
                 <!-- SLIDE 2 -->
                 <li data-transition="fade" data-masterspeed="500" data-slotamount="1" data-delay="6000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{ asset('assets/images/slider/placeholder.jpg') }}" alt="slidebg2" data-bgfit="cover">
+                    <img src="{{ asset('assets/images/img/slide-05.jpg') }}" alt="slidebg2" data-bgfit="cover">
                     <!-- LAYERS -->
                     <!-- LAYER 01 -->
                     <div class="tp-caption customin customout"
@@ -93,7 +93,7 @@
                 <!-- SLIDE 3 -->
                 <li data-transition="fade" data-masterspeed="500" data-slotamount="1" data-delay="6000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{ asset('assets/images/slider/placeholder.jpg') }}" alt="slidebg3" data-bgfit="cover">
+                    <img src="{{ asset('assets/images/img/slide-09.jpg') }}" alt="slidebg3" data-bgfit="cover">
                     <!-- LAYERS -->
                     <!-- LAYER 01 -->
                     <div class="tp-caption customin customout"
@@ -139,39 +139,41 @@
         <div class="clearfix">
             <div class="row margin-top-89">
                 <div class="row">
-                    <h2 class="box-header">WHY CHOOSE US</h2>
-                    <p class="description align-center">Cleanmate operates in Ottawa and provides a variety of cleaning services.<br>Choose us because of our reputation for excellence.</p>
+                    <h2 class="box-header transform">Vision & Objectif</h2>
+                    <p class="description align-center">Faire de l’UONGTO à l’horizon 2025, une faitière d’organisations de la société civile, professionnelle, autonome, influente, au service des transformations économiques, sociales et environnementales durables</p>
                     <div class="row page-margin-top">
                         <div class="column column-1-4">
                             <ul class="features-list align-right margin-top-30">
                                 <li>
                                     <div class="icon features-diamond"></div>
-                                    <h4>SPARKLING CLEAN</h4>
-                                    <p>We keep your home sparkling clean and germ free. Our disinfecting process kills 99% of common bacteria and viruses.</p>
+                                    <h4 class="transform">Représentation</h4>
+                                    <p>Représenter les ONG membres dans les instances du gouvernement, des partenaires techniques et financiers (PTF) et dans les différentes conférences sur le développement partout au monde.</p>
                                 </li>
                                 <li>
                                     <div class="icon features-umbrella"></div>
-                                    <h4>INSURED AND BONDED</h4>
-                                    <p>Our cleaners are insured and bonded so no need to worry about your apartment, office or garden.</p>
+                                    <h4 class="transform">Renforcement</h4>
+                                    <p>
+                                        Le renforcement des capacités d’analyse et de formulation de positions et propositions communes des organisations de la société civile pour une action publique efficiente et prenant en charge les droits humains ainsi que les priorités des communautés et les besoins de développement
+                                        .</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="column column-1-2 align-center">
                             <div class="image-wrapper">
-                                <img src="{{ asset('assets/images/samples/480x480/placeholder.jpg') }}" alt="" class="radius border">
+                                <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="" class="radius border">
                             </div>
                         </div>
                         <div class="column column-1-4">
                             <ul class="features-list margin-top-30">
                                 <li>
                                     <div class="icon features-eco"></div>
-                                    <h4>LEADING TECHNOLOGIES</h4>
-                                    <p>We use safe hospital-grade disinfectants, HEPA filtrations and microfiber cleaning cloths to reduce cross contamination.</p>
+                                    <h4 class="transform">Promotion</h4>
+                                    <p>La promotion du dialogue politique, économique, social et culturel pour influencer les politiques publiques nationales, africaines et internationales.</p>
                                 </li>
                                 <li>
                                     <div class="icon features-maid"></div>
-                                    <h4>RELIABLE CREWS</h4>
-                                    <p>Our reliable and stable crews understand your specific house and office clearning service needs.</p>
+                                    <h4 class="transform">Construire un plaidoyer</h4>
+                                    <p>Construire un plaidoyer actif pour favoriser l’accès des acteurs des membres aux services sociaux de base (santé, éducation, eau et assainissement) </p>
                                 </li>
                             </ul>
                         </div>
@@ -183,114 +185,126 @@
             </div>
             <div class="row full-width padding-top-89 padding-bottom-96 page-margin-top-section parallax parallax-1 overlay">
                 <div class="row">
-                    <h2 class="box-header white">NOTHING IS MORE IMPORTANT</h2>
-                    <p class="description align-center white">We prioritize the following.</p>
+                    <h2 class="box-header white transform">Nos Valeurs et Nos Principes</h2>
+                    <p class="description align-center white">Les valeurs et principes de l’UONGTO sont celles partagées par le personnel de sa direction exécutive, les membres du conseil d’administration, le personnel et membres de CA de ses structures membres et qui vont régir sa mission et ses relations avec l’ensemble des acteurs et partenaires.</p>
                     <div class="tabs white no-scroll margin-top-27 clearfix">
                         <ul class="tabs-navigation clearfix">
                             <li>
-                                <a href="#our-customers" title="Our Customers" class="features-team">
-                                    OUR CUSTOMERS
+                                <a href="#our-customers" title="Engagement" class="features-team transform">
+                                    Respect
                                 </a>
                             </li>
                             <li>
-                                <a href="#the-environment" title="The Environment" class="features-leaf">
-                                    THE ENVIRONMENT
+                                <a href="#the-environment" title="Excellence" class="features-leaf transform">
+                                    Transparence
                                 </a>
                             </li>
                             <li>
-                                <a href="#communication" title="Communication" class="features-megaphone">
-                                    COMMUNICATION
+                                <a href="#communication" title="Communication" class="features-megaphone transform">
+                                    Redevabilité
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#integrity" title="Intégrité" class="features-armchair transform">
+                                    Equité
                                 </a>
                             </li>
                         </ul>
                         <div id="our-customers">
-                            <p>Our cleaning services are affordable and our cleaning experts are highly trained. If for any reason you aren't happy with our professional cleaning services, contact Cleanmate. We will come back and clean the specific areas that didn't meet your expectations. Nothing is more important to us than your satisfaction.</p>
+                            <p>
+                                La personne humaine est au cœur des actions et interventions de l’UONGTO. Le Personnel de la Direction exécutive, les membres du CA et les organisations membres doivent, dans l’exercice de leur mission, garantir le respect de la personne et la valorisation de ses capacités individuelles sans distinction ou discrimination aucune. Il s’agit, notamment du respect de la diversité, des cultures, des structures et des coutumes des populations, ainsi que la compréhension mutuelle, qui sont entre autres, des éléments essentiels au maintien de la dignité humaine
+                            </p>
                         </div>
                         <div id="the-environment">
-                            <p>Our cleaning services are affordable and our cleaning experts are highly trained. If for any reason you aren't happy with our professional cleaning services, contact Cleanmate. We will come back and clean the specific areas that didn't meet your expectations. Nothing is more important to us than your satisfaction.</p>
+                            <p>
+                                L’UONGTO insistera sur la bonne gouvernance à tous les niveaux, le partage d’informations et l’ouverture aux autres, la nécessité de rendre toujours fidèlement compte, et d’inspirer la confiance en adoptant des comportements dignes et en respectant les dispositions de la bonne gouvernance.
+                            </p>
                         </div>
                         <div id="communication">
-                            <p>Our cleaning services are affordable and our cleaning experts are highly trained. If for any reason you aren't happy with our professional cleaning services, contact Cleanmate. We will come back and clean the specific areas that didn't meet your expectations. Nothing is more important to us than your satisfaction.</p>
+                            <p>
+                                Pour l’UONGTO, il s’agira de définir des buts et objectifs clairs, d’assumer la responsabilité de les atteindre et d’en rendre compte à toutes les parties prenantes.
+                            </p>
+                        </div>
+                        <div id="communication">
+                            <p>
+                                L’UONGTO est consciente de la nécessité de promouvoir et de consolider un cadre où les hommes et les femmes ont les mêmes droits, les mêmes chances et opportunités de participer au développement et de jouir des bénéfices des efforts de développement.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row full-width gray padding-top-89 padding-bottom-96">
                 <div class="row">
-                    <h2 class="box-header">OUR CLEANING SERVICES</h2>
-                    <p class="description align-center">Do you wish you had more free time? We can make it happen!</p>
+                    <h2 class="box-header">Nos Thématiques</h2>
+                    <p class="description align-center">
+                        Dans le cadre de l'atteinte de ses objectifs l’UONGTO est structuré autour de 9 thématiques qui sont :
+                    </p>
                     <div class="carousel-container margin-top-65 clearfix">
                         <ul class="services-list horizontal-carousel clearfix page-margin-top">
                             <li class="column column-1-3">
-                                <a href="?page=service_house_cleaning" title="House Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="House Cleaning">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_house_cleaning" title="House Cleaning">HOUSE CLEANING</a></h4>
-                                <p>Complete apartment and house cleaning services by professional cleaners.</p>
+                                <h4 class="box-header transform"><a href="?page=service_house_cleaning" title="Agriculture, élevage et pêche">Agriculture, élevage et pêche</a></h4>
+                                <p>Agriculture, élevage et pêche</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_post_renovation" title="Post Renovation">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="Post Renovation">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_post_renovation" title="Post Renovation">POST RENOVATION</a></h4>
-                                <p>Get rid of the dust left behind after construction or renovation.</p>
+                                <h4 class="box-header transform"><a href="#" title="Post Renovation">Bonne gouvernance</a></h4>
+                                <p>Bonne gouvernance .</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_green_spaces_maintenance" title="Green Spaces Maintenance">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="Green Spaces Maintenance">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_green_spaces_maintenance" title="Green Spaces Maintenance">GREEN SPACES MAINTENANCE</a></h4>
-                                <p>The right maintenance methods will make keeping your garden beautiful.</p>
+                                <h4 class="box-header transform"><a href="#" title="Green Spaces Maintenance">Décentralisation</a></h4>
+                                <p>Décentralisation .</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_move_in_out" title="Move In Out Service">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="Move In Out Service">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_move_in_out" title="Move In Out Service">MOVE IN OUT SERVICE</a></h4>
-                                <p>We will leave the place you're leaving look even better than it did when you moved in.</p>
+                                <h4 class="box-header transform"><a href="#" title="Droits humains, Genre et Équité">Droits humains, Genre et Équité </a></h4>
+                                <p>Droits humains, Genre et Équité .</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_commercial_cleaning" title="Commercial Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="Commercial Cleaning">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_commercial_cleaning" title="Commercial Cleaning">COMMERCIAL CLEANING</a></h4>
-                                <p>Only the most skilled professionals for commercial office cleaning.</p>
+                                <h4 class="box-header transform"><a href="#" title="Éducation, formation professionnelle et alphabétisation">Éducation, formation professionnelle et alphabétisation</a></h4>
+                                <p>Éducation, formation professionnelle et alphabétisation.</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_window_cleaning" title="Window Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="Window Cleaning">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_window_cleaning" title="Window Cleaning">WINDOW CLEANING</a></h4>
-                                <p>The highest quality window cleaning service at a competitive price.</p>
+                                <h4 class="box-header transform"><a href="#" title="Emploi et entreprenariat ">Emploi et entreprenariat </a></h4>
+                                <p>Emploi et entreprenariat .</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_house_cleaning" title="House Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="House Cleaning">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_house_cleaning" title="House Cleaning">HOUSE CLEANING</a></h4>
-                                <p>Complete apartment and house cleaning services by professional cleaners.</p>
+                                <h4 class="box-header transform"><a href="#" title="Renforcement des capacités ">Renforcement des capacités </a></h4>
+                                <p>Renforcement des capacités .</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_post_renovation" title="Post Renovation">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="Post Renovation">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_post_renovation" title="Post Renovation">POST RENOVATION</a></h4>
-                                <p>Get rid of the dust left behind after construction or renovation.</p>
+                                <h4 class="box-header transform"><a href="#" title="Environnement ">Environnement</a></h4>
+                                <p>Environnement, changement climatique et gestion des catastrophes et humanitaire .</p>
                             </li>
                             <li class="column column-1-3">
-                                <a href="?page=service_green_spaces_maintenance" title="Green Spaces Maintenance">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                <a href="#" title="Green Spaces Maintenance">
+                                    <img src="{{ asset('assets/images/img/uongto.jpg') }}" alt="">
                                 </a>
-                                <h4 class="box-header"><a href="?page=service_green_spaces_maintenance" title="Green Spaces Maintenance">GREEN SPACES MAINTENANCE</a></h4>
-                                <p>The right maintenance methods will make keeping your garden beautiful.</p>
+                                <h4 class="box-header transform"><a href="#" title="Santé">Santé</a></h4>
+                                <p>Santé, hygiène, eau et assainissement</p>
                             </li>
-                            <li class="column column-1-3">
-                                <a href="?page=service_green_spaces_maintenance" title="Green Spaces Maintenance">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
-                                </a>
-                                <h4 class="box-header"><a href="?page=service_green_spaces_maintenance" title="Green Spaces Maintenance">GREEN SPACES MAINTENANCE</a></h4>
-                                <p>The right maintenance methods will make keeping your garden beautiful.</p>
-                            </li>
+
                         </ul>
                         <div class="cm-carousel-pagination"></div>
                     </div>
@@ -299,27 +313,27 @@
             <div class="row page-margin-top-section">
                 <div class="column column-1-4">
                     <div class="row">
-                        <a href="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" class="prettyPhoto cm-preload" title="House Cleaning">
-                            <img src='{{ asset('assets/images/samples/480x320/placeholder.jpg') }}' alt='img'>
+                        <a href="{{ asset('assets/images/img/uongto.jpg') }}" class="prettyPhoto cm-preload" title="House Cleaning">
+                            <img src='{{ asset('assets/images/img/uongto.jpg') }}' alt='img'>
                         </a>
                     </div>
                     <div class="row margin-top-30">
-                        <a href="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" class="prettyPhoto cm-preload" title="Window Cleaning">
-                            <img src='{{ asset('assets/images/samples/480x320/placeholder.jpg') }}' alt='img'>
+                        <a href="{{ asset('assets/images/img/uongto.jpg') }}" class="prettyPhoto cm-preload" title="Window Cleaning">
+                            <img src='{{ asset('assets/images/img/uongto.jpg') }}' alt='img'>
                         </a>
                     </div>
                 </div>
                 <div class="column column-1-4">
-                    <a href="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" class="prettyPhoto cm-preload" title="Apartment Cleaning">
-                        <img src='{{ asset('assets/images/samples/480x320/placeholder.jpg') }}' alt='img'>
+                    <a href="{{ asset('assets/images/img/uongto.jpg') }}" class="prettyPhoto cm-preload" title="Apartment Cleaning">
+                        <img src='{{ asset('assets/images/img/uongto.jpg') }}' alt='img'>
                     </a>
                 </div>
                 <div class="column column-1-2">
-                    <h2 class="box-header">ABOUT OUR COMPANY</h2>
+                    <h2 class="box-header transform">A propos de la faitière</h2>
                     <p class="description align-center">Exceptional level of cleaning services.</p>
-                    <p class="align-center padding-0 margin-top-27 padding-left-right-35">Founded in 1995 Cleanmate quickly built a reputation as one of the leading providers of residential and commercial cleaning solutions. Our continuous pursuit for perfection has resulted in consistent growth each year. Our focus is to listen to our clients, understand their needs and provide the exceptional level of residential and commercial cleaning service.</p>
+                    <p class="align-center padding-0 margin-top-27 padding-left-right-35">Fondée en 1993, l’Union des ONG du Togo (UONGTO) est une faitière apolitique et à but non lucratif qui vise à coordonner les actions entre ses membres et à promouvoir le partenariat entre ceux-ci et les organisations nationales et internationales de développement.</p>
                     <div class="align-center page-margin-top padding-bottom-16">
-                        <a class="more" href="?page=about" title="Learn more">Learn more</a>
+                        <a class="more" href="{{ path('app_about_page') }}" title="Learn more">Lire plus ..</a>
                     </div>
                 </div>
             </div>
@@ -330,8 +344,8 @@
                             <div class="ornament-container">
                                 <div class="ornament animated-element duration-2000 animation-ornamentHeight" data-animation-start="230"></div>
                             </div>
-                            <span class="number animated-element" data-value="295" data-animation-start="230"></span>
-                            <p>COMPLETED MOVINGS</p>
+                            <span class="number animated-element" data-value="140" data-animation-start="230"></span>
+                            <p class="transform">ONG Membres</p>
                         </div>
                     </div>
                     <div class="column column-1-4">
@@ -339,8 +353,8 @@
                             <div class="ornament-container">
                                 <div class="ornament animated-element duration-2000 animation-ornamentHeight" data-animation-start="230"></div>
                             </div>
-                            <span class="number animated-element" data-value="400" data-animation-start="230"></span>
-                            <p>HAPPY CUSTOMERS</p>
+                            <span class="number animated-element" data-value="18" data-animation-start="230"></span>
+                            <p class="transform">Nos Partenaires</p>
                         </div>
                     </div>
                     <div class="column column-1-4">
@@ -349,7 +363,7 @@
                                 <div class="ornament animated-element duration-2000 animation-ornamentHeight" data-animation-start="230"></div>
                             </div>
                             <span class="number animated-element" data-value="527" data-animation-start="230"></span>
-                            <p>COMPLETED PROJECTS</p>
+                            <p class="transform">Projets Soumis</p>
                         </div>
                     </div>
                     <div class="column column-1-4">
@@ -357,182 +371,120 @@
                             <div class="ornament-container">
                                 <div class="ornament animated-element duration-2000 animation-ornamentHeight" data-animation-start="230"></div>
                             </div>
-                            <span class="number animated-element" data-value="105" data-animation-start="230"></span>
-                            <p>PLACES CLEANED</p>
+                            <span class="number animated-element" data-value="456" data-animation-start="230"></span>
+                            <p class="transform">Projets Accomplis</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row full-width gray padding-top-89 padding-bottom-100">
-                <div class="row">
-                    <h2 class="box-header">SIMPLE PLANS. SIMPLE PRICING</h2>
-                    <p class="description align-center">Cleanmate comes with cost calculator - a unique tool which allows you to easily create<br>price estimation forms to give your client idea of the cost of your service.</p>
-                    <form class="cost-calculator-container row margin-top-65 prevent-submit" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-                        <fieldset class="column column-1-2">
-                            <div class="cost-calculator-box clearfix">
-                                <label>Total area to be cleaned in square feet:</label>
-                                <input type="hidden" name="clean-area-label" value="Total area to be cleaned">
-                                <div class="cost-slider-container">
-                                    <input id="clean-area" class="cost-slider-input" name="clean-area" type="number" value="1200">
-                                    <div class="cost-slider" data-value="1200" data-step="1" data-min="1" data-max="2000" data-input="clean-area"></div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="column column-1-2">
-                            <div class="cost-calculator-box clearfix">
-                                <label>Cleaning frequency:</label>
-                                <input type="hidden" name="cleaning-frequency-label" value="Cleaning frequency">
-                                <select name="cleaning-frequency" id="cleaning-frequency" class="cost-dropdown">
-                                    <option value="">Choose...</option>
-                                    <option value="0.4">Weekly Service</option>
-                                    <option value="0.8">Bi-Weekly Service</option>
-                                    <option value="1.2">Tri-Weekly Service</option>
-                                    <option value="1.6">Quarter Weekly Service</option>
-                                    <option value="0.1">Monthly Service</option>
-                                    <option value="0.2" selected="selected">One Time Service</option>
-                                </select>
-                                <input type="hidden" class="cleaning-frequency" name="cleaning-frequency-name" value="">
-                            </div>
-                        </fieldset>
-                    </form>
-                    <div class="row margin-top-30 flex-box">
-                        <form class="cost-calculator-container column column-1-3" method="post" action="?page=service_calculator">
-                            <div class="cost-calculator-box cost-calculator-sum clearfix">
-                                <h4>BASIC SERVICE</h4>
-                                <span class="cost-calculator-price small-currency margin-top-33" id="basic-service-cost"><span class="currency">$</span>0.00</span>
-                                <input type="hidden" id="basic-service-total-cost" name="basic-service-total-cost">
-                                <p class="cost-calculator-price-description">/ per month</p>
-                                <ul class="simple-list margin-top-20">
-                                    <li>1 Bathroom cleaning</li>
-                                    <li>Up to 3 bedrooms cleaning</li>
-                                    <li>1 Livingroom cleaning</li>
-                                    <li>Small kitchen (0 - 150 ft2)</li>
-                                    <!--<li>Dinning room cleaning</li>
-                                    <li>Garage cleaning</li>-->
-                                    <li>Up to 2 additional rooms cleaning</li>
-                                    <!--<li>Wiping the dust from furniture</li>
-                                    <li>Cleaning window sills</li>
-                                    <li>Cleaning mirrors</li>
-                                    <li>Vacumming floors and floor coverings</li>
-                                    <li>Emptying garbage cans</li>
-                                    <li>Cleaning kitchen worktops, sink and hob</li>
-                                    <li>Cleaning toilets and bathroom fixtures</li>-->
-                                </ul>
-                                <div class="cost-calculator-submit-container">
-                                    <input type="hidden" class="clean-area-hidden" name="clean-area" value="1200">
-                                    <input type="hidden" class="cleaning-frequency-hidden" name="cleaning-frequency" value="0.2">
-                                    <input type="hidden" id="basic-service-bathrooms" name="bathrooms" value="1">
-                                    <input type="hidden" id="basic-service-bedrooms" name="bedrooms" value="3">
-                                    <input type="hidden" id="basic-service-livingrooms" name="livingrooms" value="1">
-                                    <input type="hidden" id="basic-service-kitchen-size" name="kitchen-size" value="15">
-                                    <input type="hidden" id="basic-service-bathroom-includes" name="bathroom-includes" value="">
-                                    <input type="hidden" id="basic-service-pets" name="pets" value="0">
-                                    <input type="hidden" id="basic-service-cleaning-supplies" name="cleaning-supplies" value="0">
-                                    <input type="hidden" id="basic-service-dining-room" name="dining-room" value="10">
-                                    <input type="hidden" id="basic-service-play-room" name="play-room" value="0">
-                                    <input type="hidden" id="basic-service-laundry" name="laundry" value="0">
-                                    <input type="hidden" id="basic-service-gym" name="gym" value="0">
-                                    <input type="hidden" id="basic-service-garage" name="garage" value="20">
-                                    <input type="hidden" id="basic-service-refrigerator-clean" name="refrigerator-clean" value="0">
-                                    <input type="submit" name="submit_basic" value="Customize" class="more gray">
-                                </div>
-                            </div>
-                        </form>
-                        <form class="cost-calculator-container column column-1-3" method="post" action="?page=service_calculator">
-                            <div class="cost-calculator-box cost-calculator-sum clearfix">
-                                <h4>PREMIUM SERVICE</h4>
-                                <span class="cost-calculator-price small-currency margin-top-33" id="premium-service-cost"><span class="currency">$</span>0.00</span>
-                                <input type="hidden" id="premium-service-total-cost" name="premium-service-total-cost">
-                                <p class="cost-calculator-price-description">/ per month</p>
-                                <ul class="simple-list margin-top-20">
-                                    <li>Up to 2 bathrooms cleaning</li>
-                                    <li>Up to 4 bedrooms cleaning</li>
-                                    <li>Up to 2 livingrooms cleaning</li>
-                                    <li>Medium kitchen (151 - 250 ft2)</li>
-                                    <li>Pets hair removing</li>
-                                    <li>Up to 5 additional rooms cleaning</li>
-                                    <!--<li>Dinning room cleaning</li>
-                                    <li>Play room cleaning</li>
-                                    <li>Laundry cleaning</li>
-                                    <li>Gym cleaning</li>
-                                    <li>Garage cleaning</li>
-                                    <li>The scope of basic service +</li>
-                                    <li>Washing floors</li>
-                                    <li>Cleaning lamps and heaters</li>
-                                    <li>Cleaning of bathroom and kitchen tiles</li>
-                                    <li>Cleaning cabinets fronts</li>
-                                    <li>Cleaning doors and doorframes</li>-->
-                                </ul>
-                                <div class="cost-calculator-submit-container">
-                                    <input type="hidden" class="clean-area-hidden" name="clean-area" value="1200">
-                                    <input type="hidden" class="cleaning-frequency-hidden" name="cleaning-frequency" value="0.2">
-                                    <input type="hidden" id="premium-service-bathrooms" name="bathrooms" value="2">
-                                    <input type="hidden" id="premium-service-bedrooms" name="bedrooms" value="4">
-                                    <input type="hidden" id="premium-service-livingrooms" name="livingrooms" value="2">
-                                    <input type="hidden" id="premium-service-kitchen-size" name="kitchen-size" value="20">
-                                    <input type="hidden" id="premium-service-bathroom-includes" name="bathroom-includes" value="10">
-                                    <input type="hidden" id="premium-service-pets" name="pets" value="30">
-                                    <input type="hidden" id="premium-service-cleaning-supplies" name="cleaning-supplies" value="300">
-                                    <input type="hidden" id="premium-service-dining-room" name="dining-room" value="10">
-                                    <input type="hidden" id="premium-service-play-room" name="play-room" value="15">
-                                    <input type="hidden" id="premium-service-laundry" name="laundry" value="0">
-                                    <input type="hidden" id="premium-service-gym" name="gym" value="17">
-                                    <input type="hidden" id="premium-service-garage" name="garage" value="20">
-                                    <input type="hidden" id="premium-service-refrigerator-clean" name="refrigerator-clean" value="0">
-                                    <input type="submit" name="submit_premium" value="Customize" class="more gray">
-                                </div>
-                            </div>
-                        </form>
-                        <form class="cost-calculator-container column column-1-3" method="post" action="?page=service_calculator">
-                            <div class="cost-calculator-box cost-calculator-sum clearfix">
-                                <h4>POST RENOVATION</h4>
-                                <span class="cost-calculator-price small-currency margin-top-33" id="post-renovation-service-cost"><span class="currency">$</span>0.00</span>
-                                <input type="hidden" id="post-renovation-service-total-cost" name="post-renovation-service-total-cost">
-                                <p class="cost-calculator-price-description">/ per month</p>
-                                <ul class="simple-list margin-top-20">
-                                    <li>Up to 3 bathrooms cleaning</li>
-                                    <li>Up to 6 bedrooms cleaning</li>
-                                    <li>Up to 3 livingrooms cleaning</li>
-                                    <li>Large kitchen (>250 ft2)</li>
-                                    <li>Pets hair removing</li>
-                                    <!--<li>Dinning room cleaning</li>
-                                    <li>Play room cleaning</li>
-                                    <li>Laundry cleaning</li>
-                                    <li>Gym cleaning</li>
-                                    <li>Garage cleaning</li>-->
-                                    <li>Up to 5 additional rooms cleaning</li>
-                                    <li>Refrigerator cleaning</li>
-                                    <!--<li>The scope of premium service +</li>
-                                    <li>Dust removal after renovation</li>
-                                    <li>Cleaning cabinets inside</li>
-                                    <li>Cleaning windows and window frames</li>
-                                    <li>Washing the inside of the refrigerator</li>-->
-                                </ul>
-                                <div class="cost-calculator-submit-container">
-                                    <input type="hidden" class="clean-area-hidden" name="clean-area" value="1200">
-                                    <input type="hidden" class="cleaning-frequency-hidden" name="cleaning-frequency" value="0.2">
-                                    <input type="hidden" id="post-renovation-bathrooms" name="bathrooms" value="3">
-                                    <input type="hidden" id="post-renovation-bedrooms" name="bedrooms" value="6">
-                                    <input type="hidden" id="post-renovation-livingrooms" name="livingrooms" value="3">
-                                    <input type="hidden" id="post-renovation-kitchen-size" name="kitchen-size" value="25">
-                                    <input type="hidden" id="post-renovation-bathroom-includes" name="bathroom-includes" value="15">
-                                    <input type="hidden" id="post-renovation-pets" name="pets" value="30">
-                                    <input type="hidden" id="post-renovation-cleaning-supplies" name="cleaning-supplies" value="500">
-                                    <input type="hidden" id="post-renovation-dining-room" name="dining-room" value="10">
-                                    <input type="hidden" id="post-renovation-play-room" name="play-room" value="15">
-                                    <input type="hidden" id="post-renovation-laundry" name="laundry" value="14">
-                                    <input type="hidden" id="post-renovation-gym" name="gym" value="17">
-                                    <input type="hidden" id="post-renovation-garage" name="garage" value="20">
-                                    <input type="hidden" id="post-renovation-refrigerator-clean" name="refrigerator-clean" value="20">
-                                    <input type="submit" name="submit_post_renovation" value="Customize" class="more gray">
-                                </div>
-                            </div>
-                        </form>
+            <div class="row full-width gray flex-box">
+                <div class="column column-1-3 padding-bottom-96">
+                    <div class="row padding-left-right-70 margin-top-89">
+                        <h4>OUR MISSION IS TO:</h4>
+                        <ul class="list margin-top-20">
+                            <li class="template-tick-1">Offer a different kind of services to families and professionals</li>
+                            <li class="template-tick-1">Deliver high quality and consistent services</li>
+                            <li class="template-tick-1">Use environmentall friendly cleaning products</li>
+                            <li class="template-tick-1">Provide stable jobs with resonable wages</li>
+                            <li class="template-tick-1">Concentrate our resources on maintaining standards</li>
+                            <li class="template-tick-1">Make you an extremely satisfied customer</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column column-1-3 background-3">
+                    <a class="flex-hide" href="?page=project_gutter_cleaning" title="Gutter Cleaning">
+                        <img src="images/samples/960x750/placeholder.jpg" alt="">
+                    </a>
+                </div>
+                <div class="column column-1-3 padding-bottom-100 green">
+                    <div class="row padding-left-right-70 margin-top-89">
+                        <h2 class="font-weight-300">Want to talk?</h2>
+                        <h2>Please call now: <a href="tel:2507257052">250 725 7052</a></h2>
+                        <p class="description margin-top-20">Need a special cleaning service? We are happy to fulfill every request in order to exceed your expectations.</p>
+                        <div class="page-margin-top padding-bottom-16">
+                            <a class="more" href="?page=contact" title="Contact form">Contact form</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row full-width padding-top-59 padding-bottom-60 align-center">
-                <h3><span class="button-label">SEE MORE CALCULATOR EXAMPLES</span> <a class="more" href="?page=service_calculator" title="Service calculator">Service calculator</a></h3>
+            <div class="row full-width padding-top-89 padding-bottom-100">
+                <div class="row">
+                    <div class="column column-1-2">
+                        <h3>LEARN MORE</h3>
+                        <ul class="accordion margin-top-40 clearfix">
+                            <li>
+                                <div id="accordion-house-cleaning">
+                                    <h4>How many people will come to clean my house?</h4>
+                                </div>
+                                <div class="clearfix">
+                                    <a class="thumb-image" href="?page=about"><img alt="" src="images/samples/260x260/placeholder.jpg"></a>
+                                    <p>What makes Cleanmate trusted above other cleaning service providers? When you combine higher standards, smarter strategies and superior quality all in one package, the result is top notch.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="accordion-present-for-cleaning">
+                                    <h4>Do I have to be present for a cleaning?</h4>
+                                </div>
+                                <div class="clearfix">
+                                    <a class="thumb-image" href="?page=about"><img alt="" src="images/samples/260x260/placeholder.jpg"></a>
+                                    <p>What makes Cleanmate trusted above other cleaning service providers? When you combine higher standards, smarter strategies and superior quality all in one package, the result is top notch.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="accordion-how-long">
+                                    <h4>How long will it take to clean my house?</h4>
+                                </div>
+                                <div class="clearfix">
+                                    <a class="thumb-image" href="?page=about"><img alt="" src="images/samples/260x260/placeholder.jpg"></a>
+                                    <p>What makes Cleanmate trusted above other cleaning service providers? When you combine higher standards, smarter strategies and superior quality all in one package, the result is top notch.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column column-1-2">
+                        <h3>DID YOU KNOW?</h3>
+                        <div class="row margin-top-40">
+                            <div class="column column-1-2">
+                                <div class="single-counter-box">
+                                    <span class="number animated-element" data-value="95">0</span><span class="number-sign">%</span>
+                                    <p>Women feel better when their home is clean.</p>
+                                    <div class="ornament-container">
+                                        <div class="ornament animated-element duration-2000 animation-width"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column column-1-2">
+                                <div class="single-counter-box">
+                                    <span class="number animated-element" data-value="80">0</span><span class="number-sign">%</span>
+                                    <p>More dust is found on carpets then floorboards.</p>
+                                    <div class="ornament-container">
+                                        <div class="ornament animated-element duration-2000 animation-width"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top-30">
+                            <div class="column column-1-2">
+                                <div class="single-counter-box">
+                                    <span class="number animated-element" data-value="54">0</span><span class="number-sign">%</span>
+                                    <p>Americans prefer to clean on a weekly basis.</p>
+                                    <div class="ornament-container">
+                                        <div class="ornament animated-element duration-2000 animation-width"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column column-1-2">
+                                <div class="single-counter-box">
+                                    <span class="number animated-element" data-value="20">0</span><span class="number-sign">%</span>
+                                    <p>Of men do housework on a daily basis.</p>
+                                    <div class="ornament-container">
+                                        <div class="ornament animated-element duration-2000 animation-width"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row full-width padding-top-112 padding-bottom-115 parallax parallax-3 overlay">
                 <div class="row testimonials-container">
@@ -562,123 +514,123 @@
             </div>
             <div class="row full-width padding-top-89 padding-bottom-100">
                 <div class="row">
-                    <h2 class="box-header">SELECTED PROJECTS</h2>
-                    <p class="description align-center">Explore completed projects.</p>
+                    <h2 class="box-header transform">Atelier de capitalisation </h2>
+                    <p class="description align-center">2<sup>eme</sup> Edition.</p>
                     <div class="carousel-container margin-top-65 clearfix">
                         <ul class="projects-list horizontal-carousel clearfix page-margin-top">
                             <li class="column column-1-3">
-                                <a href="?page=project_apartment_cleaning" title="Apartment Cleaning">
-                                    <img src="images/samples/480x320/placeholder.jpg" alt="">
+                                <a href="#" title="Apartment Cleaning">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-yatombo.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>Apartment cleaning</p>
-                                            <a class="more simple" href="?page=project_apartment_cleaning" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_gutter_cleaning" title="Gutter Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-wilson.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>Gutter Cleaning</p>
-                                            <a class="more simple" href="?page=project_gutter_cleaning" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_move_in_out" title="Move In Out">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-nametougli.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>Move In Out</p>
-                                            <a class="more simple" href="?page=project_move_in_out" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_after_renovation_cleaning" title="After Renovation Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-nadjombe.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>After Renovation Cleaning</p>
-                                            <a class="more simple" href="?page=project_after_renovation_cleaning" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_house_cleaning" title="House Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-Bemah.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>House Cleaning</p>
-                                            <a class="more simple" href="?page=project_house_cleaning" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_garden_maintenance" title="Garden Maintenance">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-kolani.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>Garden Maintenance</p>
-                                            <a class="more simple" href="?page=project_garden_maintenance" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_apartment_cleaning" title="Apartment Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-batchale.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>Apartment cleaning</p>
-                                            <a class="more simple" href="?page=project_apartment_cleaning" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_gutter_cleaning" title="Gutter Cleaning">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-alassan.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>Gutter Cleaning</p>
-                                            <a class="more simple" href="?page=project_gutter_cleaning" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="column column-1-3">
                                 <a href="?page=project_move_in_out" title="Move In Out">
-                                    <img src="{{ asset('assets/images/samples/480x320/placeholder.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/img/atelier_valide-akpa.jpg') }}" alt="">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
                                             <p>Move In Out</p>
-                                            <a class="more simple" href="?page=project_move_in_out" title="View project">View project</a>
+                                            <a class="more simple" href="#" title="View project">View project</a>
                                         </div>
                                     </div>
                                 </div>
