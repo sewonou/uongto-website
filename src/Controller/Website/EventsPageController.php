@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class EventsPageController extends AbstractController
 {
-    #[Route('/tenders', name: 'app_tenders_page')]
+    #[Route('/events', name: 'app_event_page')]
     public function index(): Response
     {
         return $this->render('website/blog/blog.html.twig', [
@@ -16,7 +16,7 @@ class EventsPageController extends AbstractController
         ]);
     }
 
-    #[Route('/tenders/single', name: 'app_tenders_single_page')]
+    #[Route('/events/single', name: 'app_event_single_page')]
     public function blog_single(): Response
     {
         return $this->render('website/blog/blog-single.html.twig', [

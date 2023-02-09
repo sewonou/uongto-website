@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Website/AboutPageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Website/AnnouncementPageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/about/about-single.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/about/contact-us.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/about/historic.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/about/team-single.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/about/team.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/member/member-single.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/website/member/member.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/about/team.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/about/team.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,23 +184,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/website/about" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller/Website" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\htdocs\uongto-website\templates\website\partner" />
       <recent name="D:\htdocs\uongto-website\templates\admin" />
       <recent name="D:\htdocs\uongto-website\src\Controller\Admin" />
       <recent name="D:\htdocs\uongto-website\src\Controller\Website" />
       <recent name="D:\htdocs\uongto-website\templates\Website" />
-      <recent name="D:\htdocs\uongto-website\templates\Admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\htdocs\uongto-website\templates\website\about" />
       <recent name="D:\htdocs\uongto-website\src\Controller\Website" />
-      <recent name="D:\htdocs\uongto-website\templates\admin\category" />
-      <recent name="D:\htdocs\uongto-website\templates\admin\comment" />
-      <recent name="D:\htdocs\uongto-website\templates\admin\member" />
+      <recent name="D:\htdocs\uongto-website\templates\bundles\TwigBundle\Exception" />
+      <recent name="D:\htdocs\uongto-website\templates\website" />
+      <recent name="D:\htdocs\uongto-website\templates\website\partner" />
+      <recent name="D:\htdocs\uongto-website\templates\website\member" />
     </key>
   </component>
   <component name="RunManager">
@@ -246,7 +236,7 @@
       <workItem from="1675669440272" duration="25604000" />
       <workItem from="1675704848092" duration="29525000" />
       <workItem from="1675805590193" duration="10400000" />
-      <workItem from="1675841449131" duration="21562000" />
+      <workItem from="1675841449131" duration="29873000" />
     </task>
     <servers />
   </component>
