@@ -29,7 +29,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/features/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/template/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/social/style.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/social/main.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/style/main.css') }}">
 
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -38,9 +38,11 @@
     </head>
     <body class="wide overlay with-topbar">
     <div class="site-container wide">
-        <div class="transparent-header-container overlay height-auto">
+        <div class="{% if t_head is defined and t_head == true %}transparent-header-container overlay{% else %} header-top-bar-container clearfix {% endif %}  {% if h_auto is defined and h-auto == true %}height-auto {% endif %}">
             {{ include('website/_partials/top-header.html.twig') }}
             {{ include('website/_partials/navbar.html.twig') }}
+            {% block header %}
+            {% endblock %}
         </div>
 
 

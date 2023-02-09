@@ -12,7 +12,8 @@ class HomePageController extends AbstractController
     public function index(): Response
     {
         return $this->render('website/home/index.html.twig', [
-
+            'h-auto' => true,
+            't-head' => true,
         ]);
     }
 }

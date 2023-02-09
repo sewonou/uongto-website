@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Website/AboutPageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Website/AnnouncementPageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/about/about-single.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/about/contact-us.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/about/historic.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/about/team-single.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/about/team.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/member/member-single.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/website/member/member.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +182,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2LBciyQznA16pNBDwKHHfTEOZRs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -177,23 +194,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin/category" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/website/about" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\htdocs\uongto-website\templates\admin\category" />
-      <recent name="D:\htdocs\uongto-website\templates\admin\comment" />
-      <recent name="D:\htdocs\uongto-website\templates\admin\member" />
-      <recent name="D:\htdocs\uongto-website\templates\admin\menu" />
-      <recent name="D:\htdocs\uongto-website\templates\admin\page" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\htdocs\uongto-website\templates\admin" />
       <recent name="D:\htdocs\uongto-website\src\Controller\Admin" />
       <recent name="D:\htdocs\uongto-website\src\Controller\Website" />
       <recent name="D:\htdocs\uongto-website\templates\Website" />
       <recent name="D:\htdocs\uongto-website\templates\Admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\uongto-website\templates\website\about" />
+      <recent name="D:\htdocs\uongto-website\src\Controller\Website" />
+      <recent name="D:\htdocs\uongto-website\templates\admin\category" />
+      <recent name="D:\htdocs\uongto-website\templates\admin\comment" />
+      <recent name="D:\htdocs\uongto-website\templates\admin\member" />
     </key>
   </component>
   <component name="RunManager">
@@ -229,7 +246,7 @@
       <workItem from="1675669440272" duration="25604000" />
       <workItem from="1675704848092" duration="29525000" />
       <workItem from="1675805590193" duration="10400000" />
-      <workItem from="1675841449131" duration="8061000" />
+      <workItem from="1675841449131" duration="21562000" />
     </task>
     <servers />
   </component>
@@ -249,6 +266,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1675812348676" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1675933602387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1675933602387" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
