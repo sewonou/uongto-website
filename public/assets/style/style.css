@@ -785,7 +785,11 @@ body .transparent-header-container
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(54, 59, 64, 0.4);
+	/*background: rgba(64, 59, 64, 0.4);*/
+	background-image: url("../images/backgrounds/images/image_4.jpg") ;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
 	z-index: 1;
 }
 .transparent-header-container.overlay>*
@@ -2704,19 +2708,19 @@ ol.features-list li p
 /* --- backgrounds --- */
 body .background-1
 {
-	background-image: url('../images/samples/960x750/placeholder.jpg');
+	background-image: url('../images/img/bg-1.jpg');
 	background-size: cover;
 	background-position: center;
 }
 body .background-2
 {
-	background-image: url('../images/samples/960x750/placeholder.jpg');
+	background-image: url('../images/img/bg-about-1.jpg');
 	background-size: cover;
 	background-position: center;
 }
 body .background-3
 {
-	background-image: url('../images/samples/960x750/placeholder.jpg');
+	background-image: url('../images/img/bg-3.jpg');
 	background-size: cover;
 	background-position: center;
 }

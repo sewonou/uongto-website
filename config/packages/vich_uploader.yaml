@@ -1,8 +1,10 @@
 vich_uploader:
     db_driver: orm
 
-    #mappings:
-    #    products:
-    #        uri_prefix: /images/products
-    #        upload_destination: '%kernel.project_dir%/public/images/products'
-    #        namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+    mappings:
+        medias:
+            uri_prefix: /medias/
+            upload_destination: '%kernel.project_dir%/public/media/'
+            namer:
+                service: Vich\UploaderBundle\Naming\PropertyNamer
+                options: { property: 'slug' }
