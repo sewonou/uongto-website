@@ -3,28 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uongto-website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uongto-website.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/page/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/page/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/page/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/user/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/about/team.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/about/team.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +242,7 @@
       <workItem from="1676621550876" duration="2462000" />
       <workItem from="1676882921343" duration="23590000" />
       <workItem from="1677051705265" duration="14689000" />
-      <workItem from="1677139420565" duration="17091000" />
+      <workItem from="1677139420565" duration="18164000" />
     </task>
     <servers />
   </component>
