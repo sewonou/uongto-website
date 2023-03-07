@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\CommentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
 class Comment
@@ -31,6 +32,9 @@ class Comment
 
     #[ORM\ManyToOne(inversedBy: 'comments')]
     private ?Post $post = null;
+
+    #[ORM\Column(length: 125, nullable: true)]
+    private ?string $website = null;
 
     public function getId(): ?int
     {
@@ -105,6 +109,18 @@ class Comment
     public function setPost(?Post $post): self
     {
         $this->post = $post;
+
+        return $this;
+    }
+
+    public function getWebsite(): ?string
+    {
+        return $this->website;
+    }
+
+    public function setWebsite(?string $website): self
+    {
+        $this->website = $website;
 
         return $this;
     }

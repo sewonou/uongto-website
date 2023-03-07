@@ -35,7 +35,17 @@
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
+
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-01BV3RVLNM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-01BV3RVLNM');
+    </script>
     <body class="wide overlay with-topbar">
     <div class="site-container wide">
         <div class="{% if t_head is defined and t_head == true %}transparent-header-container overlay{% else %} header-top-bar-container clearfix {% endif %}  {% if h_auto is defined and h-auto == true %}height-auto {% endif %}">
@@ -82,5 +92,7 @@
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
+
+
     </body>
 </html>

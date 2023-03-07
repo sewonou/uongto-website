@@ -1,3 +1,25 @@
 body .header-container .menu-container .sf-menu > li > a{
     text-transform: uppercase;
 }
+
+.uppercase{
+    text-transform: uppercase !important;
+}
+
+.blog-img{
+    height: 400px !important;
+    width: 870px !important;
+
+}
+
+@media screen and (max-width:1189px){
+
+}
+
+@media screen and (max-width:767px){
+
+}
+
+@media screen and (max-width:479px){
+
+}

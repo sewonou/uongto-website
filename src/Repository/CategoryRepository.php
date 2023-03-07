@@ -39,6 +39,17 @@ class CategoryRepository extends ServiceEntityRepository
         }
     }
 
+    public function findIsPublishedAndIsActive(): array
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.isPublished = :val')
+            ->andWhere('c.isActive = :val')
+            ->setParameter('val', true)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 //    /**
 //     * @return Category[] Returns an array of Category objects
 //     */

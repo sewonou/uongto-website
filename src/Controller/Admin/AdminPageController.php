@@ -61,6 +61,7 @@ class AdminPageController extends AbstractController
     /**
      * @param Request $request
      * @param EntityManagerInterface $manager
+     * @param Page $page
      * @return Response
      * @IsGranted("ROLE_ADMIN")
      */

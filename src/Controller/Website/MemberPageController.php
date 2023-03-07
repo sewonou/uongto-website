@@ -11,7 +11,7 @@ class MemberPageController extends AbstractController
     #[Route('/members', name: 'app_member_page')]
     public function index(): Response
     {
-        return $this->render('website/partner/member.html.twig', [
+        return $this->render('website/member/member.html.twig', [
 
         ]);
     }
@@ -19,7 +19,7 @@ class MemberPageController extends AbstractController
     #[Route('/members/single', name: 'app_member_single_page')]
     public function member_single(): Response
     {
-        return $this->render('website/partner/member.html.twig', [
+        return $this->render('website/member/member-single.html.twig', [
 
         ]);
     }
@@ -27,7 +27,7 @@ class MemberPageController extends AbstractController
     #[Route('/members/become-member', name: 'app_become_member_page')]
     public function become_member(): Response
     {
-        return $this->render('website/partner/member.html.twig', [
+        return $this->render('website/member/become-member.html.twig', [
 
         ]);
     }

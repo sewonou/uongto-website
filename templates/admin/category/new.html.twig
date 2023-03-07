@@ -9,107 +9,68 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title" id="striped-row-layout-basic">Project Info</h4>
-                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <h4 class="card-title" id="striped-row-layout-basic">{% if category is not defined %}Création {% else %} Modification {% endif %} d'une catégorie</h4>
+
                 </div>
                 <div class="card-content collpase show">
                     <div class="card-body">
-                        <form class="form form-horizontal striped-rows form-bordered" action="#" method="post">
-                            <div class="form-body">
-                                <h4 class="form-section"><i class="ft-user"></i> Paramétrage</h4>
-                                <div class="form-group row mx-auto">
-                                    <label class="col-md-3 label-control" for="projectinput1">Titre</label>
-                                    <div class="col-md-9">
-                                        <input type="text" id="projectinput1" class="form-control" placeholder="First Name" name="fname">
-                                    </div>
-                                </div>
-                                <div class="form-group row mx-auto">
-                                    <label class="col-md-3 label-control" for="projectinput2">Last Name</label>
-                                    <div class="col-md-9">
-                                        <input type="text" id="projectinput2" class="form-control" placeholder="Last Name" name="lname">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mx-auto">
-                                    <label class="col-md-3 label-control" for="projectinput3">E-mail</label>
-                                    <div class="col-md-9">
-                                        <input type="text" id="projectinput3" class="form-control" placeholder="E-mail" name="email">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mx-auto last">
-                                    <label class="col-md-3 label-control" for="projectinput4">Contact Number</label>
-                                    <div class="col-md-9">
-                                        <input type="text" id="projectinput4" class="form-control" placeholder="Phone" name="phone">
-                                    </div>
-                                </div>
-
-                                <h4 class="form-section"><i class="la la-clipboard"></i> Requirements</h4>
-
-                                <div class="form-group row mx-auto">
-                                    <label class="col-md-3 label-control" for="projectinput5">Company</label>
-                                    <div class="col-md-9">
-                                        <input type="text" id="projectinput5" class="form-control" placeholder="Company Name" name="company">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mx-auto">
-                                    <label class="col-md-3 label-control" for="projectinput6">Interested in</label>
-                                    <div class="col-md-9">
-                                        <select id="projectinput6" name="interested" class="form-control">
-                                            <option value="none" selected="" disabled="">Interested in</option>
-                                            <option value="design">design</option>
-                                            <option value="development">development</option>
-                                            <option value="illustration">illustration</option>
-                                            <option value="branding">branding</option>
-                                            <option value="video">video</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mx-auto">
-                                    <label class="col-md-3 label-control" for="projectinput7">Budget</label>
-                                    <div class="col-md-9">
-                                        <select id="projectinput7" name="budget" class="form-control">
-                                            <option value="0" selected="" disabled="">Budget</option>
-                                            <option value="less than 5000$">less than 5000$</option>
-                                            <option value="5000$ - 10000$">5000$ - 10000$</option>
-                                            <option value="10000$ - 20000$">10000$ - 20000$</option>
-                                            <option value="more than 20000$">more than 20000$</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mx-auto">
-                                    <label class="col-md-3 label-control">Select File</label>
-                                    <div class="col-md-9">
-                                        <label id="projectinput8" class="file center-block">
-                                            <input type="file" id="file">
-                                            <span class="file-custom"></span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mx-auto last">
-                                    <label class="col-md-3 label-control" for="projectinput9">About Project</label>
-                                    <div class="col-md-9">
-                                        <textarea name="editor1" id="editor1" rows="10" cols="80">
-                                            This is my textarea to be replaced with CKEditor 4.
-                                        </textarea>
-
+                        {{ form_start(form, {'attr': {'class': 'form form-horizontal striped-rows form-bordered'}}) }}
+                        <div class="form-body">
+                            <h4 class="form-section"><i class="ft-user"></i> Exigences</h4>
+                            <div class="form-group row mx-auto">
+                                {{ form_label(form.title, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+                                    <div class="danger">
+                                        {{ form_errors(form.title) }}
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="form-actions">
-                                <button type="button" class="btn btn-warning mr-1">
-                                    <i class="ft-x"></i> Cancel
-                                </button>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="la la-check-square-o"></i> Save
-                                </button>
+                            <div class="form-group row mx-auto">
+                                {{ form_label(form.type, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+                                    <div class="danger">
+                                        {{ form_errors(form.type) }}
+                                    </div>
+                                </div>
                             </div>
-                        </form>
+                            <div class="form-group row mx-auto">
+                                {{ form_label(form.metaDescription, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.metaDescription, {'attr': {'class': 'form-control'}}) }}
+                                    <div class="danger">
+                                        {{ form_errors(form.title) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mx-auto last">
+                                {{ form_label(form.isActive, null,{'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                <div class="col-md-3">
+                                    {{ form_widget(form.isActive, {'attr' : {'class' : 'custom-control custom-check mr-1 mt-1'}}) }}
+                                    <div class="danger">
+                                        {{ form_errors(form.isActive) }}
+                                    </div>
+                                </div>
+                                {{ form_label(form.isPublished, null,{'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                <div class="col-md-3">
+                                    {{ form_widget(form.isPublished, {'attr' : {'class' : 'custom-control custom-check mr-1 mt-1'}}) }}
+                                    <div class="danger">
+                                        {{ form_errors(form.isPublished) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions text-center">
+                            <a href="{{ path('app_admin_category') }}" class="btn btn-warning mr-1">
+                                <i class="ft-x"></i> Annuler
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="la la-check-square-o"></i> Enregistrer
+                            </button>
+                        </div>
+                        {{ form_row(form._token) }}
+                        {{ form_end(form, {render_rest: false} ) }}
                     </div>
                 </div>
             </div>
@@ -118,12 +79,7 @@
 </section>
 {% endblock %}
 {% block javascripts %}
-    <script src="{{ asset('app-assets/vendors/js/editors/ckeditor/ckeditor.js') }}"></script>
-    <script>
-        // Replace the <textarea id="editor1"> with a CKEditor 4
-        // instance, using default configuration.
-        CKEDITOR.replace( 'editor1' );
-    </script>
+
 {% endblock %}
 
 

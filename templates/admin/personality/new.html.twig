@@ -1,0 +1,150 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title 'Nouvel personnalité' %}
+
+
+{% block body %}
+<section id="striped-row-form-layouts">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title" id="striped-row-layout-basic">{% if personality is not defined %}Création {% else %} Modification {% endif %} d'une fiche de personnalité</h4>
+                </div>
+                <div class="card-content collpase show">
+                    <div class="card-body">
+                        {{ form_start(form, {'attr': {'class': 'form form-horizontal striped-rows form-bordered'}}) }}
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h4 class="form-section"><i class="ft-user"></i> Information</h4>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.firstName, null,{'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                            <div class="col-md-9">
+                                                {{ form_widget(form.firstName, {'attr': {'class': 'form-control'}}) }}
+                                                {{ form_errors(form.firstName) }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.lastName, null,{'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                            <div class="col-md-9">
+                                                {{ form_widget(form.lastName, {'attr': {'class': 'form-control'}}) }}
+                                                {{ form_errors(form.lastName) }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.office, null,{'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                            <div class="col-md-9">
+                                                {{ form_widget(form.office, {'attr': {'class': 'form-control'}}) }}
+                                                <div class="danger">
+                                                    {{ form_errors(form.office) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.gender, null,{'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                            <div class="col-md-9">
+                                                {{ form_widget(form.gender, {'attr': {'class': 'form-control'}} ) }} {##}
+                                                <div class="danger">
+                                                    {{ form_errors(form.gender) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4 class="form-section"><i class="ft-file"></i> {{ form_label(form.imageFile) }}</h4>
+                                        <div class="form-group row mx-auto upload">
+                                            {{ form_widget(form.imageFile) }}
+                                            <output></output>
+                                        </div>
+                                        <div class="danger">
+                                            {{ form_errors(form.imageFile) }}
+                                        </div>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.isPublished, null, {'label_attr': {'class': 'col-md-4 label-control'}}) }}
+                                            <div class="col-md-8">
+                                                {{ form_widget(form.isPublished, {'attr': {'class': 'custom-control custom-check mr-1 mt-1'}}) }}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h4 class="form-section"><i class="ft-file-text"></i> Contenu</h4>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.page, null, {'label_attr': {'class': 'col-md-2 label-control'}}) }}
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.page, {'attr': {'class': 'form-control'}}) }}
+
+                                                <div class="danger">
+                                                    {{ form_errors(form.page) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.facebookUrl, null, {'label_attr': {'class': 'col-md-2 label-control'}}) }}
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.facebookUrl, {'attr': {'class': 'form-control'}}) }}
+
+                                                <div class="danger">
+                                                    {{ form_errors(form.facebookUrl) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.linkedinUrl, null, {'label_attr': {'class': 'col-md-2 label-control'}}) }}
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.linkedinUrl, {'attr': {'class': 'form-control'}}) }}
+                                                <div class="danger">
+                                                    {{ form_errors(form.linkedinUrl) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mx-auto">
+                                            {{ form_label(form.twitterUrl, null, {'label_attr': {'class': 'col-md-2 label-control'}}) }}
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.twitterUrl, {'attr': {'class': 'form-control'}}) }}
+
+                                                <div class="danger">
+                                                    {{ form_errors(form.twitterUrl) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-actions text-center">
+                                <a href="{{ path('app_admin_personality') }}" class="btn btn-warning mr-1">
+                                    <i class="ft-x"></i> Annuler
+                                </a>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Enregister
+                                </button>
+                            </div>
+                        {{ form_row(form._token) }}
+                        {{ form_end(form, {render_rest: false}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('app-assets/vendors/css/uploader/upload.css') }}">
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('app-assets/vendors/js/uploader/upload.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/editors/ckeditor/ckeditor.js') }}"></script>
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor 4
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor1' );
+    </script>
+{% endblock %}
+
+

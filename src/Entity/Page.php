@@ -54,9 +54,13 @@ class Page
     #[ORM\Column(nullable: true)]
     private ?bool $isPublished = null;
 
+    #[ORM\OneToMany(mappedBy: 'page', targetEntity: Personality::class)]
+    private Collection $personalities;
+
     public function __construct()
     {
         $this->posts = new ArrayCollection();
+        $this->personalities = new ArrayCollection();
     }
 
     #[ORM\PrePersist]
@@ -197,6 +201,36 @@ class Page
     public function setIsPublished(?bool $isPublished): self
     {
         $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Personality>
+     */
+    public function getPersonalities(): Collection
+    {
+        return $this->personalities;
+    }
+
+    public function addPersonality(Personality $personality): self
+    {
+        if (!$this->personalities->contains($personality)) {
+            $this->personalities->add($personality);
+            $personality->setPage($this);
+        }
+
+        return $this;
+    }
+
+    public function removePersonality(Personality $personality): self
+    {
+        if ($this->personalities->removeElement($personality)) {
+            // set the owning side to null (unless already changed)
+            if ($personality->getPage() === $this) {
+                $personality->setPage(null);
+            }
+        }
 
         return $this;
     }

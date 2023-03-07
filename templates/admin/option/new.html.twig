@@ -1,0 +1,54 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title 'Nouvel article' %}
+
+
+{% block body %}
+<section id="striped-row-form-layouts">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title" id="striped-row-layout-basic">{% if option is not defined %}Création {% else %} Modification {% endif %} d'une option</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                </div>
+                <div class="card-content collpase show">
+                    <div class="card-body">
+                        {{ form_start(form, {'attr': {'class': 'form form-horizontal striped-rows form-bordered' }}) }}
+                        <div class="form-body">
+                            <h4 class="form-section"><i class="ft-user"></i> Paramétrage</h4>
+                            <div class="form-group row mx-auto">
+                                {{ form_label(form.title, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.title, {attr: {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions text-center">
+                            <a href="{{ path('app_admin_option') }}" type="button" class="btn btn-warning mr-1">
+                                <i class="ft-x"></i> Cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="la la-check-square-o"></i> Save
+                            </button>
+                        </div>
+                        {{ form_row(form._token) }}
+                        {{ form_end(form) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('app-assets/vendors/js/editors/ckeditor/ckeditor.js') }}"></script>
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor 4
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor1' );
+    </script>
+{% endblock %}
+
+

@@ -1,0 +1,11 @@
+<ul class="pagination margin-top-70">
+    <li class="left">
+        <a href="{{ path(route, {'page': page - 1}) }}" title="" class="template-arrow-horizontal-3" {% if page == 1 %}disabled{% endif %}>&nbsp;</a>
+    </li>
+    {% for i in 1..pages %}
+    <li class="{% if page == i %}selected{% endif %}"><a href="{{ path(route, {'page': i}) }}" title="">{{ i }}</a></li>
+    {% endfor %}
+    <li class="right">
+        <a href="{{ path(route, {'page': page + 1}) }}" title="" class="template-arrow-horizontal-3" {% if page == pages %}disabled{% endif %}>&nbsp;</a>
+    </li>
+</ul>

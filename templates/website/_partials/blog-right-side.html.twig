@@ -1,0 +1,85 @@
+<div class="column column-1-4 cm-smart-column">
+    <div class="cm-smart-column-wrapper">
+        <ul class="categories clearfix">
+            {% if categories is defined %}
+                {% for category in categories %}
+                    <li><a href="#" title="{{ category.title }}">{{ category.title }}<span>{{ category.posts.count }}</span></a></li>
+                {% endfor %}
+            {% endif %}
+
+
+        </ul>
+        <h6 class="box-header page-margin-top">Les dernières actualités</h6>
+        <ul class="blog small margin-top-30 clearfix">
+            <li>
+                <a href="?page=post" title="How to: deep clean your kitchen" class="post-image">
+                    <img src="images/samples/90x90/placeholder.jpg" alt="">
+                </a>
+                <div class="post-content">
+                    <a href="?page=post" title="How to: deep clean your kitchen">How to: deep clean your kitchen</a>
+                    <ul class="post-details">
+                        <li class="date">August 24, 2017</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="?page=post" title="10 ways to save more &amp; waste less" class="post-image">
+                    <img src="images/samples/90x90/placeholder.jpg" alt="">
+                </a>
+                <div class="post-content">
+                    <a href="?page=post" title="10 ways to save more &amp; waste less">10 ways to save more &amp; waste less</a>
+                    <ul class="post-details">
+                        <li class="date">August 22, 2017</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="?page=post" title="Before move-in cleaning checklist" class="post-image">
+                    <img src="images/samples/90x90/placeholder.jpg" alt="">
+                </a>
+                <div class="post-content">
+                    <a href="?page=post" title="Before move-in cleaning checklist">Before move-in cleaning checklist</a>
+                    <ul class="post-details">
+                        <li class="date">July 10, 2017</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <h6 class="box-header page-margin-top">Les actualités les plus lues</h6>
+        <ul class="blog small margin-top-30 clearfix">
+            <li>
+                <a href="?page=post" title="Best pro tips for home cleaning" class="post-image">
+                    <img src="images/samples/90x90/placeholder.jpg" alt="">
+                </a>
+                <div class="post-content">
+                    <a href="?page=post" title="Best pro tips for home cleaning">Best pro tips for home cleaning</a>
+                    <ul class="post-details">
+                        <li class="date">April 25, 2017</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="?page=post" title="Before move-in cleaning checklist" class="post-image">
+                    <img src="images/samples/90x90/placeholder.jpg" alt="">
+                </a>
+                <div class="post-content">
+                    <a href="?page=post" title="Before move-in cleaning checklist">Before move-in cleaning checklist</a>
+                    <ul class="post-details">
+                        <li class="date">July 10, 2017</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="?page=post" title="What to look for in green cleaning" class="post-image">
+                    <img src="images/samples/90x90/placeholder.jpg" alt="">
+                </a>
+                <div class="post-content">
+                    <a href="?page=post" title="What to look for in green cleaning">What to look for in green cleaning</a>
+                    <ul class="post-details">
+                        <li class="date">June 05, 2017</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

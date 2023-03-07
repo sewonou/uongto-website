@@ -92,6 +92,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'author', targetEntity: Tag::class)]
     private Collection $tags;
 
+
     public function __construct()
     {
         $this->userRoles = new ArrayCollection();
@@ -510,6 +511,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
 
 
 }

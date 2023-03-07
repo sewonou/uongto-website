@@ -39,6 +39,47 @@ class PostRepository extends ServiceEntityRepository
         }
     }
 
+    public function findByActiveAndPublished(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.isActive = :val')
+            ->andWhere('p.isPublished= :val')
+            ->setParameter('val', true)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    /**
+     * @return Post[] Returns an array of Post objects
+     */
+    public function findLatestPost(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.isActive = :val')
+            ->andWhere('p.isPublished= :val')
+            ->setParameter('val', true)
+            ->orderBy('p.id', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    public function updateCount($post)
+    {
+        /*dump($post->getCount() +1 );
+        die();*/
+        return $this->createQueryBuilder('p')
+            ->update()
+            ->set('p.count ', ':val')
+            ->setParameter('val',$post->getCount() +1 )
+            ->where( 'p.id = :val2')
+            ->setParameter('val2', $post->getId())
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
 //    /**
 //     * @return Post[] Returns an array of Post objects
 //     */

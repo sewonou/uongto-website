@@ -3,12 +3,21 @@
 namespace App\Entity;
 
 use App\Repository\OptionRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: OptionRepository::class)]
 #[ORM\Table(name: '`option`')]
+#[ORM\HasLifecycleCallbacks]
+
+/**
+ * Class Option
+ * @package App\Entity
+ * @ORM\HasLifecycleCallbacks()
+ */
 class Option
 {
     #[ORM\Id]
@@ -17,6 +26,8 @@ class Option
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Assert\NotBlank(message: "Le titre est obligatoire")]
+    #[Assert\Length(min: 2,max: 255,minMessage: "Le titre doit être supérieur à 2 caractères", maxMessage: "Le titre doit être inférieur à 255 caractères")]
     private ?string $title = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -34,6 +45,17 @@ class Option
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+    }
+
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
+    public function initializeSlug()
+    {
+        if(empty($this->slug)){
+            $slugify = new Slugify();
+            $this->slug = $slugify->slugify($this->title);
+        }
+        $this->updateAt = new \DateTimeImmutable();
     }
 
     public function getId(): ?int

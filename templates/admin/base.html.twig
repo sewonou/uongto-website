@@ -1,3 +1,13 @@
+{% set trans_day_hash = {
+    "Monday": "Lundi",
+    "Tuesday": "Mardi",
+    "Wednesday": "Mercredi",
+    "Thursday": "Jeudi",
+    "Friday": "Vendredi",
+    "Saturday": "Samedi",
+    "Sunday": "Dimanche"
+}
+%}
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -100,7 +110,9 @@
     {% endblock %}
     <script>
         $(document).ready(function() {
-            $('.select2').select2();
+            $('.select2').select2({
+                placeholder: "Choisir une option"
+            });
         });
     </script>
 </body>

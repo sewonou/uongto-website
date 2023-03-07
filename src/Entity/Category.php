@@ -3,11 +3,20 @@
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
+#[ORM\HasLifecycleCallbacks]
+
+/**
+ * Class Option
+ * @package App\Entity
+ * @ORM\HasLifecycleCallbacks()
+ */
 class Category
 {
     #[ORM\Id]
@@ -16,6 +25,8 @@ class Category
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Asset\NotBlank(message: "Le titre est Obligartoire")]
+    #[Assert\Length(min: 2,max: 255,minMessage: "Le titre doit être supérieur à 2 caractères", maxMessage: "Le titre doit être inférieur à 255 caractères")]
     private ?string $title = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -25,9 +36,12 @@ class Category
     private ?bool $isActive = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Asset\NotBlank(message: "La meta description  est obligartoire")]
+    #[Assert\Length(min: 2,max: 255,minMessage: "la description doit être supérieur à 2 caractères", maxMessage: "La description doit être inférieur à 255 caractères")]
     private ?string $metaDescription = null;
 
     #[ORM\ManyToOne(inversedBy: 'categories')]
+    #[Asset\NotBlank(message: "L'option  est obligartoire")]
     private ?Option $type = null;
 
     #[ORM\Column(nullable: true)]
@@ -45,6 +59,17 @@ class Category
     public function __construct()
     {
         $this->posts = new ArrayCollection();
+    }
+
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
+    public function initializeSlug()
+    {
+        if(empty($this->slug)){
+            $slugify = new Slugify();
+            $this->slug = $slugify->slugify($this->title);
+        }
+        $this->updateAt = new \DateTimeImmutable();
     }
 
     public function getId(): ?int
