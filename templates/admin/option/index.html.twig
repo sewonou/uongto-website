@@ -20,6 +20,7 @@
                                 <thead>
                                 <tr>
                                     <th>Titre</th>
+                                    <th>Titre Afficher</th>
                                     <th>Dernière Mise à jour</th>
                                     <th>Options</th>
                                 </tr>
@@ -28,19 +29,21 @@
                                 {% if options %}
                                 {% for option in options %}
                                     <tr>
-                                    <td class="align-middle">
-                                        <div class="name">{{ option.title }}</div>
-                                    </td>
-
-                                    <td class="align-middle w-25">
-                                        <div class="last-login"><i class="la la-history"></i>{{ option.updateAt | date("l d F - H:i") }}</div>
-                                    </td>
-                                    <td class="align-middle w-25">
-                                        <div class="option">
-                                            <a href="{{ path('app_admin_option_edit', {'id': option.id}) }}"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
+                                        <td class="align-middle">
+                                            <div class="name">{{ option.title }}</div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="name">{{ option.displayTitle }}</div>
+                                        </td>
+                                        <td class="align-middle w-25">
+                                            <div class="last-login"><i class="la la-history"></i>{{ option.updateAt | date("l d F - H:i") }}</div>
+                                        </td>
+                                        <td class="align-middle w-25">
+                                            <div class="option">
+                                                <a href="{{ path('app_admin_option_edit', {'id': option.id}) }}"><i class="la la-pencil-square success"></i></a>
+                                                <a href="#"><i class="la la-trash danger"></i></a>
+                                            </div>
+                                        </td>
                                 </tr>
                                 {% endfor %}
                                 {% endif %}

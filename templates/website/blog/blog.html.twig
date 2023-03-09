@@ -5,45 +5,38 @@
         <div class="row gray full-width page-header vertical-align-table">
             <div class="row">
                 <div class="page-header-left">
-                    <h1>Actualités</h1>
+                    <h1>{{ option.displayTitle }}</h1>
                 </div>
                 <div class="page-header-right">
                     <div class="bread-crumb-container">
                         <ul class="bread-crumb">
-                            <li>
-                                <a title="Home" href="?page=home">
-                                    Accueil
-                                </a>
-                            </li>
-                            <li class="separator">
-                                &#47;
-                            </li>
-                            <li>
-                                Actualités
-                            </li>
+                            <li><a title="Accueil" href="{{ path('app_home_page') }}">Accueil</a></li>
+                            <li class="separator">&#47;</li>
+                            <li>{{ option.displayTitle }}</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="clearfix">
-            <div class="row page-margin-top-section">
+            <div class="row">
                 <div class="column column-3-4">
                     <ul class="blog clearfix">
                         {% if pagination %}
                             {% for post in pagination.data %}
                                 <li>
-                                    <a href="#" title="How to: deep clean your kitchen" class="post-image">
+                                    <a href="#" title="{{ post.title }}" class="post-image">
                                         <div class="post-date">
-                                            <div class="month">AUG</div>
-                                            <h4>24</h4>
+                                            <h4>{{ post.updateAt | date("d") }}</h4>
+                                            <div class="month uppercase">{{ post.updateAt | date("F") }}</div>
+                                            <div class="month uppercase">{{ post.updateAt | date("Y") }}</div>
                                         </div>
                                         <img  src="{{ vich_uploader_asset(post, 'imageFile') }}" alt="{{ post.title }}">
                                     </a>
-                                    <h2><a href="{{ path('app_new_single_page', {'slug': post.slug}) }}">{{ post.title }}</a></h2>
+                                    <h2><a href="{{ path('app_blog_single_page', {'pageCategory': pagination.pageCategory, 'slug': post.slug}) }}">{{ post.title }}</a></h2>
                                     <div class="post-content-details-container clearfix">
                                         <ul class="post-content-details left">
-                                            <li>{{ post.updateAt | date("F jS") }}</li>
+                                            <li>{{ post.updateAt | date("d F Y") }}</li>
                                             <li>par <a href="#" title="{{ post.author.fullName }}">{{ post.author.fullName }}</a></li>
                                         </ul>
                                         <ul class="post-content-details right">
@@ -51,36 +44,13 @@
                                             <li class="template-comment"><a href="#" title="{{ post.comments.count }} commentaires">{{ post.comments.count }}</a></li>
                                         </ul>
                                     </div>
-                                    <p>{{ post.quote }} <a href="{{ path('app_new_single_page', {'slug': post.slug}) }}" title="Lire plus">Lire plus</a></p>
+                                    <p>{{ post.quote | raw }} <a href="{{ path('app_blog_single_page', {'pageCategory': pagination.pageCategory, 'slug': post.slug}) }}" title="Lire plus">Lire plus</a></p>
                                 </li>
                             {% endfor %}
 
                     </ul>
-                    {{ pagination.display() }}
+                        {{ pagination.display() }}
                     {% endif %}
-                    {#<ul class="pagination margin-top-70">
-                        <li class="left">
-                            <a href="#" title="" class="template-arrow-horizontal-3">&nbsp;</a>
-                        </li>
-                        <li class="selected">
-                            <a href="#" title="">
-                                1
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" title="">
-                                2
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" title="">
-                                3
-                            </a>
-                        </li>
-                        <li class="right">
-                            <a href="#" title="" class="template-arrow-horizontal-3">&nbsp;</a>
-                        </li>
-                    </ul>#}
                 </div>
                 {{ include('website/_partials/blog-right-side.html.twig') }}
             </div>

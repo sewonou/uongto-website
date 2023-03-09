@@ -50,6 +50,19 @@ class CategoryRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findByOption($option):array
+    {
+        return $this->createQueryBuilder('c')
+            ->leftJoin('c.types', 'co')
+            ->where('co = :option')
+            ->andWhere('c.isPublished = :val')
+            ->andWhere('c.isActive = :val')
+            ->setParameters(['val'=> true, 'option'=>$option])
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 //    /**
 //     * @return Category[] Returns an array of Category objects
 //     */

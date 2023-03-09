@@ -21,9 +21,22 @@
                                 {{ form_label(form.title, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
                                 <div class="col-md-9">
                                     {{ form_widget(form.title, {attr: {'class': 'form-control'}}) }}
+                                    <div class="danger">
+                                        {{ form_errors(form.title, {attr: {'class': 'form-control'}}) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mx-auto last">
+                                {{ form_label(form.displayTitle, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.displayTitle, {attr: {'class': 'form-control'}}) }}
+                                    <div class="danger">
+                                        {{ form_errors(form.displayTitle, {attr: {'class': 'form-control'}}) }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-actions text-center">
                             <a href="{{ path('app_admin_option') }}" type="button" class="btn btn-warning mr-1">
                                 <i class="ft-x"></i> Cancel

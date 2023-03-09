@@ -27,11 +27,11 @@
                                 </div>
                             </div>
                             <div class="form-group row mx-auto">
-                                {{ form_label(form.type, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                {{ form_label(form.types, null, {'label_attr': {'class': 'col-md-3 label-control'}}) }}
                                 <div class="col-md-9">
-                                    {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+                                    {{ form_widget(form.types, {'attr': {'class': 'form-control select2'}}) }}
                                     <div class="danger">
-                                        {{ form_errors(form.type) }}
+                                        {{ form_errors(form.types) }}
                                     </div>
                                 </div>
                             </div>

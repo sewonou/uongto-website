@@ -12,6 +12,13 @@ body .header-container .menu-container .sf-menu > li > a{
 
 }
 
+.disabled {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
 @media screen and (max-width:1189px){
 
 }

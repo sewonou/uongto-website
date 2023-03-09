@@ -36,11 +36,16 @@ class Option
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updateAt = null;
 
-    #[ORM\OneToMany(mappedBy: 'type', targetEntity: Category::class)]
-    private Collection $categories;
+
 
     #[ORM\ManyToOne(inversedBy: 'options')]
     private ?User $author = null;
+
+    #[ORM\ManyToMany(targetEntity: Category::class, mappedBy: 'types')]
+    private Collection $categories;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $displayTitle = null;
 
     public function __construct()
     {
@@ -99,6 +104,19 @@ class Option
         return $this;
     }
 
+
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?User $author): self
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
     /**
      * @return Collection<int, Category>
      */
@@ -111,7 +129,7 @@ class Option
     {
         if (!$this->categories->contains($category)) {
             $this->categories->add($category);
-            $category->setType($this);
+            $category->addType($this);
         }
 
         return $this;
@@ -120,23 +138,20 @@ class Option
     public function removeCategory(Category $category): self
     {
         if ($this->categories->removeElement($category)) {
-            // set the owning side to null (unless already changed)
-            if ($category->getType() === $this) {
-                $category->setType(null);
-            }
+            $category->removeType($this);
         }
 
         return $this;
     }
 
-    public function getAuthor(): ?User
+    public function getDisplayTitle(): ?string
     {
-        return $this->author;
+        return $this->displayTitle;
     }
 
-    public function setAuthor(?User $author): self
+    public function setDisplayTitle(?string $displayTitle): self
     {
-        $this->author = $author;
+        $this->displayTitle = $displayTitle;
 
         return $this;
     }

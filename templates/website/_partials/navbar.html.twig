@@ -21,10 +21,10 @@
                     <li >
                         <a href="#" title="Actualités">Actualités</a>
                         <ul>
-                            <li><a href="{{ path('app_new_page') }}" title="Actualités">Actualités</a></li>
-                            <li><a href="{{ path('app_announcement_page') }}" title="Annonces">Annonces</a></li>
-                            <li><a href="{{ path('app_tender_page') }}" title="Appels d'offres">Appels d'offres</a></li>
-                            <li><a href="{{ path('app_event_page') }}" title="Evènements à venir">Evènements à venir</a></li>
+                            <li><a href="{{ path('app_blog_page', {'pageCategory': "news"}) }}" title="Actualités">Actualités</a></li>
+                            <li><a href="{{ path('app_blog_page', {'pageCategory': "announcement"}) }}" title="Annonces">Annonces</a></li>
+                            <li><a href="{{ path('app_blog_page', {'pageCategory': "tenders"}) }}" title="Appels d'offres">Appels d'offres</a></li>
+                            <li><a href="{{ path('app_blog_page', {'pageCategory': "events"}) }}" title="Evènements à venir">Evènements à venir</a></li>
                             <li><a href="#" title="Forum">Forum</a></li>
                         </ul>
                     </li>
@@ -78,10 +78,10 @@
                             <a href="#" title="Actualités">Actualités</a>
                             <a href="#" class="template-arrow-menu"></a>
                             <ul>
-                                <li><a href="{{ path('app_new_page') }}" title="Actualités">Actualités</a></li>
-                                <li><a href="{{ path('app_announcement_page') }}" title="Annonces">Annonces</a></li>
-                                <li><a href="{{ path('app_tender_page') }}" title="Appels d'offres">Appels d'offres</a></li>
-                                <li><a href="{{ path('app_event_page') }}" title="Evènements à venir">Evènements à venir</a></li>
+                                <li><a href="{{ path('app_blog_page', {'pageCategory': "news"}) }}" title="Actualités">Actualités</a></li>
+                                <li><a href="{{ path('app_blog_page', {'pageCategory': "announcement"}) }}" title="Annonces">Annonces</a></li>
+                                <li><a href="{{ path('app_blog_page', {'pageCategory': "tenders"}) }}" title="Appels d'offres">Appels d'offres</a></li>
+                                <li><a href="{{ path('app_blog_page', {'pageCategory': "events"}) }}" title="Evènements à venir">Evènements à venir</a></li>
                                 <li><a href="#" title="Forum">Forum</a></li>
                             </ul>
                         </li>

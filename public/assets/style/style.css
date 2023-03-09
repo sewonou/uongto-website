@@ -1575,7 +1575,7 @@ body.overlay .background-overlay
 }
 .page-margin-top-section
 {
-	margin-top: 100px;
+	margin-top: 25px;
 }
 .page-padding-top
 {
@@ -2963,7 +2963,7 @@ span.number.sign
 /* --- blog --- */
 .blog>li
 {
-	margin-top: 52px;
+	margin-top: -12px;
 }
 .blog>li:first-child,
 .column .blog.small>li:first-child

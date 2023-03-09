@@ -14,6 +14,7 @@ class OptionType extends ApplicationType
     {
         $builder
             ->add('title', TextType::class, $this->getConfiguration("Titre","Saisir le titre"))
+            ->add('displayTitle', TextType::class, $this->getConfiguration("Titre d'adffichage","Saisir le titre a afficher"))
         ;
     }
 

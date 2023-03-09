@@ -50,6 +50,19 @@ class PostRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findByPage($page): array
+    {
+
+        return $this->createQueryBuilder('p')
+            ->where('p.page = :page')
+            ->andWhere('p.isActive = :val')
+            ->andWhere('p.isPublished= :val')
+            ->setParameters(['val'=>true, 'page'=>$page])
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     /**
      * @return Post[] Returns an array of Post objects
      */
@@ -64,6 +77,23 @@ class PostRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
         ;
+    }
+
+    /**
+     * @return Post[] Returns an array of Post objects
+     */
+    public function findBestPost(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.isActive = :val')
+            ->andWhere('p.isPublished = :val')
+            ->andWhere('p.count >= :count')
+            ->setParameters(['val' => true, 'count' => 10 ])
+            ->orderBy('p.id', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+            ;
     }
 
     public function updateCount($post)

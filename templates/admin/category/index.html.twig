@@ -34,7 +34,9 @@
                                         <div class="name">{{ category.title }}</div>
                                     </td>
                                     <td class="align-middle">
-                                        <div class="email">{{ category.type.title }}</div>
+                                        {% for option in category.types %}
+                                            <div class="email">{{ option.title }}</div>
+                                        {% endfor %}
                                     </td>
 
                                     <td class="align-middle">

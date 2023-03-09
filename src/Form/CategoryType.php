@@ -21,10 +21,11 @@ class CategoryType extends ApplicationType
             ->add('isActive', CheckboxType::class, $this->getConfiguration("Actif", ""))
             ->add('metaDescription', TextareaType::class, $this->getConfiguration("Meta description de la catégorie", "Saisir la méta description de la catégorie"))
             ->add('isPublished', CheckboxType::class, $this->getConfiguration("Publiée", ""))
-            ->add('type', EntityType::class, $this->getConfiguration('Option', "", [
+            ->add('types', EntityType::class, $this->getConfiguration('Option', "", [
                 'placeholder'=>"Choisir l'option de la catégorie",
                 'class' => Option::class,
-                'choice_label' => 'title'
+                'choice_label' => 'title',
+                'multiple' => true,
             ]) )
         ;
     }

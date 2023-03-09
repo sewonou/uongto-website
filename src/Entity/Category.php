@@ -40,9 +40,7 @@ class Category
     #[Assert\Length(min: 2,max: 255,minMessage: "la description doit être supérieur à 2 caractères", maxMessage: "La description doit être inférieur à 255 caractères")]
     private ?string $metaDescription = null;
 
-    #[ORM\ManyToOne(inversedBy: 'categories')]
-    #[Asset\NotBlank(message: "L'option  est obligartoire")]
-    private ?Option $type = null;
+
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updateAt = null;
@@ -56,9 +54,13 @@ class Category
     #[ORM\Column(nullable: true)]
     private ?bool $isPublished = null;
 
+    #[ORM\ManyToMany(targetEntity: Option::class, inversedBy: 'categories')]
+    private Collection $types;
+
     public function __construct()
     {
         $this->posts = new ArrayCollection();
+        $this->types = new ArrayCollection();
     }
 
     #[ORM\PrePersist]
@@ -125,17 +127,7 @@ class Category
         return $this;
     }
 
-    public function getType(): ?Option
-    {
-        return $this->type;
-    }
-
-    public function setType(?Option $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
+    
 
     public function getUpdateAt(): ?\DateTimeImmutable
     {
@@ -196,6 +188,30 @@ class Category
     public function setIsPublished(?bool $isPublished): self
     {
         $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Option>
+     */
+    public function getTypes(): Collection
+    {
+        return $this->types;
+    }
+
+    public function addType(Option $type): self
+    {
+        if (!$this->types->contains($type)) {
+            $this->types->add($type);
+        }
+
+        return $this;
+    }
+
+    public function removeType(Option $type): self
+    {
+        $this->types->removeElement($type);
 
         return $this;
     }
