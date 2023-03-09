@@ -32,7 +32,7 @@
                                     <div class="month uppercase">{{ post.updateAt | date("Y") }}</div>
 
                                 </div>
-                                <img src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}">
+                                <img src="{% if app.environment == prod  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}">
                             </a>
                             <h2><a href="#">{% if post is defined %}{{ post.title }}{% endif %}</a></h2>
                             <div class="post-content-details-container clearfix">

@@ -31,7 +31,7 @@
                                             <div class="month uppercase">{{ post.updateAt | date("F") }}</div>
                                             <div class="month uppercase">{{ post.updateAt | date("Y") }}</div>
                                         </div>
-                                        <img  src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}">
+                                        <img  src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}">
                                     </a>
                                     <h2><a href="{{ path('app_blog_single_page', {'pageCategory': pagination.pageCategory, 'slug': post.slug}) }}">{{ post.title }}</a></h2>
                                     <div class="post-content-details-container clearfix">

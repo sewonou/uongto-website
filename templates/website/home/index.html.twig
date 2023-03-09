@@ -13,7 +13,7 @@
                 <!-- SLIDE 1 -->
                 <li data-transition="fade" data-masterspeed="500" data-slotamount="1" data-delay="6000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" data-bgfit="cover">
+                    <img src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" data-bgfit="cover">
                     <!-- LAYERS -->
                     <!-- LAYER 01 -->
                     <div class="tp-caption"
@@ -171,7 +171,7 @@
                                 {% for thematic in thematics %}
                                     <li class="column column-1-3">
                                         <a href="#" title="{{ thematic.title | raw }}">
-                                            <img src="{{ asset(vich_uploader_asset(thematic, 'imageFile')) }}" alt="{{ thematic.title | raw }}">
+                                            <img src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(thematic, 'imageFile')) }}" alt="{{ thematic.title | raw }}">
                                         </a>
                                         <h4 class="box-header transform"><a href="#" title="{{ thematic.title | raw }}">{{ thematic.title | raw }}</a></h4>
                                         <p>{{ thematic.description | raw }}</p>
@@ -374,7 +374,7 @@
                             {% for post in posts %}
                             <li class="column column-1-3">
                                 <a href="{{ path('app_blog_single_page', {'pageCategory': post.page.codeName ,'slug': post.slug}) }}" title="{{ post.title }}">
-                                    <img src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}">
+                                    <img src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">

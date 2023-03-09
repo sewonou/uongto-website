@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/PaginationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PaginationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/_partials/blog-right-side.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/blog-right-side.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +250,7 @@
       <workItem from="1678177191328" duration="1353000" />
       <workItem from="1678199397097" duration="7301000" />
       <workItem from="1678260900123" duration="20552000" />
-      <workItem from="1678350235830" duration="17462000" />
+      <workItem from="1678350235830" duration="17859000" />
     </task>
     <servers />
   </component>

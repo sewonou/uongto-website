@@ -15,7 +15,7 @@
             {% for post in latestPost %}
             <li>
                 <a href="#" title="{{ post.title }}" class="post-image">
-                    <img src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" style=" height:90px; width:90px;">
+                    <img src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" style=" height:90px; width:90px;">
                 </a>
                 <div class="post-content">
                     <a href="#" title="{{ post.title }}">{{ post.title }}</a>
@@ -33,7 +33,7 @@
             {% for post in bestPost %}
             <li>
                 <a href="#" title="{{ post.title }}" class="post-image">
-                    <img src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" style=" height:90px; width:90px;">
+                    <img src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" style=" height:90px; width:90px;">
                 </a>
                 <div class="post-content">
                     <a href="#" title="{{ post.title }}">{{ post.title }}</a>
