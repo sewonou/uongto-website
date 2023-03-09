@@ -3,28 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/AnnouncementPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/AnnouncementPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/EventsPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/TendersPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Option.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Option.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/OptionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OptionType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/PaginationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PaginationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/option/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/option/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/option/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/option/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/_partials/blog-right-side.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/blog-right-side.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/_partials/footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/footer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/_partials/pagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/pagination.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/home/index.html.twig" afterDir="false" />
@@ -274,7 +254,7 @@
       <workItem from="1678177191328" duration="1353000" />
       <workItem from="1678199397097" duration="7301000" />
       <workItem from="1678260900123" duration="20552000" />
-      <workItem from="1678350235830" duration="14705000" />
+      <workItem from="1678350235830" duration="17462000" />
     </task>
     <servers />
   </component>

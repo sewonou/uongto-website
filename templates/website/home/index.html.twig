@@ -13,7 +13,7 @@
                 <!-- SLIDE 1 -->
                 <li data-transition="fade" data-masterspeed="500" data-slotamount="1" data-delay="6000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{ vich_uploader_asset(post, 'imageFile') }}" alt="{{ post.title }}" data-bgfit="cover">
+                    <img src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" data-bgfit="cover">
                     <!-- LAYERS -->
                     <!-- LAYER 01 -->
                     <div class="tp-caption"
@@ -171,7 +171,7 @@
                                 {% for thematic in thematics %}
                                     <li class="column column-1-3">
                                         <a href="#" title="{{ thematic.title | raw }}">
-                                            <img src="{{ vich_uploader_asset(thematic, 'imageFile') }}" alt="{{ thematic.title | raw }}">
+                                            <img src="{{ asset(vich_uploader_asset(thematic, 'imageFile')) }}" alt="{{ thematic.title | raw }}">
                                         </a>
                                         <h4 class="box-header transform"><a href="#" title="{{ thematic.title | raw }}">{{ thematic.title | raw }}</a></h4>
                                         <p>{{ thematic.description | raw }}</p>
@@ -344,20 +344,21 @@
                     <ul class="testimonials-list testimonials-carousel">
                         <li>
                             <div class="testimonials-icon template-quote"></div>
-                            <p>Cleanmate cleaned my home today - they did a terrific job. They even moved the folding chairs beside the washer to be sure the laundry floor was cleaned - they really paid attention to detail. Thank you!</p>
-                            <h6>STACEY, NORTH LYNNWOOD</h6>
+                            <p>L’union des ONG du Togo (UONGTO) m'a permis dans le cadre de la gestion des déchets de savoir comment faire le tri à la base des déchets pour une meilleur valorisation de ces derniers. Merci à vous!</p>
+                            <h6>Bemah GADO, ONG STADD</h6>
                             <!--<div class="author-details">CEO OF NEW PORT COMPANY</div>-->
                         </li>
                         <li>
                             <div class="testimonials-icon template-quote"></div>
-                            <p>We would like to thank Cleanmate company for an outstanding effort on this recently completed project located in the Moscow. The project involved a very aggressive schedule and it was completed on time.</p>
-                            <h6>MARK, SOUTH EVERETT</h6>
+                            <p>L’union des ONG du Togo (UONGTO) nous a permis dans le cadre de la lutte contre le changement climatique de passer à une vitesse en plantant un grand nombre d'arbres pour augmenter le couvert végétal, nous vous en sommes très reconnaissant! </p>
+                            <h6>Anani Akpé WILSON, ONG AVOTODE</h6>
                             <!--<div class="author-details">CEO OF NEW PORT COMPANY</div>-->
                         </li>
                         <li>
                             <div class="testimonials-icon template-quote"></div>
-                            <p>Cleanmate cleaned my home today - they did a terrific job. They even moved the folding chairs beside the washer to be sure the laundry floor was cleaned - they really paid attention to detail. Thank you!</p>
-                            <h6>ANTHONY, BELLEVUE</h6>
+                            <p>
+                                L’union des ONG du Togo (UONGTO) nous a permis dans le cadre de l'Atelier de vulgarisation du budget citoyen d'avoir l'accès au informations du budget de l'Etat par les citoyens. Nos sincères remerciement à l'endroit de l'éauipe technique!</p>
+                            <h6>Juliette GOUDJINOU, Stagiaire à UONGTO</h6>
                             <!--<div class="author-details">CEO OF NEW PORT COMPANY</div>-->
                         </li>
                     </ul>
@@ -373,7 +374,7 @@
                             {% for post in posts %}
                             <li class="column column-1-3">
                                 <a href="{{ path('app_blog_single_page', {'pageCategory': post.page.codeName ,'slug': post.slug}) }}" title="{{ post.title }}">
-                                    <img src="{{ vich_uploader_asset(post, 'imageFile') }}" alt="{{ post.title }}">
+                                    <img src="{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}">
                                 </a>
                                 <div class="view align-center">
                                     <div class="vertical-align-table">

@@ -56,7 +56,7 @@ class PaginationService {
             'pageCategory' => $this->pageCategory,
         ]);
 
-        dump($this->currentPage, $this->getPages(), $this->route);
+        //dump($this->currentPage, $this->getPages(), $this->route);
     }
 
     public function getPages(): int {
