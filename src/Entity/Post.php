@@ -59,7 +59,7 @@ class Post
     #[Assert\NotNull(message: "L'image d'accroche est obligatoire")]
     private ?File $imageFile = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     #[Assert\NotNull(message: "La citation de résumé est obligatoire")]
     private ?string $quote = null;
 
