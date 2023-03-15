@@ -5,16 +5,20 @@
         <div class="row gray full-width page-header vertical-align-table">
             <div class="row">
                 <div class="page-header-left">
-                    <h1 class="uppercase"{{ option.displayTitle }}</h1>
+                    {% if option is defined %}
+                    <h1 class="uppercase">{{ option.displayTitle }}</h1>
+                    {% endif %}
                 </div>
                 <div class="page-header-right">
                     <div class="bread-crumb-container">
                         <ul class="bread-crumb">
                             <li><a title="Accueil" href="{{ path('app_home_page') }}">Accueil</a></li>
                             <li class="separator">&#47;</li>
+                            {% if option is defined %}
                             <li><a title="{{ option.displayTitle }}" href="#">{{ option.displayTitle }}</a></li>
                             <li class="separator">&#47;</li>
                             <li>{% if post is defined %}{{ post.title }}{% endif %}</li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
@@ -24,6 +28,7 @@
             <div class="row page-margin-top-section">
                 <div class="column column-3-4">
                     <div class="blog clearfix">
+                        {% if post is defined %}
                         <div class="post single">
                             <a href="#" title="{{ post.title }}" class="post-image">
                                 <div class="post-date">
@@ -67,6 +72,13 @@
                                 <li><a href="#" title="Home">Home</a></li>
                             </ul>#}
                         </div>
+                        {% else %}
+                        <div class="post single">
+                            <p class="margin-top-10">
+                                Aucun contenu  disponible
+                            </p>
+                        </div>
+                        {% endif %}
                     </div>
                     <div class="row page-margin-top">
                         <h4 class="uppercase">Laisser un commentaire</h4>

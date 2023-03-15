@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog-single.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +253,7 @@
       <workItem from="1678350235830" duration="21826000" />
       <workItem from="1678440627937" duration="2379000" />
       <workItem from="1678783056676" duration="2261000" />
-      <workItem from="1678895308105" duration="803000" />
+      <workItem from="1678895308105" duration="3499000" />
     </task>
     <servers />
   </component>
@@ -309,7 +310,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/templates/website/blog/blog-single.html.twig</url>
-          <line>104</line>
+          <line>116</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
