@@ -2,6 +2,7 @@
 
 namespace App\Controller\Website;
 
+use App\Entity\Category;
 use App\Entity\Comment;
 use App\Entity\Post;
 use App\Form\CommentType;
@@ -33,7 +34,7 @@ class BlogPageController extends AbstractController
         $this->optionRepo = $optionRepo;
     }
 
-    #[Route('/{pageCategory}/{page<\d+>?1}', name: 'app_blog_page')]
+    #[Route('/blog/{pageCategory}/{page<\d+>?1}', name: 'app_blog_page')]
     public function index($pageCategory, $page, RequestStack $request): Response
     {
 
@@ -58,8 +59,42 @@ class BlogPageController extends AbstractController
         ]);
     }
 
-    #[Route('/{pageCategory}/{slug}', name: 'app_blog_single_page')]
+    #[Route('/blog/{pageCategory}/{slug}', name: 'app_blog_single_page')]
     public function blog_single($pageCategory,Post $post, Request $request, EntityManagerInterface $manager, RequestStack $stack): Response
+    {
+        //$l = strlen($stack->getCurrentRequest()->attributes->get('slug'))+1;
+        //$var = $stack->getCurrentRequest()->getPathInfo();
+        //$pageCategory = substr($var, 1, -$l);
+        $option = $this->optionRepo->findBy(['title' => $pageCategory], [], null, null);
+        $categories = $this->categoryRepo->findByOption($option);
+        $option = $this->optionRepo->findBy(['slug'=>$pageCategory], null,null, null);
+        $latestPost = $this->postRepo->findLatestPost();
+        $bestPost = $this->postRepo->findBestPost();
+        $comment = new Comment();
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $comment->setIsPublished(true);
+            $comment->setPost($post);
+            $manager->persist($comment);
+            $manager->flush();
+            return $this->redirectToRoute('app_blog_single_page', ['pageCategory'=>$pageCategory, 'slug'=>$post->getSlug()]);
+
+        }
+        $this->postRepo->updateCount($post);
+        return $this->render('website/blog/blog-single.html.twig', [
+            'form' => $form->createView(),
+            'post'=> $post,
+            'categories' => $categories,
+            'option' => $option[0],
+            'latestPost' => $latestPost,
+            'bestPost' => $bestPost,
+        ]);
+    }
+
+
+    #[Route('/blog/{pageCategory}/{slug}', name: 'app_blog_single_page')]
+    public function blog_category_single(Category $blogCategory,$pageCategory,Post $post, Request $request, EntityManagerInterface $manager, RequestStack $stack): Response
     {
         //$l = strlen($stack->getCurrentRequest()->attributes->get('slug'))+1;
         //$var = $stack->getCurrentRequest()->getPathInfo();

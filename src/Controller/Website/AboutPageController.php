@@ -2,25 +2,38 @@
 
 namespace App\Controller\Website;
 
+use App\Entity\Post;
+use App\Repository\PostRepository;
+use App\Repository\ThematicRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AboutPageController extends AbstractController
 {
+    private $postRepo;
+    private $thematicRepo;
+
+    public function __construct(PostRepository $postRepo, ThematicRepository $thematicRepo)
+    {
+        $this->postRepo = $postRepo;
+        $this->thematicRepo = $thematicRepo;
+    }
+
     #[Route('/about', name: 'app_about_page')]
     public function index(): Response
     {
         return $this->render('website/about/about-us.html.twig', [
             't_head' => true,
+            'thematics' => $this->thematicRepo->findAll(),
         ]);
     }
 
-    #[Route('/about/single', name: 'app_about_single_page')]
-    public function about_single(): Response
+    #[Route('/about/slug', name: 'app_about_single_page')]
+    public function about_single(Post $post): Response
     {
         return $this->render('website/about/about-single.html.twig', [
-
+            'post' => $post,
         ]);
     }
 
