@@ -37,9 +37,10 @@ class AdminCategoryController extends AbstractController
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $category->setAuthor($this->getUser());
-            $this->addFlash('success', "La Categorie <strong>{$category->getTitle() }</strong> a bien été enregister");
+
             $manager->persist($category);
             $manager->flush();
+            $this->addFlash('success', "La Categorie <strong>{$category->getTitle() }</strong> a bien été enregister");
             return $this->redirectToRoute('app_admin_category');
         }
 

@@ -45,81 +45,46 @@
             <div class="row page-margin-top-section">
                 <div class="column column-1-2">
                     <div class="row">
-                        <a href="{{ asset('assets/images/img/bg-about-1.jpg') }}" class="prettyPhoto cm-preload" title="House Cleaning">
-                            <img src='{{ asset('assets/images/img/bg-about-1.jpg') }}' alt='img'>
+                        <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}" class="prettyPhoto cm-preload" title="House Cleaning">
+                            <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}' alt='img'>
                         </a>
                     </div>
                     <div class="row margin-top-30">
                         <div class="column column-1-2">
-                            <a href="images/samples/480x320/placeholder.jpg" class="prettyPhoto cm-preload" title="Move In Out Services">
-                                <img src='images/samples/370x246/placeholder.jpg' alt='img'>
+                            <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}" class="prettyPhoto cm-preload" title="Move In Out Services">
+                                <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}' alt='img'>
                             </a>
                         </div>
                         <div class="column column-1-2">
-                            <a href="images/samples/480x320/placeholder.jpg" class="prettyPhoto cm-preload" title="After Renovation Cleaning">
-                                <img src='images/samples/370x246/placeholder.jpg' alt='img'>
+                            <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}" class="prettyPhoto cm-preload" title="After Renovation Cleaning">
+                                <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}' alt='img'>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="column column-1-2">
                     <div class="row padding-left-right-30">
-                        <h2 class="box-header align-left">WHO WE ARE</h2>
-                        <p class="description">Founded in 1995 Cleanmate quickly built a reputation as one of the leading providers of residential cleaning solutions.</p>
-                        <p class="padding-0 margin-top-27">Our continuous pursuit for perfection has resulted in consistent growth each year. Our focus is to really listen to our clients, understand their needs and provide the exceptional level of residential and commercial cleaning or maid service that makes them relax with the confidence that the job will be done well. Our cleaning services are thorough, consistent and customized.</p>
-                        <h4 class="margin-top-40">OUR MISSION IS TO:</h4>
+
+                        <h2 class="box-header align-left">Notre objectifs</h2>
+                        <p class="description">Fondée en 1993, l’Union des ONG du Togo (UONGTO) est une faitière apolitique et à but non lucratif, la faitière à pour objectif</p>
+
+                        <p class="padding-0 margin-top-27">Représenter les ONG membres dans les instances du gouvernement, des partenaires techniques et financiers (PTF) et dans les différentes conférences sur le développement partout au monde.</p>
+                        <p class="padding-0 margin-top-27">Le renforcement des capacités institutionnelles, organisationnelles et techniques des organisations de la société civile, des collectivités locales et des médias</p>
+                        <p class="padding-0 margin-top-27">Le renforcement des capacités d’analyse et de formulation de positions et propositions communes des organisations de la société civile pour une action publique efficiente et prenant en charge les droits humains ainsi que les priorités des communautés et les besoins de développement </p>
+                        <p class="padding-0 margin-top-27"></p>
+                        <p class="padding-0 margin-top-27"></p>
+                        {% if thematics is defined and thematics is not null %}
+                        <h4 class="margin-top-40">Nos Thémathiques:</h4>
                         <ul class="list margin-top-20">
-                            <li class="template-tick-1">Offer a different kind of services to families and professionals</li>
-                            <li class="template-tick-1">Deliver high quality and consistent services</li>
-                            <li class="template-tick-1">Use environmentall friendly cleaning products</li>
-                            <li class="template-tick-1">Provide stable jobs with resonable wages</li>
-                            <li class="template-tick-1">Concentrate our resources on maintaining standards</li>
-                            <li class="template-tick-1">Make you an extremely satisfied customer</li>
+                            {% for thematic in thematics %}
+                            <li class="template-tick-1">{{ thematic.title }}</li>
+                            {% endfor %}
                         </ul>
+                        {% endif  %}
                     </div>
                 </div>
             </div>
-            {#<div class="row full-width gray flex-box page-margin-top-section">
-                <div class="column column-1-2 background-2">
-                    <a class="flex-hide" href="#" title="Window Cleaning">
-                        <img src="{{ asset('assets/images/img/bg-about-1.jpg') }}" alt="">
-                    </a>
-                </div>
-                <div class="column column-1-2 padding-bottom-96">
-                    <div class="row padding-left-right-100">
-                        <h2 class="box-header align-left margin-top-89">REASONS TO CHOOSE US</h2>
-                        <p class="description">Cleanmate opperates in Ottawa and provides a variety of cleaning services. Choose us because of our reputation for excellence.</p>
-                        <div class="row page-margin-top">
-                            <ol class="features-list">
-                                <li class="column column-1-2">
-                                    <span class="list-number">1</span>
-                                    <h4>SPARKLING CLEAN</h4>
-                                    <p>We keep your home sparkling clean and germ free. Our disinfecting process kills 99% of common bacteria and viruses.</p>
-                                </li>
-                                <li class="column column-1-2">
-                                    <span class="list-number">2</span>
-                                    <h4>LEADING TECHNOLOGIES</h4>
-                                    <p>We use safe hospital-grade disinfectants, HEPA filtrations and microfiber cleaning cloths.</p>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="row page-margin-top">
-                            <ol class="features-list">
-                                <li class="column column-1-2">
-                                    <span class="list-number">3</span>
-                                    <h4>INSURED AND BONDED</h4>
-                                    <p>Our cleaners are insured and bonded so no need to worry about your apartment.</p>
-                                </li>
-                                <li class="column column-1-2">
-                                    <span class="list-number">4</span>
-                                    <h4>RELIABLE CREWS</h4>
-                                    <p>Our reliable and stable crews understand your specific clearning service needs.</p>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>#}
+
             <div class="row full-width padding-top-89 padding-bottom-100">
                 <div class="row">
                     <h2 class="box-header">Notre équipe Technique</h2>

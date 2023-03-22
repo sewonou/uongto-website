@@ -1,5 +1,28 @@
 {% extends 'website/base.html.twig' %}
 
+{% block header %}
+    <div class="row gray full-width page-header vertical-align-table">
+        <div class="row">
+            <div class="page-header-left">
+                <h1 class="uppercase">A propos de l'ONG {% if member is defined %}{{ member.shortName }}{% endif %}</h1>
+            </div>
+            <div class="page-header-right">
+                <div class="bread-crumb-container">
+                    <ul class="bread-crumb">
+                        <li><a title="Home" href="{{ path('app_home_page') }}">Accueil</a></li>
+                        <li class="separator">&#47;</li>
+                        <li>A propos de l'ONG {% if member is defined %}{{ member.shortName }}{% endif %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 {% block body %}
+    <div class="theme-page">
+        <div class="row full-width header-background header-background-1"></div>
+        <div class="clearfix">
 
+        </div>
+    </div>
 {% endblock %}

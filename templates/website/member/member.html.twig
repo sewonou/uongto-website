@@ -1,5 +1,117 @@
 {% extends 'website/base.html.twig' %}
 
+{% block header %}
+    <div class="row gray full-width page-header vertical-align-table">
+        <div class="row">
+            <div class="page-header-left">
+                <h1 class="uppercase">Nos Membres</h1>
+            </div>
+            <div class="page-header-right">
+                <div class="bread-crumb-container">
+                    <ul class="bread-crumb">
+                        <li><a title="Home" href="{{ path('app_home_page') }}">Accueil</a></li>
+                        <li class="separator">&#47;</li>
+                        <li>Nos Membres</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 {% block body %}
-
+<div class="theme-page ">
+    <div class="row full-width header-background header-background-1"></div>
+    <div class="clearfix">
+        <div class="row">
+            <div class="column column-1-4 cm-smart-column">
+                <div class="cm-smart-column-wrapper">
+                    <h6 class="box-header page-margin-top">Les thématiques</h6>
+                    <ul class="categories clearfix">
+                        {% if thematics is defined %}
+                            {% for thematic in thematics %}
+                                <li><a href="#" title="{{ thematic.title }}">{{ thematic.title }}<span>{#{{ temathic.posts.count }}<#}</span></a></li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                    <h6 class="box-header page-margin-top">Les régions</h6>
+                    <ul class="categories clearfix">
+                        {% if regions is defined %}
+                            {% for region in regions %}
+                                <li><a href="#" title="{{ region.title }}">{{ region.title }}<span>{#{{ temathic.posts.count }}<#}</span></a></li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="column column-3-4">
+                <div class="row full-width padding-bottom-100">
+                    <div class="row">
+                        <ul class="team-list gray margin-top-65 clearfix">
+                            <li class="team-box column column-1-3">
+                                <a href="#" title="Karisma Taruda" class="image-box">
+                                    <img alt="Karisma Taruda" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-akpa.jpg') }}">
+                                </a>
+                                <h4><a href="#" title="Akpa Komi">AKPA Komi</a></h4>
+                                <p>Président du C.A, D.E de PASYD</p>
+                                <ul class="social-icons align-center">
+                                    <li>
+                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="team-box column column-1-3">
+                                <a href="#" title="Bemmah Gado" class="image-box">
+                                    <img alt="Paige Morgan" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-bemah.jpg') }}">
+                                </a>
+                                <h4><a href="#" title="Bemah Gado">BEMAH Gado</a></h4>
+                                <p>Secrétaire Général du C.A, D.E de STADD</p>
+                                <ul class="social-icons align-center">
+                                    <li>
+                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="team-box column column-1-3">
+                                <a href="#" title="" class="image-box">
+                                    <img alt="Akati Sylvain" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-akati.jpg') }}">
+                                </a>
+                                <h4><a href="#" title="Akati Sylvain">AKATI Sylvain</a></h4>
+                                <p>Trésorier Général du C.A, D.E de AJEDI</p>
+                                <ul class="social-icons align-center">
+                                    <li>
+                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="team-box column column-1-3">
+                                <a href="#" title="" class="image-box">
+                                    <img alt="Akati Sylvain" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-akati.jpg') }}">
+                                </a>
+                                <h4><a href="#" title="Akati Sylvain">AKATI Sylvain</a></h4>
+                                <p>Trésorier Général du C.A, D.E de AJEDI</p>
+                                <ul class="social-icons align-center">
+                                    <li>
+                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

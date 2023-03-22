@@ -92,6 +92,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'author', targetEntity: Tag::class)]
     private Collection $tags;
 
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Goal::class)]
+    private Collection $goals;
+
 
     public function __construct()
     {
@@ -103,6 +106,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->personalities = new ArrayCollection();
         $this->metas = new ArrayCollection();
         $this->tags = new ArrayCollection();
+        $this->goals = new ArrayCollection();
     }
 
     #[ORM\PrePersist]
@@ -506,6 +510,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($tag->getAuthor() === $this) {
                 $tag->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Goal>
+     */
+    public function getGoals(): Collection
+    {
+        return $this->goals;
+    }
+
+    public function addGoal(Goal $goal): self
+    {
+        if (!$this->goals->contains($goal)) {
+            $this->goals->add($goal);
+            $goal->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGoal(Goal $goal): self
+    {
+        if ($this->goals->removeElement($goal)) {
+            // set the owning side to null (unless already changed)
+            if ($goal->getAuthor() === $this) {
+                $goal->setAuthor(null);
             }
         }
 

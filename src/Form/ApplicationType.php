@@ -16,7 +16,7 @@ class ApplicationType extends  AbstractType
      * @param $options array
      * @return array
      */
-    protected function getConfiguration($label, $placeholder, $options = [])
+    protected function getConfiguration( $label, $placeholder, $options = [])
     {
         return array_merge_recursive([
             'label' => $label,

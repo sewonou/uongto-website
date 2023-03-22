@@ -3,6 +3,8 @@
 namespace App\Controller\Website;
 
 use App\Entity\Post;
+use App\Repository\PageRepository;
+use App\Repository\PersonalityRepository;
 use App\Repository\PostRepository;
 use App\Repository\ThematicRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,19 +15,32 @@ class AboutPageController extends AbstractController
 {
     private $postRepo;
     private $thematicRepo;
+    private $personalityRepo;
+    private $pageRepo;
 
-    public function __construct(PostRepository $postRepo, ThematicRepository $thematicRepo)
+    public function __construct(PostRepository $postRepo, ThematicRepository $thematicRepo, PersonalityRepository $personalityRepo, PageRepository $pageRepo)
     {
         $this->postRepo = $postRepo;
         $this->thematicRepo = $thematicRepo;
+        $this->personalityRepo = $personalityRepo;
+        $this->pageRepo = $pageRepo;
+
     }
 
     #[Route('/about', name: 'app_about_page')]
     public function index(): Response
     {
+        $page = $this->pageRepo->findBy(['codeName'=>'about'], null, null, null);
+        $page = $page[0];
+        $personalities = $this->personalityRepo->findBy(['page'=>$page, 'isPublished' =>true], null, null, null);
+        //$posts = $this->postRepo->findBy(['page'=>$page, 'isPublished'=>true, 'isActive'=>true], null, null, null);
+        //dd($page, $personalities, $posts);
+
+
         return $this->render('website/about/about-us.html.twig', [
             't_head' => true,
             'thematics' => $this->thematicRepo->findAll(),
+            'personalities' => $personalities,
         ]);
     }
 
@@ -41,7 +56,7 @@ class AboutPageController extends AbstractController
     public function team(): Response
     {
         return $this->render('website/about/team.html.twig', [
-
+            't_head' => true,
         ]);
     }
 
