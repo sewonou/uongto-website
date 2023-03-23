@@ -28,7 +28,7 @@ vich_uploader:
                 options: { property: 'slug' }
         media_partner:
             uri_prefix: /media/partner
-            upload_destination: '%kernel.project_dir%/public/media/thematic'
+            upload_destination: '%kernel.project_dir%/public/media/partner'
             namer:
                 service: Vich\UploaderBundle\Naming\PropertyNamer
                 options: { property: 'slug' }

@@ -23,7 +23,7 @@ class AdminPartnerController extends AbstractController
     #[Route('/admin/partner', name: 'app_admin_partner')]
     public function index(): Response
     {
-        return $this->render('admin_partner/index.html.twig', [
+        return $this->render('admin/partner/index.html.twig', [
             'partners' => $this->partnerRepo->findAll(),
         ]);
     }
@@ -38,7 +38,7 @@ class AdminPartnerController extends AbstractController
             $partner->setAuthor($this->getUser());
             $manager->persist($partner);
             $manager->flush();
-            $this->addFlash('success', "Le partenaire <strong>{$partner->getTitle()} </strong> a bien été enregistrer");
+            $this->addFlash('success', "Le partenaire <strong>{$partner->getName()} </strong> a bien été enregistrer");
             return $this->redirectToRoute('app_admin_partner');
         }
         return $this->render('admin/partner/new.html.twig', [

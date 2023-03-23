@@ -20,8 +20,8 @@
                                 <thead>
                                 <tr>
                                     <th>Logo</th>
-                                    <th>Titre</th>
-                                    <th>Description</th>
+                                    <th>Sigle</th>
+                                    <th>Nom complet</th>
                                     <th>Etat</th>
                                     <th>Options</th>
                                 </tr>
@@ -34,10 +34,10 @@
                                                 <span class="avatar avatar-online"><img alt="{{ partner.name }}" src="{% if app.environment == "prod" %}/public{% endif %}{{ asset(vich_uploader_asset(partner, 'imageFile')) }}"></span>
                                             </td>
                                             <td class="align-middle">
-                                                <div class="name">{{ partner.name }}</div>
+                                                <div class="name">{{ partner.shortName }}</div>
                                             </td>
                                             <td class="align-middle">
-                                                <div class="tickets">{{ partner.description }}</div>
+                                                <div class="tickets">{{ partner.name }}</div>
                                             </td>
                                             <td class="align-middle">
                                                 <div class="skin skin-flat">
@@ -49,7 +49,7 @@
                                             </td>
                                             <td class="align-middle">
                                                 <div class="option ">
-                                                    <a href="{{ path('app_admin_partner_edit', {'id': goal.id}) }}"><i class="la la-pencil-square success"></i></a>
+                                                    <a href="{{ path('app_admin_partner_edit', {'id': partner.id}) }}"><i class="la la-pencil-square success"></i></a>
                                                     <a href="#"><i class="la la-trash danger"></i></a>
                                                 </div>
                                             </td>

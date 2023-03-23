@@ -32,6 +32,13 @@
                                                 {{ form_errors(form.name) }}
                                             </div>
                                         </div>
+                                        <div class="form-group row mx-auto last">
+                                            {{ form_label(form.year, null,{'label_attr': {'class': 'col-md-3 label-control'}}) }}
+                                            <div class="col-md-9">
+                                                {{ form_widget(form.year, {'attr': {'class': 'form-control'}}) }}
+                                                {{ form_errors(form.year) }}
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-3">
                                         <h4 class="form-section"><i class="ft-file"></i> {{ form_label(form.imageFile) }}</h4>

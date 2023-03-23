@@ -4,13 +4,9 @@
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/AboutPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/AboutPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/PersonalityType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PersonalityType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/member/member-single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/member/member-single.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/publication/publication.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/publication/publication.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminPartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminPartnerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +262,7 @@
       <workItem from="1679307999971" duration="14670000" />
       <workItem from="1679387494915" duration="7365000" />
       <workItem from="1679477048979" duration="10156000" />
-      <workItem from="1679562785604" duration="14347000" />
+      <workItem from="1679562785604" duration="15672000" />
     </task>
     <servers />
   </component>
