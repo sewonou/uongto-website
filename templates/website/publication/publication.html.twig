@@ -1,5 +1,14 @@
 {% extends 'website/base.html.twig' %}
-
+{#{% set itemsPerRow = 2 %}
+<ul>
+    {% for item in items %}
+    {% if loop.index0 % itemsPerRow == 0 %}
+    {% if loop.index0 > 0 %}</ul></li>{% endif %}
+    <li><ul>{% endif %}
+<li>{{ item }}</li>
+{% if loop.last or loop.index0 % itemsPerRow == itemsPerRow-1 %}</ul></li>{% endif %}
+  {% endfor %}
+</ul>#}
 {% block body %}
     <div class="theme-page padding-bottom-100">
         <div class="row gray full-width page-header vertical-align-table">
@@ -31,24 +40,12 @@
                 <div class="column column-1-4 cm-smart-column">
                     <div class="cm-smart-column-wrapper">
                         <ul class="categories clearfix">
-                            <li><a href="?page=category&amp;cat=house_cleaning" title="House Cleaning">House Cleaning<span>5</span></a></li>
-                            <li><a href="?page=category&amp;cat=post_renovation" title="Post Renovation">Post Renovation<span>2</span></a></li>
-                            <li><a href="?page=category&amp;cat=green_spaces_maintenance" title="Green Spaces Maintenance">Green Spaces Maintenance<span>2</span></a></li>
-                            <li><a href="?page=category&amp;cat=move_in_out_service" title="Move In Out Service">Move In Out Service<span>4</span></a></li>
-                            <li><a href="?page=category&amp;cat=commercial_cleaning" title="Commercial Cleaning">Commercial Cleaning<span>1</span></a></li>
-                            <li><a href="?page=category&amp;cat=window_cleaning" title="Window Cleaning">Window Cleaning<span>12</span></a></li>
-                        </ul>
-                        <ul class="services-list services-icons gray page-margin-top clearfix">
-                            <li>
-                                <a href="?page=service_calculator" title="Cost Calculator">
-                                    <span class="service-icon features-calculator"></span>
-                                </a>
-                                <h4><a href="?page=service_calculator" title="Cost Calculator">COST CALCULATOR</a></h4>
-                                <p class="description">Estimate cleaning cost.</p>
-                                <div class="align-center margin-top-40 padding-bottom-16">
-                                    <a class="more" href="?page=service_calculator" title="Learn more">Learn more</a>
-                                </div>
-                            </li>
+                            <li><a href="" title="House Cleaning">House Cleaning<span>5</span></a></li>
+                            <li><a href="" title="Post Renovation">Post Renovation<span>2</span></a></li>
+                            <li><a href="" title="Green Spaces Maintenance">Green Spaces Maintenance<span>2</span></a></li>
+                            <li><a href="" title="Move In Out Service">Move In Out Service<span>4</span></a></li>
+                            <li><a href="" title="Commercial Cleaning">Commercial Cleaning<span>1</span></a></li>
+                            <li><a href="" title="Window Cleaning">Window Cleaning<span>12</span></a></li>
                         </ul>
                         <h6 class="box-header page-margin-top">LATEST POSTS</h6>
                         <ul class="blog small margin-top-30 clearfix">
@@ -144,6 +141,7 @@
                 <div class="column column-3-4">
                     <div class="column column-3-4">
                         <ul class="blog small clearfix">
+
                             <li class="column column-1-2">
                                 <a href="?page=post" title="How to: deep clean your kitchen" class="post-image">
                                     <div class="post-date">

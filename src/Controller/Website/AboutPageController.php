@@ -3,6 +3,7 @@
 namespace App\Controller\Website;
 
 use App\Entity\Post;
+use App\Repository\GoalRepository;
 use App\Repository\PageRepository;
 use App\Repository\PersonalityRepository;
 use App\Repository\PostRepository;
@@ -17,13 +18,15 @@ class AboutPageController extends AbstractController
     private $thematicRepo;
     private $personalityRepo;
     private $pageRepo;
+    private $goalRepo;
 
-    public function __construct(PostRepository $postRepo, ThematicRepository $thematicRepo, PersonalityRepository $personalityRepo, PageRepository $pageRepo)
+    public function __construct(PostRepository $postRepo, ThematicRepository $thematicRepo, PersonalityRepository $personalityRepo, PageRepository $pageRepo, GoalRepository $goalRepo)
     {
         $this->postRepo = $postRepo;
         $this->thematicRepo = $thematicRepo;
         $this->personalityRepo = $personalityRepo;
         $this->pageRepo = $pageRepo;
+        $this->goalRepo = $goalRepo;
 
     }
 
@@ -33,6 +36,7 @@ class AboutPageController extends AbstractController
         $page = $this->pageRepo->findBy(['codeName'=>'about'], null, null, null);
         $page = $page[0];
         $personalities = $this->personalityRepo->findBy(['page'=>$page, 'isPublished' =>true], null, null, null);
+        $goals = $this->goalRepo->findBy(['isPublished'=>true], null, null, null);
         //$posts = $this->postRepo->findBy(['page'=>$page, 'isPublished'=>true, 'isActive'=>true], null, null, null);
         //dd($page, $personalities, $posts);
 
@@ -41,6 +45,7 @@ class AboutPageController extends AbstractController
             't_head' => true,
             'thematics' => $this->thematicRepo->findAll(),
             'personalities' => $personalities,
+            'goals' => $goals,
         ]);
     }
 

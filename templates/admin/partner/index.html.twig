@@ -1,0 +1,79 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title 'Les partenaires' %}
+
+
+{% block body %}
+    <section id="pagination">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tous les partenaires</h4>
+                        <div class="heading-elements">
+                            <a href="{{ path('app_admin_partner_add') }}" type="button" class="btn btn-info btn-min-width btn-glow mr-1 mb-1">Ajouter</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table alt-pagination customer-wrapper">
+                                <thead>
+                                <tr>
+                                    <th>Logo</th>
+                                    <th>Titre</th>
+                                    <th>Description</th>
+                                    <th>Etat</th>
+                                    <th>Options</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% if partners is defined and partners is not null %}
+                                    {% for partner in partners %}
+                                        <tr>
+                                            <td>
+                                                <span class="avatar avatar-online"><img alt="{{ partner.name }}" src="{% if app.environment == "prod" %}/public{% endif %}{{ asset(vich_uploader_asset(partner, 'imageFile')) }}"></span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="name">{{ partner.name }}</div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="tickets">{{ partner.description }}</div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="skin skin-flat">
+                                                    <fieldset>
+                                                        <input type="checkbox" id="input-16" {% if partner.isPublished == true %}checked {% else %} unchecked {% endif %}>
+                                                    </fieldset>
+                                                </div>
+
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="option ">
+                                                    <a href="{{ path('app_admin_partner_edit', {'id': goal.id}) }}"><i class="la la-pencil-square success"></i></a>
+                                                    <a href="#"><i class="la la-trash danger"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block vendorscss %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
+{% endblock %}
+
+{% block vendorsjs %}
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.min.js') }}"></script>
+{% endblock %}
+
+{% block pagesjs  %}
+    <script src="{{ asset('app-assets/js/scripts/pages/support-customers.js') }}"></script>
+{% endblock %}

@@ -67,12 +67,13 @@
 
                         <h2 class="box-header align-left">Notre objectifs</h2>
                         <p class="description">Fondée en 1993, l’Union des ONG du Togo (UONGTO) est une faitière apolitique et à but non lucratif, la faitière à pour objectif</p>
-
-                        <p class="padding-0 margin-top-27">Représenter les ONG membres dans les instances du gouvernement, des partenaires techniques et financiers (PTF) et dans les différentes conférences sur le développement partout au monde.</p>
-                        <p class="padding-0 margin-top-27">Le renforcement des capacités institutionnelles, organisationnelles et techniques des organisations de la société civile, des collectivités locales et des médias</p>
-                        <p class="padding-0 margin-top-27">Le renforcement des capacités d’analyse et de formulation de positions et propositions communes des organisations de la société civile pour une action publique efficiente et prenant en charge les droits humains ainsi que les priorités des communautés et les besoins de développement </p>
-                        <p class="padding-0 margin-top-27"></p>
-                        <p class="padding-0 margin-top-27"></p>
+                        {% if goals is defined and goals is not null %}
+                        <ul class="list margin-top-20">
+                            {% for goal in goals %}
+                                <li class="template-tick-1">{{ goal.description }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
                         {% if thematics is defined and thematics is not null %}
                         <h4 class="margin-top-40">Nos Thémathiques:</h4>
                         <ul class="list margin-top-20">
@@ -85,62 +86,39 @@
                 </div>
             </div>
 
+            {% if personalities is defined and personalities is not null %}
             <div class="row full-width padding-top-89 padding-bottom-100">
                 <div class="row">
                     <h2 class="box-header">Notre équipe Technique</h2>
-                    <p class="description align-center">Our team is our most valuable resource. All of our cleaning technicians have earned professional<br>cleaner certification through maid training academy.</p>
+                    <p class="description align-center">Permettez nous vous introduire ici l'équipe technique dédiée au soutien<br> et à l'accompagnement des organisations des membres de l'Union des ONG du Togo,<br> notre équipe travaille avec passion et détermination pour fournir des solutions innovantes<br> et adaptées auxquels sont confrontées les ONG membres</p>
                     <ul class="team-list gray margin-top-65 clearfix">
+                        {% for personality in personalities %}
                         <li class="team-box column column-1-3">
-                            <a href="#" title="Karisma Taruda" class="image-box">
-                                <img alt="Karisma Taruda" src="{{ asset('assets/images/img/user/ca-datagni.jpg') }}">
+                            <a href="#" title="{{ personality.fullName }}" class="image-box">
+                                <img alt="{{ personality.fullName }}" src="{% if app.environment == "prod" %}/public{% endif %}{{ asset(vich_uploader_asset(personality, 'imageFile')) }}">
                             </a>
-                            <h4><a href="?page=team_karisma_taruda" title="Karisma Taruda">KARISMA TARUDA</a></h4>
-                            <p>Co-Founder, Office Manager</p>
+                            <h4><a href="#" title="{{ personality.fullName }}">{{ personality.fullName }}</a></h4>
+                            <p>{{ personality.office }}</p>
                             <ul class="social-icons align-center">
                                 <li>
-                                    <a target="_blank" href="https://twitter.com/QuanticaLabs" class="social-twitter" title="twitter"></a>
+                                    <a target="_blank" href="{{ personality.twitterUrl }}" class="social-twitter" title="twitter"></a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="https://1.envato.market/quanticalabs-portfolio" class="social-google-plus" title="google-plus"></a>
+                                    <a target="_blank" href="{{ personality.facebookUrl }}" class="social-facebook" title="facebook"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="{{ personality.linkedinUrl }}" class="social-linkedin" title="linkedIn"></a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_paige_morgan" title="Paige Morgan" class="image-box">
-                                <img alt="Paige Morgan" src="{{ asset('assets/images/img/user/ca-issifou.jpg') }}">
-                            </a>
-                            <h4><a href="?page=team_paige_morgan" title="Paige Morgan">PAIGE MORGAN</a></h4>
-                            <p>Cleaning Technican</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://facebook.com/QuanticaLabs" class="social-facebook" title="facebook"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/QuanticaLabs" class="social-twitter" title="twitter"></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_celevic_parkhill" title="Celevic Parkhill" class="image-box">
-                                <img alt="Celevic Parkhill" src="{{ asset('assets/images/img/user/ca-bemah.jpg') }}">
-                            </a>
-                            <h4><a href="?page=team_celevic_parkhill" title="Celevic Parkhill">BEMAH Gado</a></h4>
-                            <p>Secretaire Général du CA</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://pinterest.com/quanticalabs/" class="social-facebook" title="pinterest"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://1.envato.market/quanticalabs-portfolio" class="social-linkedin" title="linkedin"></a>
-                                </li>
-                            </ul>
-                        </li>
+                        {% endfor %}
                     </ul>
                     <div class="align-center margin-top-65 padding-bottom-16">
                         <a class="more" href="{{ path('app_team_page') }}" title="All our technicians">Le Conseil d'Administration de UONGTO</a>
                     </div>
                 </div>
             </div>
+            {% endif %}
             <div class="row full-width page-margin-top-section page-padding-top-section padding-bottom-100 parallax parallax-3 overlay">
                 <div class="row">
                     <ul class="services-list services-icons clearfix">
@@ -160,75 +138,6 @@
                             <p>Your time is important to us. We provide always on time cleaning service.</p>
                         </li>
                     </ul>
-                </div>
-            </div>
-            <div class="row full-width gray flex-box">
-                <div class="column column-1-3 padding-bottom-96">
-                    <div class="row padding-left-right-70 margin-top-89">
-                        <h4>Nos thématiques</h4>
-                        {% if thematics is defined %}
-                        <ul class="list margin-top-20">
-                            {% for thematic in thematics %}
-                            <li class="template-tick-1">{{ thematic.title }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="column column-1-3 background-3">
-                    <a class="flex-hide" href="?page=project_gutter_cleaning" title="Gutter Cleaning">
-                        <img src="images/samples/960x750/placeholder.jpg" alt="">
-                    </a>
-                </div>
-                <div class="column column-1-3 padding-bottom-100 green">
-                    <div class="row padding-left-right-70 margin-top-89">
-                        <h2 class="font-weight-300">Want to talk?</h2>
-                        <h2>Please call now: <a href="tel:2507257052">250 725 7052</a></h2>
-                        <p class="description margin-top-20">Need a special cleaning service? We are happy to fulfill every request in order to exceed your expectations.</p>
-                        <div class="page-margin-top padding-bottom-16">
-                            <a class="more" href="?page=contact" title="Contact form">Contact form</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row full-width padding-bottom-100 counters-group parallax parallax-2 overlay">
-                <div class="row">
-                    <div class="column column-1-4">
-                        <div class="counter-box">
-                            <div class="ornament-container">
-                                <div class="ornament animated-element duration-2000 animation-ornamentHeight"></div>
-                            </div>
-                            <span class="number animated-element" data-value="295"></span>
-                            <p>COMPLETED MOVINGS</p>
-                        </div>
-                    </div>
-                    <div class="column column-1-4">
-                        <div class="counter-box">
-                            <div class="ornament-container">
-                                <div class="ornament animated-element duration-2000 animation-ornamentHeight"></div>
-                            </div>
-                            <span class="number animated-element" data-value="400"></span>
-                            <p>HAPPY CUSTOMERS</p>
-                        </div>
-                    </div>
-                    <div class="column column-1-4">
-                        <div class="counter-box">
-                            <div class="ornament-container">
-                                <div class="ornament animated-element duration-2000 animation-ornamentHeight"></div>
-                            </div>
-                            <span class="number animated-element" data-value="527"></span>
-                            <p>COMPLETED PROJECTS</p>
-                        </div>
-                    </div>
-                    <div class="column column-1-4">
-                        <div class="counter-box">
-                            <div class="ornament-container">
-                                <div class="ornament animated-element duration-2000 animation-ornamentHeight"></div>
-                            </div>
-                            <span class="number animated-element" data-value="105"></span>
-                            <p>PLACES CLEANED</p>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="row full-width padding-top-89 padding-bottom-100">
