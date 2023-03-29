@@ -57,10 +57,14 @@ class Page
     #[ORM\OneToMany(mappedBy: 'page', targetEntity: Personality::class)]
     private Collection $personalities;
 
+    #[ORM\OneToMany(mappedBy: 'page', targetEntity: Testimonial::class)]
+    private Collection $testimonials;
+
     public function __construct()
     {
         $this->posts = new ArrayCollection();
         $this->personalities = new ArrayCollection();
+        $this->testimonials = new ArrayCollection();
     }
 
     #[ORM\PrePersist]
@@ -229,6 +233,36 @@ class Page
             // set the owning side to null (unless already changed)
             if ($personality->getPage() === $this) {
                 $personality->setPage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Testimonial>
+     */
+    public function getTestimonials(): Collection
+    {
+        return $this->testimonials;
+    }
+
+    public function addTestimonial(Testimonial $testimonial): self
+    {
+        if (!$this->testimonials->contains($testimonial)) {
+            $this->testimonials->add($testimonial);
+            $testimonial->setPage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTestimonial(Testimonial $testimonial): self
+    {
+        if ($this->testimonials->removeElement($testimonial)) {
+            // set the owning side to null (unless already changed)
+            if ($testimonial->getPage() === $this) {
+                $testimonial->setPage(null);
             }
         }
 

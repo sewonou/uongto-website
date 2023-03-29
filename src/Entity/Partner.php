@@ -14,7 +14,6 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 #[Vich\Uploadable]
 #[ORM\Entity(repositoryClass: PartnerRepository::class)]
 /**
- * Class Option
  * @package App\Entity
  * @ORM\HasLifecycleCallbacks()
  */

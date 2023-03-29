@@ -59,9 +59,6 @@ class Post
     #[Assert\NotNull(message: "L'image d'accroche est obligatoire")]
     private ?File $imageFile = null;
 
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    #[Assert\NotNull(message: "La citation de résumé est obligatoire")]
-    private ?string $quote = null;
 
     #[ORM\ManyToOne(inversedBy: 'posts')]
     private ?User $author = null;
@@ -79,10 +76,46 @@ class Post
     private ?\DateTimeImmutable $updateAt = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $contentIntro = null;
-
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $contentDescription = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $secondImage = null;
+
+    #[Vich\UploadableField(mapping: 'media_post_alt', fileNameProperty: 'secondImage')]
+    private ?File $secondImageFile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $thirdImage = null;
+
+    #[Vich\UploadableField(mapping: 'media_post_alt', fileNameProperty: 'thirdImage')]
+    private ?File $thirdImageFile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $fourthImage = null;
+
+    #[Vich\UploadableField(mapping: 'media_post_alt', fileNameProperty: 'fourthImage')]
+    private ?File $fourthImageFile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $firthImage = null;
+
+    #[Vich\UploadableField(mapping: 'media_post_alt', fileNameProperty: 'firthImage')]
+    private ?File $firthImageFile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $firstDocument = null;
+
+    #[Vich\UploadableField(mapping: 'media_file', fileNameProperty: 'firstDocument')]
+    private ?File $firstDocumentFile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $secondDocument = null;
+
+    #[Vich\UploadableField(mapping: 'media_file_alt', fileNameProperty: 'secondDocument')]
+    private ?File $secondDocumentFile = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $createdAt = null;
 
     public function __construct()
     {
@@ -97,6 +130,9 @@ class Post
         if(empty($this->slug)){
             $slugify = new Slugify();
             $this->slug = $slugify->slugify($this->title);
+        }
+        if(empty($this->createdAt)){
+            $this->createdAt = new \DateTimeImmutable();
         }
         $this->updateAt = new \DateTimeImmutable();
     }
@@ -214,32 +250,18 @@ class Post
         return $this;
     }
 
-    public function setImageFile(?File $imageFile = null): void
-    {
-        $this->imageFile = $imageFile;
-
-        if (null !== $imageFile) {
-            // It is required that at least one field changes if you are using doctrine
-            // otherwise the event listeners won't be called and the file is lost
-            $this->updateAt = new \DateTimeImmutable();
-        }
-    }
-
     public function getImageFile(): ?File
     {
         return $this->imageFile;
     }
 
-    public function getQuote(): ?string
+    public function setImageFile(?File $imageFile = null): void
     {
-        return $this->quote;
-    }
+        $this->imageFile = $imageFile;
 
-    public function setQuote(?string $quote): self
-    {
-        $this->quote = $quote;
-
-        return $this;
+        if (null !== $imageFile) {
+            $this->updateAt = new \DateTimeImmutable();
+        }
     }
 
     public function getAuthor(): ?User
@@ -320,17 +342,6 @@ class Post
         return $this;
     }
 
-    public function getContentIntro(): ?string
-    {
-        return $this->contentIntro;
-    }
-
-    public function setContentIntro(?string $contentIntro): self
-    {
-        $this->contentIntro = $contentIntro;
-
-        return $this;
-    }
 
     public function getContentDescription(): ?string
     {
@@ -340,6 +351,176 @@ class Post
     public function setContentDescription(?string $contentDescription): self
     {
         $this->contentDescription = $contentDescription;
+
+        return $this;
+    }
+
+    public function getSecondImage(): ?string
+    {
+        return $this->secondImage;
+    }
+
+    public function setSecondImage(?string $secondImage): self
+    {
+        $this->secondImage = $secondImage;
+
+        return $this;
+    }
+
+    public function getSecondImageFile(): ?File
+    {
+        return $this->secondImageFile;
+    }
+
+    public function setSecondImageFile(?File $secondImageFile = null): void
+    {
+        $this->secondImageFile = $secondImageFile;
+
+        if (null !== $secondImageFile) {
+            $this->updateAt = new \DateTimeImmutable();
+        }
+    }
+
+
+    public function getThirdImage(): ?string
+    {
+        return $this->thirdImage;
+    }
+
+    public function setThirdImage(?string $thirdImage): self
+    {
+        $this->thirdImage = $thirdImage;
+
+        return $this;
+    }
+
+    public function getThirdImageFile(): ?File
+    {
+        return $this->thirdImageFile;
+    }
+
+    public function setThirdImageFile(?File $thirdImageFile = null): void
+    {
+        $this->thirdImageFile = $thirdImageFile;
+
+        if (null !== $thirdImageFile) {
+            $this->updateAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getFourthImage(): ?string
+    {
+        return $this->fourthImage;
+    }
+
+    public function setFourthImage(?string $fourthImage): self
+    {
+        $this->fourthImage = $fourthImage;
+
+        return $this;
+    }
+
+    public function getFourthImageFile(): ?File
+    {
+        return $this->fourthImageFile;
+    }
+
+    public function setFourthImageFile(?File $fourthImageFile = null): void
+    {
+        $this->fourthImageFile = $fourthImageFile;
+
+        if (null !== $fourthImageFile) {
+            $this->updateAt = new \DateTimeImmutable();
+        }
+    }
+
+
+    public function getFirthImage(): ?string
+    {
+        return $this->firthImage;
+    }
+
+    public function setFirthImage(?string $firthImage): self
+    {
+        $this->firthImage = $firthImage;
+
+        return $this;
+    }
+
+    public function getFirthImageFile(): ?File
+    {
+        return $this->firthImageFile;
+    }
+
+    public function setFirthImageFile(?File $firthImageFile = null): void
+    {
+        $this->firthImageFile = $firthImageFile;
+
+        if (null !== $firthImageFile) {
+            $this->updateAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getFirstDocument(): ?string
+    {
+        return $this->firstDocument;
+    }
+
+    public function setFirstDocument(?string $firstDocument): self
+    {
+        $this->firstDocument = $firstDocument;
+
+        return $this;
+    }
+
+    public function getFirstDocumentFile(): ?File
+    {
+        return $this->firstDocumentFile;
+    }
+
+    public function setFirstDocumentFile(?File $firstDocumentFile = null): void
+    {
+        $this->firstDocumentFile = $firstDocumentFile;
+
+        if (null !== $firstDocumentFile) {
+            $this->updateAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getSecondDocument(): ?string
+    {
+        return $this->secondDocument;
+    }
+
+    public function setSecondDocument(?string $secondDocument): self
+    {
+        $this->secondDocument = $secondDocument;
+
+        return $this;
+    }
+
+    public function getSecondDocumentFile(): ?File
+    {
+        return $this->secondDocumentFile;
+    }
+
+    public function setSecondDocumentFile(?File $secondDocumentFile = null): void
+    {
+        $this->secondDocumentFile = $secondDocumentFile;
+
+        if (null !== $secondDocumentFile) {
+            $this->updateAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

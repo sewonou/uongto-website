@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ThematicRepository;
 use Cocur\Slugify\Slugify;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -47,6 +49,14 @@ class Thematic
 
     #[ORM\ManyToOne(inversedBy: 'thematics')]
     private ?User $author = null;
+
+    #[ORM\ManyToMany(targetEntity: Member::class, mappedBy: 'thematics')]
+    private Collection $members;
+
+    public function __construct()
+    {
+        $this->members = new ArrayCollection();
+    }
 
     #[ORM\PrePersist]
     #[ORM\PreUpdate]
@@ -148,6 +158,33 @@ class Thematic
     public function setAuthor(?User $author): self
     {
         $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Member>
+     */
+    public function getMembers(): Collection
+    {
+        return $this->members;
+    }
+
+    public function addMember(Member $member): self
+    {
+        if (!$this->members->contains($member)) {
+            $this->members->add($member);
+            $member->addThematic($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMember(Member $member): self
+    {
+        if ($this->members->removeElement($member)) {
+            $member->removeThematic($this);
+        }
 
         return $this;
     }

@@ -62,9 +62,7 @@ class BlogPageController extends AbstractController
     #[Route('/blog/{pageCategory}/{slug}', name: 'app_blog_single_page')]
     public function blog_single($pageCategory,Post $post, Request $request, EntityManagerInterface $manager, RequestStack $stack): Response
     {
-        //$l = strlen($stack->getCurrentRequest()->attributes->get('slug'))+1;
-        //$var = $stack->getCurrentRequest()->getPathInfo();
-        //$pageCategory = substr($var, 1, -$l);
+
         $option = $this->optionRepo->findBy(['title' => $pageCategory], [], null, null);
         $categories = $this->categoryRepo->findByOption($option);
         $option = $this->optionRepo->findBy(['slug'=>$pageCategory], null,null, null);
@@ -93,12 +91,14 @@ class BlogPageController extends AbstractController
     }
 
 
-    #[Route('/blog/{pageCategory}/{slug}', name: 'app_blog_single_page')]
+    #[Route('/category/{pageCategory}/{slug}', name: 'app_category_single_page')]
     public function blog_category_single(Category $blogCategory,$pageCategory,Post $post, Request $request, EntityManagerInterface $manager, RequestStack $stack): Response
     {
         //$l = strlen($stack->getCurrentRequest()->attributes->get('slug'))+1;
         //$var = $stack->getCurrentRequest()->getPathInfo();
         //$pageCategory = substr($var, 1, -$l);
+
+        dd($pageCategory);
         $option = $this->optionRepo->findBy(['title' => $pageCategory], [], null, null);
         $categories = $this->categoryRepo->findByOption($option);
         $option = $this->optionRepo->findBy(['slug'=>$pageCategory], null,null, null);

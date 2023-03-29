@@ -22,7 +22,7 @@
                          data-y="['211', '257', '160', '218']"
                     >
                         <h4>
-                            {{ post.quote|length < 50 ?  post.quote :  post.quote|slice(3, 53) ~ '...' | raw }}
+                            {{ post.contentDescription|length < 50 ?  post.contentDescription :  post.contentDescription|slice(3, 53) ~ '...' | raw }}
                         </h4>
                     </div>
                     <!-- LAYER 02 -->
@@ -379,7 +379,7 @@
                                 <div class="view align-center">
                                     <div class="vertical-align-table">
                                         <div class="vertical-align-cell">
-                                            <p>{{ post.quote|length < 50 ?  post.quote :  post.quote|slice(3, 53) ~ '...' | raw }}</p>
+                                            <p>{{ post.contentDescription|length < 50 ?  post.contentDescription :  post.contentDescription|slice(3, 53) ~ '...' | raw }}</p>
                                             <a class="more simple" href="{{ path('app_blog_single_page', {'pageCategory': post.page.codeName ,'slug': post.slug}) }}" title="{{ post.title }}">{{ post.title }}</a>
                                         </div>
                                     </div>

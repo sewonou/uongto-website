@@ -52,7 +52,7 @@
                     <div class="row margin-top-30">
                         <div class="column column-1-2">
                             <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}" class="prettyPhoto cm-preload" title="Move In Out Services">
-                                <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}' alt='img'>
+                                <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/bg-about-1.jpg') }}' alt=' uongto-image 1'>
                             </a>
                         </div>
                         <div class="column column-1-2">
@@ -70,7 +70,7 @@
                         {% if goals is defined and goals is not null %}
                         <ul class="list margin-top-20">
                             {% for goal in goals %}
-                                <li class="template-tick-1">{{ goal.description }}</li>
+                                <li class="template-tick-1">{{ goal.description | raw }}</li>
                             {% endfor %}
                         </ul>
                         {% endif %}
@@ -78,7 +78,7 @@
                         <h4 class="margin-top-40">Nos Thémathiques:</h4>
                         <ul class="list margin-top-20">
                             {% for thematic in thematics %}
-                            <li class="template-tick-1">{{ thematic.title }}</li>
+                            <li class="template-tick-1" title="{{ thematic.title | raw }}">{{ thematic.title | raw }}</li>
                             {% endfor %}
                         </ul>
                         {% endif  %}
@@ -97,17 +97,17 @@
                             <a href="#" title="{{ personality.fullName }}" class="image-box">
                                 <img alt="{{ personality.fullName }}" src="{% if app.environment == "prod" %}/public{% endif %}{{ asset(vich_uploader_asset(personality, 'imageFile')) }}">
                             </a>
-                            <h4><a href="#" title="{{ personality.fullName }}">{{ personality.fullName }}</a></h4>
-                            <p>{{ personality.office }}</p>
+                            <h4><a href="#" title="{{ personality.fullName | raw }}">{{ personality.fullName | raw }}</a></h4>
+                            <p>{{ personality.office | raw }}</p>
                             <ul class="social-icons align-center">
                                 <li>
-                                    <a target="_blank" href="{{ personality.twitterUrl }}" class="social-twitter" title="twitter"></a>
+                                    <a target="_blank" href="{{ personality.twitterUrl | raw }}" class="social-twitter" title="twitter"></a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="{{ personality.facebookUrl }}" class="social-facebook" title="facebook"></a>
+                                    <a target="_blank" href="{{ personality.facebookUrl | raw }}" class="social-facebook" title="facebook"></a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="{{ personality.linkedinUrl }}" class="social-linkedin" title="linkedIn"></a>
+                                    <a target="_blank" href="{{ personality.linkedinUrl | raw }}" class="social-linkedin" title="linkedIn"></a>
                                 </li>
                             </ul>
                         </li>
@@ -124,125 +124,65 @@
                     <ul class="services-list services-icons clearfix">
                         <li class="column column-1-3">
                             <span class="service-icon big features-credit-card tick"></span>
-                            <h4>EASY PAYMENTS</h4>
-                            <p>Easy payments via paypal or via credit card payment processing service.</p>
+                            <h4>Un coordanateur des projets</h4>
+                            <p>La faitière coordonne, planifie, et met en oeuvre le suivi-évaluation des projets/programmes d’envergure nationale et régionale </p>
                         </li>
                         <li class="column column-1-3">
                             <span class="service-icon big features-pet tick"></span>
-                            <h4>PET FRIENDLY</h4>
-                            <p>We us pet friendly cleaners as your pet is a valued member of your family.</p>
+                            <h4>Un représentant des membres</h4>
+                            <p>La faitière représente, les membres auprès des pouvoirs publics et des partenaires internationaux </p>
                         </li>
                         <li class="column column-1-3">
                             <span class="service-icon big features-delivery tick"></span>
-                            <h4>ALWAYS ON TIME</h4>
-                            <p>Your time is important to us. We provide always on time cleaning service.</p>
+                            <h4>Un chargé de plaidoyer</h4>
+                            <p>La faitière assure le lobbying et de plaidoyer pour l’émergence d’une société civile forte pouvant influencer les politiques publiques.</p>
                         </li>
                     </ul>
                 </div>
             </div>
+            {% if partners is defined and partners is not null %}
             <div class="row full-width padding-top-89 padding-bottom-100">
                 <div class="row">
                     <div class="column column-1-2">
-                        <h3>BRANDS WHO TRUST US</h3>
+                        <h3>Nos partenaires</h3>
                         <div class="our-clients-list-container margin-top-40 type-list">
                             <ul class="our-clients-list gray type-list">
+                                {% for partner in partners %}
                                 <li class="vertical-align">
                                     <div class="our-clients-item-container">
                                         <div class="vertical-align-cell">
-                                            <a target="_blank" href="https://quanticalabs.com">
-                                                <img src="{{ asset('assets/images/logos/logo_07.png') }}" alt="">
+                                            <a target="_blank" href="{{ partner.url }}">
+                                                <img src="{% if app.environment=="prod" %}/public{% endif %}{{ asset(vich_uploader_asset(partner, 'imageFile')) }}" alt="{{ partner.name }}">
                                             </a>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="vertical-align">
-                                    <div class="our-clients-item-container">
-                                        <div class="vertical-align-cell">
-                                            <a target="_blank" href="https://quanticalabs.com">
-                                                <img src="{{ asset('assets/images/logos/logo_08.png') }}" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="vertical-align">
-                                    <div class="our-clients-item-container">
-                                        <div class="vertical-align-cell">
-                                            <a target="_blank" href="https://quanticalabs.com">
-                                                <img src="{{ asset('assets/images/logos/logo_09.png') }}" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="vertical-align">
-                                    <div class="our-clients-item-container">
-                                        <div class="vertical-align-cell">
-                                            <a target="_blank" href="https://quanticalabs.com">
-                                                <img src="{{ asset('assets/images/logos/logo_10.png') }}" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="vertical-align">
-                                    <div class="our-clients-item-container">
-                                        <div class="vertical-align-cell">
-                                            <a target="_blank" href="https://quanticalabs.com">
-                                                <img src="{{ asset('assets/images/logos/logo_11.png') }}" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="vertical-align">
-                                    <div class="our-clients-item-container">
-                                        <div class="vertical-align-cell">
-                                            <a target="_blank" href="https://quanticalabs.com">
-                                                <img src="{{ asset('assets/images/logos/logo_12.png') }}" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
+                    {% if testimonials is defined and testimonials is not null %}
                     <div class="column column-1-2">
-                        <h3>CLIENT'S OPINIONS</h3>
+                        <h3>Les avis des partenaires</h3>
                         <div class="row testimonials-container type-small margin-top-40">
                             <div class="cm-carousel-pagination"></div>
                             <ul class="testimonials-list testimonials-carousel gray autoplay-0 pause_on_hover-1">
+                                {% for testimonial in testimonials %}
                                 <li>
-                                    <p class="template-quote">We would like to thank Cleanmate company for an outstanding effort on this
-                                        recently completed project located in the Moscow. The project involved a very
-                                        aggressive schedule and it was completed on time. We would certainly like to
-                                        use their professional services again.</p>
+                                    <p class="template-quote">{{ testimonial.content | raw }}</p>
                                     <div class="author-details-box">
-                                        <div class="author">Stacey, North Lynnwood</div>
+                                        <div class="author">{{ testimonial.title }}</div>
                                         <!--<div class="author-details">CLEANING TECHNICAN</div>-->
                                     </div>
                                 </li>
-                                <li>
-                                    <p class="template-quote">We would like to thank Cleanmate company for an outstanding effort on this
-                                        recently completed project located in the Moscow. The project involved a very
-                                        aggressive schedule and it was completed on time. We would certainly like to
-                                        use their professional services again.</p>
-                                    <div class="author-details-box">
-                                        <div class="author">Mark, South Everett</div>
-                                        <!--<div class="author-details">CLEANING TECHNICAN</div>-->
-                                    </div>
-                                </li>
-                                <li>
-                                    <p class="template-quote">We would like to thank Cleanmate company for an outstanding effort on this
-                                        recently completed project located in the Moscow. The project involved a very
-                                        aggressive schedule and it was completed on time. We would certainly like to
-                                        use their professional services again.</p>
-                                    <div class="author-details-box">
-                                        <div class="author">Anthony, Bellevue</div>
-                                        <!--<div class="author-details">CLEANING TECHNICAN</div>-->
-                                    </div>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

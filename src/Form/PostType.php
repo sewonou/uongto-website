@@ -23,11 +23,15 @@ class PostType extends ApplicationType
             ->add('isPublished', CheckboxType::class, $this->getConfiguration("Publiée", ""))
             ->add('title', TextType::class, $this->getConfiguration("",""))
             ->add('content', TextareaType::class, $this->getConfiguration("Contenu", "Saisir le conbtenu"))
-            ->add('contentIntro', TextareaType::class, $this->getConfiguration("Introduction du contenu", "Saisir l'introduction'"))
-            ->add('contentDescription', TextareaType::class, $this->getConfiguration("Description du contenu", "Saisir la desctiption du contenu"))
-            ->add('metaDescription', TextareaType::class, $this->getConfiguration("",""))
-            ->add('imageFile', FileType::class, $this->getConfiguration("Image", "Choisir l'image "))
-            ->add('quote', TextareaType::class, $this->getConfiguration("",""))
+            ->add('contentDescription', TextareaType::class, $this->getConfiguration("Résumé", "Saisir la desctiption du contenu"))
+            ->add('metaDescription', TextareaType::class, $this->getConfiguration("Résumé en entête",""))
+            ->add('imageFile', FileType::class, $this->getConfiguration("Image principale", "Choisir l'image "))
+            ->add('secondImageFile', FileType::class, $this->getConfiguration("Image second", "Choisir l'image "))
+            ->add('thirdImageFile', FileType::class, $this->getConfiguration("Troisième Image", "Choisir l'image "))
+            ->add('fourthImageFile', FileType::class, $this->getConfiguration("Quatrième Image", "Choisir l'image "))
+            ->add('firthImageFile', FileType::class, $this->getConfiguration("Cinquième Image", "Choisir l'image "))
+            ->add('firstDocumentFile', FileType::class, $this->getConfiguration("Document Principal", "Choisir l'image "))
+            ->add('secondDocumentFile', FileType::class, $this->getConfiguration("Document Secondaire", "Choisir l'image "))
             ->add('categories', EntityType::class, $this->getConfiguration("","", [
                 'placeholder'=>"Choisir la catégorie",
                 'class' => Category::class,

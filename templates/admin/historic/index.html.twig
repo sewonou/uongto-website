@@ -1,0 +1,74 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title 'Les Historiques' %}
+
+
+{% block body %}
+    <section id="pagination">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Toutes les historiques</h4>
+                        <div class="heading-elements">
+                            <a href="{{ path('app_admin_historic_add') }}" type="button" class="btn btn-info btn-min-width btn-glow mr-1 mb-1">Ajouter</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table alt-pagination customer-wrapper">
+                                <thead>
+                                <tr>
+                                    <th>Période</th>
+                                    <th>Titre</th>
+                                    <th>Sout titrage</th>
+                                    <th>Autheur</th>
+                                    <th>Options</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% if histories %}
+                                {% for historic in histories %}
+                                    <tr>
+                                        <td class="align-middle">
+                                            <div class="name">{{ historic.year }}</div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="name">{{ historic.title }}</div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="name">{{ historic.subtitle }}</div>
+                                        </td>
+                                        <td class="align-middle w-25">
+                                            <div class="last-login"><i class="la la-history"></i>{% if historic.author is defined and historic.author is not null %}{{ historic.author.fullName }}{% endif %}</div>
+                                        </td>
+                                        <td class="align-middle w-25">
+                                            <div class="option">
+                                                <a href="{{ path('app_admin_historic_edit', {'id': historic.id}) }}"><i class="la la-pencil-square success"></i></a>
+                                                <a href="#"><i class="la la-trash danger"></i></a>
+                                            </div>
+                                        </td>
+                                </tr>
+                                {% endfor %}
+                                {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block vendorscss %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
+{% endblock %}
+
+{% block vendorsjs %}
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.min.js') }}"></script>
+{% endblock %}
+
+{% block pagesjs  %}
+    <script src="{{ asset('app-assets/js/scripts/pages/support-customers.js') }}"></script>
+{% endblock %}

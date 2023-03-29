@@ -50,19 +50,6 @@
                                     <li class="template-comment"><a class="scroll-to-comments" href="#" title="{{ post.comments.count }} comments">{{ post.comments.count }}</a></li>
                                 </ul>
                             </div>
-                            <p class="margin-top-10">
-                                {{ post.contentIntro | raw }}
-                            </p>
-                            <div class="row margin-top-30">
-                                <div class="column column-1-2">
-                                    <blockquote>
-                                        <p class="template-quote">{{ post.quote | raw }}</p>
-                                    </blockquote>
-                                </div>
-                                <div class="column column-1-2">
-                                    <p class="padding-top-0">{{ post.contentDescription | raw }}</p>
-                                </div>
-                            </div>
                             <div class="row margin-top-10">
                                 {{ post.content | raw  }}
                             </div>

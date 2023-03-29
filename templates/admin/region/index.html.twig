@@ -1,6 +1,6 @@
 {% extends 'admin/base.html.twig' %}
 
-{% block title 'Les Articles' %}
+{% block title 'Les Régions' %}
 
 
 {% block body %}
@@ -9,284 +9,46 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Tous les articles</h4>
+                        <h4 class="card-title">Toutes les régions</h4>
+                        <div class="heading-elements">
+                            <a href="{{ path('app_admin_region_add') }}" type="button" class="btn btn-info btn-min-width btn-glow mr-1 mb-1">Ajouter</a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table alt-pagination customer-wrapper">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Last Login</th>
-                                    <th>Tickets</th>
+                                    <th>Titre</th>
+                                    <th>Etat</th>
+                                    <th>Dernière Mise à jour</th>
                                     <th>Options</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Kail Reack</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>kail.reack@gmail.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>15 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>5</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
+                                {% if regions %}
+                                {% for region in regions %}
+                                    <tr>
+                                        <td class="align-middle">
+                                            <div class="name">{{ region.title }}</div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="name">
+                                                <fieldset><input type="checkbox" id="input-16" {% if region.isPublished == true %}checked {% else %} unchecked {% endif %}></fieldset>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle w-25">
+                                            <div class="last-login"><i class="la la-history"></i>{{ region.updateAt | date("l d F - H:i") }}</div>
+                                        </td>
+                                        <td class="align-middle w-25">
+                                            <div class="option">
+                                                <a href="{{ path('app_admin_region_edit', {'id': region.id}) }}"><i class="la la-pencil-square success"></i></a>
+                                                <a href="#"><i class="la la-trash danger"></i></a>
+                                            </div>
+                                        </td>
                                 </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Shail Black</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>shailblack@outlook.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>40 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>2</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Black Smith</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>smith@yahoomail.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>10 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>3</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">George Nelson</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>george_nelson@gmail.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>30 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>1</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Monica Luice</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>monicaluice123@outlook.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>2 Days ago
-                                        </div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets">0</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Colin Welch</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>colin_welch@asana.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>1 Day ago
-                                        </div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>12</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Mark Shawn</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>mark1991@gmail.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>2 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>6</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Jane Andre</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>jane.andre@gmail.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>
-                                            46 minutes ago </div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>3</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Jones smith</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>smith143@asana.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>23 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>2</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">John Anderson</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>john123@yahoomail.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>50 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>10</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Mishal Johnson</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>mishal_johnson1970@utlook.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>3 Days ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>11</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Mark Luis</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>mark_041983@outlook.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>17 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets">0</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="align-middle">
-                                        <div class="name">Angelina David</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="email"><i class="la la-envelope"></i>angelina_david1@gmail.com</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="last-login"><i class="la la-history"></i>10 minutes ago</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="tickets"><i class="la la-tag"></i>2</div>
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="option">
-                                            <a href="#"><i class="la la-pencil-square success"></i></a>
-                                            <a href="#"><i class="la la-trash danger"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                {% endfor %}
+                                {% endif %}
                                 </tbody>
                             </table>
                         </div>

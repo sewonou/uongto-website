@@ -98,6 +98,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'author', targetEntity: Partner::class)]
     private Collection $partners;
 
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Testimonial::class)]
+    private Collection $testimonials;
+
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Historic::class)]
+    private Collection $historics;
+
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Region::class)]
+    private Collection $regions;
+
+    #[ORM\OneToMany(mappedBy: 'author', targetEntity: Member::class)]
+    private Collection $members;
+
 
     public function __construct()
     {
@@ -111,6 +123,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->tags = new ArrayCollection();
         $this->goals = new ArrayCollection();
         $this->partners = new ArrayCollection();
+        $this->testimonials = new ArrayCollection();
+        $this->historics = new ArrayCollection();
+        $this->regions = new ArrayCollection();
+        $this->members = new ArrayCollection();
     }
 
     #[ORM\PrePersist]
@@ -574,6 +590,126 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($partner->getAuthor() === $this) {
                 $partner->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Testimonial>
+     */
+    public function getTestimonials(): Collection
+    {
+        return $this->testimonials;
+    }
+
+    public function addTestimonial(Testimonial $testimonial): self
+    {
+        if (!$this->testimonials->contains($testimonial)) {
+            $this->testimonials->add($testimonial);
+            $testimonial->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTestimonial(Testimonial $testimonial): self
+    {
+        if ($this->testimonials->removeElement($testimonial)) {
+            // set the owning side to null (unless already changed)
+            if ($testimonial->getAuthor() === $this) {
+                $testimonial->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Historic>
+     */
+    public function getHistorics(): Collection
+    {
+        return $this->historics;
+    }
+
+    public function addHistoric(Historic $historic): self
+    {
+        if (!$this->historics->contains($historic)) {
+            $this->historics->add($historic);
+            $historic->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHistoric(Historic $historic): self
+    {
+        if ($this->historics->removeElement($historic)) {
+            // set the owning side to null (unless already changed)
+            if ($historic->getAuthor() === $this) {
+                $historic->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Region>
+     */
+    public function getRegions(): Collection
+    {
+        return $this->regions;
+    }
+
+    public function addRegion(Region $region): self
+    {
+        if (!$this->regions->contains($region)) {
+            $this->regions->add($region);
+            $region->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRegion(Region $region): self
+    {
+        if ($this->regions->removeElement($region)) {
+            // set the owning side to null (unless already changed)
+            if ($region->getAuthor() === $this) {
+                $region->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Member>
+     */
+    public function getMembers(): Collection
+    {
+        return $this->members;
+    }
+
+    public function addMember(Member $member): self
+    {
+        if (!$this->members->contains($member)) {
+            $this->members->add($member);
+            $member->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMember(Member $member): self
+    {
+        if ($this->members->removeElement($member)) {
+            // set the owning side to null (unless already changed)
+            if ($member->getAuthor() === $this) {
+                $member->setAuthor(null);
             }
         }
 

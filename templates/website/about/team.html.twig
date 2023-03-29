@@ -1,37 +1,36 @@
 {% extends 'website/base.html.twig' %}
 
-{% block body  %}
-    <div class="theme-page">
-        <div class="row gray full-width page-header vertical-align-table">
-            <div class="row">
-                <div class="page-header-left">
-                    <h1>Les membres du Conseil d'Admninistrration de l'UONGTO</h1>
-                </div>
-                <div class="page-header-right">
-                    <div class="bread-crumb-container">
-                        <ul class="bread-crumb">
-                            <li>
-                                <a title="Home" href="?page=home">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="separator">
-                                &#47;
-                            </li>
-                            <li>
-                                Our Team
-                            </li>
-                        </ul>
-                    </div>
+{% block header %}
+    <div class="row gray full-width page-header vertical-align-table">
+        <div class="row">
+            <div class="page-header-left">
+                <h1 class="uppercase">Les membres du Conseil d'Admninistrration de l'UONGTO</h1>
+            </div>
+            <div class="page-header-right">
+                <div class="bread-crumb-container">
+                    <ul class="bread-crumb">
+                        <li><a title="Home" href="?page=home">Accueil</a>
+                        </li>
+                        <li class="separator">&#47;</li>
+                        <li>Qui est qui ?</li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
+{% endblock %}
+{% block body  %}
+    <div class="theme-page">
+        <div class="row full-width header-background header-background-1"></div>
         <div class="clearfix">
             <div class="row full-width padding-top-89 padding-bottom-100">
                 <div class="row">
                     <h2 class="box-header">Le Conseil d'Administration</h2>
-                    <p class="description align-center">Le conseil d'adminitration de l'UONGTO est élu pour un mandat de 3 ans. Ce conseil est constitué d'éminante personalité qui ont pour devoir de conduire l'institution</p>
+                    <p class="description align-center">Le conseil d'adminitration de l'UONGTO est élu pour <strong>un mandat de 3 ans</strong>.
+                        <br> Ce conseil est constitué d'éminante personalité qui ont pour devoir de conduire l'institution</p>
+                    {% if personalities is defined and personalities is not null %}
                     <ul class="team-list gray margin-top-65 clearfix">
+                        {% for personality in personalities %}
                         <li class="team-box column column-1-3">
                             <a href="#" title="Karisma Taruda" class="image-box">
                                 <img alt="Karisma Taruda" src="{{ asset('assets/images/img/user/ca-akpa.jpg') }}">
@@ -47,131 +46,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="team-box column column-1-3">
-                            <a href="#" title="Bemmah Gado" class="image-box">
-                                <img alt="Paige Morgan" src="{{ asset('assets/images/img/user/ca-bemah.jpg') }}">
-                            </a>
-                            <h4><a href="#" title="Bemah Gado">BEMAH Gado</a></h4>
-                            <p>Secrétaire Général du C.A, D.E de STADD</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="team-box column column-1-3">
-                            <a href="#" title="" class="image-box">
-                                <img alt="Akati Sylvain" src="{{ asset('assets/images/img/user/ca-akati.jpg') }}">
-                            </a>
-                            <h4><a href="#" title="Akati Sylvain">AKATI Sylvain</a></h4>
-                            <p>Trésorier Général du C.A, D.E de AJEDI</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
-                                </li>
-                            </ul>
-                        </li>
+                        {% endfor %}
                     </ul>
-                    <ul class="team-list gray margin-top-65 clearfix">
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_karisma_taruda" title="Karisma Taruda" class="image-box">
-                                <img alt="Karisma Taruda" src="images/samples/260x260/placeholder.jpg">
-                            </a>
-                            <h4><a href="?page=team_karisma_taruda" title="Karisma Taruda">KARISMA TARUDA</a></h4>
-                            <p>Co-Founder, Office Manager</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/QuanticaLabs" class="social-twitter" title="twitter"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://1.envato.market/quanticalabs-portfolio" class="social-google-plus" title="google-plus"></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_paige_morgan" title="Paige Morgan" class="image-box">
-                                <img alt="Paige Morgan" src="images/samples/260x260/placeholder.jpg">
-                            </a>
-                            <h4><a href="?page=team_paige_morgan" title="Paige Morgan">PAIGE MORGAN</a></h4>
-                            <p>Cleaning Technican</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://facebook.com/QuanticaLabs" class="social-facebook" title="facebook"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/QuanticaLabs" class="social-twitter" title="twitter"></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_celevic_parkhill" title="Celevic Parkhill" class="image-box">
-                                <img alt="Karisma Taruda" src="images/samples/260x260/placeholder.jpg">
-                            </a>
-                            <h4><a href="?page=team_celevic_parkhill" title="Celevic Parkhill">CELEVIC PARKHILL</a></h4>
-                            <p>Cleaning Technican, Toronto Division</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://pinterest.com/quanticalabs/" class="social-pinterest" title="pinterest"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://1.envato.market/quanticalabs-portfolio" class="social-envato" title="envato"></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="team-list gray margin-top-65 clearfix">
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_karisma_taruda" title="Karisma Taruda" class="image-box">
-                                <img alt="Karisma Taruda" src="images/samples/260x260/placeholder.jpg">
-                            </a>
-                            <h4><a href="?page=team_karisma_taruda" title="Karisma Taruda">KARISMA TARUDA</a></h4>
-                            <p>Co-Founder, Office Manager</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/QuanticaLabs" class="social-twitter" title="twitter"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://1.envato.market/quanticalabs-portfolio" class="social-google-plus" title="google-plus"></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_paige_morgan" title="Paige Morgan" class="image-box">
-                                <img alt="Paige Morgan" src="images/samples/260x260/placeholder.jpg">
-                            </a>
-                            <h4><a href="?page=team_paige_morgan" title="Paige Morgan">PAIGE MORGAN</a></h4>
-                            <p>Cleaning Technican</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://facebook.com/QuanticaLabs" class="social-facebook" title="facebook"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/QuanticaLabs" class="social-twitter" title="twitter"></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="team-box column column-1-3">
-                            <a href="?page=team_celevic_parkhill" title="Celevic Parkhill" class="image-box">
-                                <img alt="Karisma Taruda" src="images/samples/260x260/placeholder.jpg">
-                            </a>
-                            <h4><a href="?page=team_celevic_parkhill" title="Celevic Parkhill">CELEVIC PARKHILL</a></h4>
-                            <p>Cleaning Technican, Toronto Division</p>
-                            <ul class="social-icons align-center">
-                                <li>
-                                    <a target="_blank" href="https://pinterest.com/quanticalabs/" class="social-pinterest" title="pinterest"></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://1.envato.market/quanticalabs-portfolio" class="social-envato" title="envato"></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    {% endif %}
                 </div>
             </div>
             <div class="row full-width gray flex-box">

@@ -4,22 +4,14 @@
     <div class="row gray full-width page-header vertical-align-table">
         <div class="row">
             <div class="page-header-left">
-                <h1>ABOUT US STYLE 2</h1>
+                <h1 class="uppercase">Notre Histoire</h1>
             </div>
             <div class="page-header-right">
                 <div class="bread-crumb-container">
                     <ul class="bread-crumb">
-                        <li>
-                            <a title="Home" href="?page=home">
-                                Home
-                            </a>
-                        </li>
-                        <li class="separator">
-                            &#47;
-                        </li>
-                        <li>
-                            About Us Style 2
-                        </li>
+                        <li><a title="Accueil" href="{{ path('app_home_page') }}">Accueil</a></li>
+                        <li class="separator">&#47;</li>
+                        <li>Historique</li>
                     </ul>
                 </div>
             </div>
@@ -31,80 +23,36 @@
         <div class="row full-width header-background header-background-1"></div>
         <div class="clearfix">
             <div class="row margin-top-89 padding-bottom-36">
-                <h2 class="box-header">MY EXPERIENCE</h2>
-                <p class="description align-center">I am trustworthy, dependable and pay excellent attention to detail.<br>I've been cleaning houses for over ten years.</p>
-                <div class="timeline-item vertical-align-table margin-top-65 right first">
-                    <div class="timeline-left vertical-align-cell">
-                        <div class="label-container">
-                            <div class="animated-element animation-slideLeft10">
-                                <span class="label-triangle"></span>
-                                <label>2015 - 2016</label>
+                <h2 class="box-header uppercase">Notre Histoire</h2>
+                <p class="description align-center">Découvrez l'histoire de notre fédération d'ONG, <br>engagée depuis de nombreuses années dans des thématiques variées telles que la santé, l'éducation,<br> l'environnement ou encore l'aide humanitaire.</p>
+                {% if histories is defined and histories is not null  %}
+                    {% for historic in histories %}
+                        <div class="timeline-item vertical-align-table {% if loop.first %}margin-top-65{% endif %} {% if loop.index % 2 !=0 %}right{% endif %} {% if loop.first  %}first{% endif %} {% if loop.last  %}last{% endif %}">
+                            <div class="timeline-left vertical-align-cell">
+                                <div class="label-container">
+                                    <div class="animated-element animation-slideLeft10">
+                                        <span class="label-triangle"></span>
+                                        <label>{{ historic.year | raw }}</label>
+                                    </div>
+                                    <span class="timeline-circle animated-element animation-scale"></span>
+                                </div>
                             </div>
-                            <span class="timeline-circle animated-element animation-scale"></span>
-                        </div>
-                    </div>
-                    <div class="timeline-content-container vertical-align-cell">
-                        <div class="flex-container animated-element animation-slideRight10">
-                            <div class="timeline-arrow-container">
-                                <div class="timeline-arrow"></div>
-                            </div>
-                            <div class="timeline-content">
-                                <h4 class="clearfix">
-                                    <span class="timeline-title">ANN WILBERG CLEANING</span><span class="timeline-subtitle">MAID SERVICE</span>
-                                </h4>
-                                <p>Paetos dignissim at cursus elefeind norma arcu. Pellentesque accumsan est in tempus etos ullamcorper, sem quam suscipit lacus maecenas tortor cursus elefeind dignissim.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item vertical-align-table">
-                    <div class="timeline-left vertical-align-cell">
-                        <div class="label-container">
-                            <div class="animated-element animation-slideRight10">
-                                <span class="label-triangle"></span>
-                                <label>2013 - 2015</label>
-                            </div>
-                            <span class="timeline-circle animated-element animation-scale"></span>
-                        </div>
-                    </div>
-                    <div class="timeline-content-container vertical-align-cell">
-                        <div class="flex-container animated-element animation-slideLeft10">
-                            <div class="timeline-arrow-container">
-                                <div class="timeline-arrow"></div>
-                            </div>
-                            <div class="timeline-content">
-                                <h4 class="clearfix">
-                                    <span class="timeline-title">SERVICE MASTER CO.</span><span class="timeline-subtitle">SERVICE OPERATOR</span>
-                                </h4>
-                                <p>Paetos dignissim at cursus elefeind norma arcu. Pellentesque accumsan est in tempus etos ullamcorper, sem quam suscipit lacus maecenas tortor cursus elefeind dignissim.</p>
+                            <div class="timeline-content-container vertical-align-cell">
+                                <div class="flex-container animated-element animation-slideRight10">
+                                    <div class="timeline-arrow-container">
+                                        <div class="timeline-arrow"></div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h4 class="clearfix">
+                                            <span class="timeline-title uppercase">{{ historic.title | raw }}</span><span class="timeline-subtitle uppercase">{{ historic.subtitle | raw }}</span>
+                                        </h4>
+                                        <p>{{ historic.subtitle | raw }}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="timeline-item vertical-align-table last right">
-                    <div class="timeline-left vertical-align-cell">
-                        <div class="label-container">
-                            <div class="animated-element animation-slideLeft10">
-                                <span class="label-triangle"></span>
-                                <label>2012 - 2013</label>
-                            </div>
-                            <span class="timeline-circle animated-element animation-scale"></span>
-                        </div>
-                    </div>
-                    <div class="timeline-content-container vertical-align-cell">
-                        <div class="flex-container animated-element animation-slideRight10">
-                            <div class="timeline-arrow-container">
-                                <div class="timeline-arrow"></div>
-                            </div>
-                            <div class="timeline-content">
-                                <h4 class="clearfix">
-                                    <span class="timeline-title">STEAM CLEAN</span><span class="timeline-subtitle">CLEANING TECHNICAN</span>
-                                </h4>
-                                <p>Paetos dignissim at cursus elefeind norma arcu. Pellentesque accumsan est in tempus etos ullamcorper, sem quam suscipit lacus maecenas tortor cursus elefeind dignissim.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>

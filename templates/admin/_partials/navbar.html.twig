@@ -74,10 +74,16 @@
                             <li data-menu=""><a class="dropdown-item" href="#" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
                         </ul>
                     </li>
-                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les ONG</span></a>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les ONG membres</span></a>
                         <ul class="dropdown-menu">
                             <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_member') }}" data-toggle=""><span data-i18n="Bootstrap">Toutes les ONG</span></a></li>
                             <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_member_add') }}" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les partenaires</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_partner') }}" data-toggle=""><span data-i18n="Bootstrap">Tous les partenaires</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_partner_add') }}" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
                         </ul>
                     </li>
                     <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les Thématiques</span></a>
@@ -96,6 +102,12 @@
                         <ul class="dropdown-menu">
                             <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_personality') }}" data-toggle=""><span data-i18n="Bootstrap">Tous les personnalités</span></a></li>
                             <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_personality_add') }}" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-tablet"></i><span data-i18n="Cards">Les témoignages</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_testimonial') }}" data-toggle=""><span data-i18n="Bootstrap">Tous les témoignages</span></a></li>
+                            <li data-menu=""><a class="dropdown-item" href="{{ path('app_admin_testimonial_add') }}" data-toggle=""><span data-i18n="Statistics">Ajouter</span></a></li>
                         </ul>
                     </li>
                 </ul>

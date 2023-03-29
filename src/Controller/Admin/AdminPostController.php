@@ -35,8 +35,11 @@ class AdminPostController extends AbstractController
         $post = new Post();
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()){
+        //dd($post);
+
+        if($form->isSubmitted()){
             $post->setAuthor($this->getUser());
+            //dd($post, $request->server);
             $manager->persist($post);
             $manager->flush();
             $this->addFlash('success', "La page <strong>{$post->getTitle() }</strong> a bien été enregister");
