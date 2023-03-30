@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e0a6d9-3788-4c5e-a8f4-9215877fbe56" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/post/article-de-test-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/post/article-de-test-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminPostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/BlogPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/HomePageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Website/PublicationPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Website/PublicationPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/_partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/_partials/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/option/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/option/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/_partials/navbar.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/about/about-us.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/blog/blog.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website/publication/publication.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website/publication/publication.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +263,7 @@
       <workItem from="1679747054951" duration="2130000" />
       <workItem from="1679785268480" duration="30765000" />
       <workItem from="1679992398891" duration="23193000" />
-      <workItem from="1680165847008" duration="9561000" />
+      <workItem from="1680165847008" duration="9922000" />
     </task>
     <servers />
   </component>
