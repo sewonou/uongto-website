@@ -46,69 +46,27 @@
             <div class="column column-3-4">
                 <div class="row full-width padding-bottom-100">
                     <div class="row">
-                        <ul class="team-list gray margin-top-65 clearfix">
-                            <li class="team-box column column-1-3">
-                                <a href="#" title="Karisma Taruda" class="image-box">
-                                    <img alt="Karisma Taruda" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-akpa.jpg') }}">
-                                </a>
-                                <h4><a href="#" title="Akpa Komi">AKPA Komi</a></h4>
-                                <p>Président du C.A, D.E de PASYD</p>
-                                <ul class="social-icons align-center">
-                                    <li>
-                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="team-box column column-1-3">
-                                <a href="#" title="Bemmah Gado" class="image-box">
-                                    <img alt="Paige Morgan" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-bemah.jpg') }}">
-                                </a>
-                                <h4><a href="#" title="Bemah Gado">BEMAH Gado</a></h4>
-                                <p>Secrétaire Général du C.A, D.E de STADD</p>
-                                <ul class="social-icons align-center">
-                                    <li>
-                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="team-box column column-1-3">
-                                <a href="#" title="" class="image-box">
-                                    <img alt="Akati Sylvain" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-akati.jpg') }}">
-                                </a>
-                                <h4><a href="#" title="Akati Sylvain">AKATI Sylvain</a></h4>
-                                <p>Trésorier Général du C.A, D.E de AJEDI</p>
-                                <ul class="social-icons align-center">
-                                    <li>
-                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="team-box column column-1-3">
-                                <a href="#" title="" class="image-box">
-                                    <img alt="Akati Sylvain" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset('assets/images/img/user/ca-akati.jpg') }}">
-                                </a>
-                                <h4><a href="#" title="Akati Sylvain">AKATI Sylvain</a></h4>
-                                <p>Trésorier Général du C.A, D.E de AJEDI</p>
-                                <ul class="social-icons align-center">
-                                    <li>
-                                        <a target="_blank" href="#" class="social-twitter" title="twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="#" class="social-facebook" title="facebook"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                        {% if members is defined and members is not null %}
+                            {% set counter = 1 %}
+                            {% for member in members %}
+                                {% if counter == 1 %}<ul class="team-list gray margin-top-65 clearfix">{% endif %}
+                                <li class="team-box column column-1-3">
+                                    <a href="#" title="{{ member.name }}" class="image-box">
+                                        <img alt="{{ personality.fullName }}" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(personality, 'imageFile')) }}">
+                                    </a>
+                                    <h4><a href="#" title="{{ member.name }}">{{ member.name }}</a></h4>
+                                    <h2>ONG : {{ member.shortName }}</h2>
+                                    <ul class="social-icons align-center">
+                                        <li><a target="_blank" href="{{ member.url }}" class="social-weibo" title="weibo"></a></li>
+                                        <li><a target="_blank" href="{{ member.twitterUrl }}" class="social-twitter" title="twitter"></a></li>
+                                        <li><a target="_blank" href="{{ member.facebookUrl }}" class="social-facebook" title="facebook"></a></li>
+                                        <li><a target="_blank" href="{{ member.linkedInUrl }}" class="social-linkedin" title="facebook"></a></li>
+                                    </ul>
+                                </li>
+                                {% if counter == 3 or loop.last %}</ul> {% set counter = 1 %} {% else %} {% set counter = counter+1 %}{% endif %}
+                            {% endfor %}
+                        {% endif %}
+                </div>
                 </div>
             </div>
         </div>

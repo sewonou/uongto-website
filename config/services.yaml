@@ -25,3 +25,6 @@ services:
     App\Service\PaginationService:
         arguments:
             $templatePath: 'website/_partials/pagination.html.twig'
+    App\Service\PaginationMemberService:
+        arguments:
+            $templatePath: 'website/_partials/pagination.html.twig'
