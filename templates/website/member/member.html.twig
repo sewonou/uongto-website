@@ -52,7 +52,7 @@
                                 {% if counter == 1 %}<ul class="team-list gray margin-top-65 clearfix">{% endif %}
                                 <li class="team-box column column-1-3">
                                     <a href="#" title="{{ member.name }}" class="image-box">
-                                        <img alt="{{ personality.fullName }}" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(personality, 'imageFile')) }}">
+                                        <img alt="{{ member.name }}" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(member, 'imageFile')) }}">
                                     </a>
                                     <h4><a href="#" title="{{ member.name }}">{{ member.name }}</a></h4>
                                     <h2>ONG : {{ member.shortName }}</h2>
