@@ -22,7 +22,7 @@ class HomePageController extends AbstractController
     #[Route('/', name: 'app_home_page')]
     public function index(): Response
     {
-        $latestPosts = $this->postRepo->findLatestPost();
+        $latestPosts = $this->postRepo->findisOnFirstPost();
         $posts = $this->postRepo->findBy([], ['id'=>'DESC'], 6);
         return $this->render('website/home/index.html.twig', [
             'h-auto' => true,

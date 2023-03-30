@@ -35,11 +35,10 @@ class AdminPostController extends AbstractController
         $post = new Post();
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
-        //dd($post);
 
-        if($form->isSubmitted()){
+
+        if($form->isSubmitted() && $form->isValid()){
             $post->setAuthor($this->getUser());
-            //dd($post, $request->server);
             $manager->persist($post);
             $manager->flush();
             $this->addFlash('success', "La page <strong>{$post->getTitle() }</strong> a bien été enregister");
@@ -54,14 +53,14 @@ class AdminPostController extends AbstractController
     #[Route('/admin/post/{id}', name: 'app_admin_post_edit')]
     public function editAction(Request $request, EntityManagerInterface $manager, Post $post): Response
     {
-
+        //dump($post->getImageFile());
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $post->setAuthor($this->getUser());
             $manager->persist($post);
             $manager->flush();
-            //$this->addFlash('success', "L'article <strong>{ $post->getTitle() }</strong> a bien été enregister");
+            $this->addFlash('success', "L'article <strong>{$post->getTitle() }</strong> a bien été enregister");
             return $this->redirectToRoute('app_admin_post');
         }
 

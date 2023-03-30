@@ -21,6 +21,7 @@ class PostType extends ApplicationType
         $builder
             ->add('isActive', CheckboxType::class, $this->getConfiguration("Actif", ""))
             ->add('isPublished', CheckboxType::class, $this->getConfiguration("Publiée", ""))
+            ->add('isOnFirst', CheckboxType::class, $this->getConfiguration("à la une", ""))
             ->add('title', TextType::class, $this->getConfiguration("",""))
             ->add('content', TextareaType::class, $this->getConfiguration("Contenu", "Saisir le conbtenu"))
             ->add('contentDescription', TextareaType::class, $this->getConfiguration("Résumé", "Saisir la desctiption du contenu"))

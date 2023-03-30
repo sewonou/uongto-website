@@ -82,6 +82,23 @@ class PostRepository extends ServiceEntityRepository
     /**
      * @return Post[] Returns an array of Post objects
      */
+    public function findisOnFirstPost(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.isActive = :val')
+            ->andWhere('p.isPublished= :val')
+            ->andWhere('p.isOnFirst= :val')
+            ->setParameter('val', true)
+            ->orderBy('p.id', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    /**
+     * @return Post[] Returns an array of Post objects
+     */
     public function findBestPost(): array
     {
         return $this->createQueryBuilder('p')

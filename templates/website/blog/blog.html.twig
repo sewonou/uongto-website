@@ -44,7 +44,7 @@
                                             <li class="template-comment"><a href="#" title="{{ post.comments.count }} commentaires">{{ post.comments.count }}</a></li>
                                         </ul>
                                     </div>
-                                    <p>{{ post.quote | raw }} <a href="{{ path('app_blog_single_page', {'pageCategory': pagination.pageCategory, 'slug': post.slug}) }}" title="Lire plus">Lire plus</a></p>
+                                    <p>{{ post.contentDescription | raw }} <a href="{{ path('app_blog_single_page', {'pageCategory': pagination.pageCategory, 'slug': post.slug}) }}" title="Lire plus">Lire plus</a></p>
                                 </li>
                             {% endfor %}
 

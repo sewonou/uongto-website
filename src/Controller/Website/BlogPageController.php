@@ -91,7 +91,7 @@ class BlogPageController extends AbstractController
     }
 
 
-    #[Route('/category/{pageCategory}/{slug}', name: 'app_category_single_page')]
+    /*#[Route('/category/{pageCategory}/{slug}', name: 'app_category_single_page')]
     public function blog_category_single(Category $blogCategory,$pageCategory,Post $post, Request $request, EntityManagerInterface $manager, RequestStack $stack): Response
     {
         //$l = strlen($stack->getCurrentRequest()->attributes->get('slug'))+1;
@@ -124,5 +124,5 @@ class BlogPageController extends AbstractController
             'latestPost' => $latestPost,
             'bestPost' => $bestPost,
         ]);
-    }
+    }*/
 }

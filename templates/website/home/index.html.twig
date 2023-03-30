@@ -16,42 +16,51 @@
                     <img src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.title }}" data-bgfit="cover">
                     <!-- LAYERS -->
                     <!-- LAYER 01 -->
-                    <div class="tp-caption"
-                         data-frames='[{"delay":500,"speed":1500,"from":"y:40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
-                         data-x="center"
-                         data-y="['211', '257', '160', '218']"
-                    >
-                        <h4>
-                            {{ post.contentDescription|length < 50 ?  post.contentDescription :  post.contentDescription|slice(3, 53) ~ '...' | raw }}
-                        </h4>
-                    </div>
-                    <!-- LAYER 02 -->
-                    <div class="tp-caption"
-                         data-frames='[{"delay":900,"speed":2000,"from":"y:-40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
-                         data-x="center"
-                         data-y="['273', '313', '200', '260']"
-                    >
-                        <h2><a href="{{ path('app_blog_single_page', {'pageCategory': post.page.codeName ,'slug': post.slug}) }}" title="{{ post.title }}" class="uppercase">{{ post.title }}</a></h2>
-                    </div>
-                    {#<!-- LAYER 03 -->
-                    <div class="tp-caption"
-                         data-frames='[{"delay":1100,"speed":2000,"from":"y:40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
-                         data-x="center"
-                         data-y="['345', '368', '236', '290']"
-                    >
-                        <h2 class="slider-subtitle"><strong>{{ post.quote }}</strong></h2>
-                    </div>#}
-                    <!-- LAYER 04 -->
-                    <div class="tp-caption"
-                         data-frames='[{"delay":1500,"speed":1500,"from":"y:40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
-                         data-x="center"
-                         data-y="['476', '478', '304', '353']"
-                    >
-                        <div class="align-center">
-                            <a class="more" href="{{ path('app_blog_single_page', {'pageCategory': post.page.codeName ,'slug': post.slug}) }}" title="{{ post.title }}">Lire plus</a>
+                    <div class="header-bg">
+                        <div class="tp-caption"
+                             data-frames='[{"delay":500,"speed":1500,"from":"y:40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
+                             data-x="center"
+                             data-y="['211', '257', '160', '218']"
+                        >
+                            <p class="header-text">
+                                {{ post.contentDescription | raw }}
+                            </p>
                         </div>
+                        <!-- LAYER 02 -->
+                        <div class="tp-caption"
+                             data-frames='[{"delay":900,"speed":2000,"from":"y:-40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
+                             data-x="center"
+                             data-y="['273', '313', '200', '260']"
+                        >
+                            <h2 class="slider-subtitle header-title"><a href="{{ path('app_blog_single_page', {'pageCategory': post.page.codeName ,'slug': post.slug}) }}" title="{{ post.title }}" class="uppercase">{{ post.title }}</a></h2>
+                        </div>
+                        {#<!-- LAYER 03 -->
+                        <div class="tp-caption"
+                             data-frames='[{"delay":1100,"speed":2000,"from":"y:40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
+                             data-x="center"
+                             data-y="['345', '368', '236', '290']"
+                        >
+                        <div class="tp-caption"
+                             data-frames='[{"delay":1500,"speed":1500,"from":"y:40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
+                             data-x="center"
+                             data-y="['476', '478', '304', '353']"
+                        >
+                            <h2 class="slider-subtitle"><strong>{{ post.quote }}</strong></h2>
+                        </div>#}
+                        <!-- LAYER 04 -->
+                        <div class="tp-caption"
+                             data-frames='[{"delay":1100,"speed":2000,"from":"y:40;o:0;","ease":"easeInOutExpo"},{"delay":"wait","speed":500,"to":"o:0;","ease":"easeInOutExpo"}]'
+                             data-x="center"
+                             data-y="['345', '368', '236', '290']"
+                             style="margin-top: 100px !important;"
+                        >
+                            <div class="align-center">
+                                <a class="more" href="{{ path('app_blog_single_page', {'pageCategory': post.page.codeName ,'slug': post.slug}) }}" title="{{ post.title }}">Lire plus</a>
+                            </div>
+                        </div>
+                        <!-- / -->
                     </div>
-                    <!-- / -->
+
                 </li>
                 {% endfor %}
                 {% else %}

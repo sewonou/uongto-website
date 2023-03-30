@@ -117,6 +117,9 @@ class Post
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $createdAt = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $isOnFirst = null;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -252,6 +255,7 @@ class Post
 
     public function getImageFile(): ?File
     {
+
         return $this->imageFile;
     }
 
@@ -524,4 +528,17 @@ class Post
 
         return $this;
     }
+
+    public function isIsOnFirst(): ?bool
+    {
+        return $this->isOnFirst;
+    }
+
+    public function setIsOnFirst(?bool $isOnFirst): self
+    {
+        $this->isOnFirst = $isOnFirst;
+
+        return $this;
+    }
+
 }
