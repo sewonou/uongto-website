@@ -30,7 +30,7 @@
                         {% if personalities is defined and personalities is not null %}
                             {% set counter = 1 %}
                             {% for personality in personalities %}
-                                {% if counter == 0 %}<ul class="team-list gray margin-top-65 clearfix">{% endif %}
+                                {% if counter == 1 %}<ul class="team-list gray margin-top-65 clearfix">{% endif %}
                                     <li class="team-box column column-1-3">
                                         <a href="#" title="{{ personality.fullName }}" class="image-box">
                                             <img alt="{{ personality.fullName }}" src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(personality, 'imageFile')) }}">
