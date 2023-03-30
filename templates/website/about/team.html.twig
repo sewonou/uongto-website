@@ -28,7 +28,7 @@
                     <p class="description align-center">Le conseil d'adminitration de l'UONGTO est élu pour <strong>un mandat de 3 ans</strong>.
                         <br> Ce conseil est constitué d'éminante personalité qui ont pour devoir de conduire l'institution</p>
                         {% if personalities is defined and personalities is not null %}
-                            {% set counter == 1 %}
+                            {% set counter = 1 %}
                             {% for personality in personalities %}
                                 {% if counter == 0 %}<ul class="team-list gray margin-top-65 clearfix">{% endif %}
                                     <li class="team-box column column-1-3">
