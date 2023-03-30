@@ -7,6 +7,7 @@ use App\Repository\MemberRepository;
 use App\Repository\PageRepository;
 use App\Repository\PersonalityRepository;
 use App\Repository\PostRepository;
+use App\Repository\RegionRepository;
 use App\Repository\ThematicRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,14 +20,16 @@ class MemberPageController extends AbstractController
     private $personalityRepo;
     private $pageRepo;
     private $memberRepo;
+    private $regionRepo;
 
-    public function __construct(PostRepository $postRepo, ThematicRepository $thematicRepo, PersonalityRepository $personalityRepo, PageRepository $pageRepo, MemberRepository $memberRepo)
+    public function __construct(PostRepository $postRepo, ThematicRepository $thematicRepo, PersonalityRepository $personalityRepo, PageRepository $pageRepo, MemberRepository $memberRepo, RegionRepository $regionRepo)
     {
         $this->postRepo = $postRepo;
         $this->thematicRepo = $thematicRepo;
         $this->personalityRepo = $personalityRepo;
         $this->pageRepo = $pageRepo;
         $this->memberRepo = $memberRepo;
+        $this->regionRepo = $regionRepo;
 
     }
 
@@ -34,11 +37,12 @@ class MemberPageController extends AbstractController
     public function index(): Response
     {
         $members = $this->memberRepo->findBy(['isPublished'=>true], null, null, null);
-
+        $regions = $this->regionRepo->findBy(['isPublished'=>true], null, null, null);
         return $this->render('website/member/member.html.twig', [
             't_head' => true,
             'thematics' => $this->thematicRepo->findAll(),
             'members' => $members,
+            'regions' => $regions,
         ]);
     }
 
