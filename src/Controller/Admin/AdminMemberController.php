@@ -52,7 +52,7 @@ class AdminMemberController extends AbstractController
 
         $form = $this->createForm(MemberType::class, $member);
         $form->handleRequest($request);
-        if($form->isSubmitted && $form->isValid()){
+        if($form->isSubmitted() && $form->isValid()){
             $member->setAuthor($this->getUser());
             $manager->persist($member);
             $manager->flush();
