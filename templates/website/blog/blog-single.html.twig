@@ -1,5 +1,5 @@
 {% extends 'website/base.html.twig' %}
-
+{% block title  %}{% if post is defined %}{{ post.title }}{% endif %}{% endblock %}
 {% block body %}
     <div class="theme-page padding-bottom-100">
         <div class="row gray full-width page-header vertical-align-table">
@@ -52,6 +52,28 @@
                             </div>
                             <div class="row margin-top-10">
                                 {{ post.content | raw  }}
+                            </div>
+                            <div class="row">
+                                {% if post.secondImage is not null %}
+                                <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'secondImageFile')) }}" class="prettyPhoto cm-preload" title="{{ post.title }}">
+                                    <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'secondImageFile')) }}' alt='{{ post.title }}'>
+                                </a>
+                                {% endif %}
+                                {% if post.thirdImage is not null %}
+                                <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'thirdImageFile')) }}" class="prettyPhoto cm-preload" title="{{ post.title }}">
+                                    <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'thirdImageFile')) }}' alt='{{ post.title }}'>
+                                </a>
+                                {% endif %}
+                                {% if post.fourthImage is not null %}
+                                <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'fourthImageFile')) }}" class="prettyPhoto cm-preload" title="{{ post.title }}">
+                                    <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'fourthImageFile')) }}' alt='{{ post.title }}'>
+                                </a>
+                                {% endif %}
+                                {% if post.firthImage is not null %}
+                                <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'firthImageFile')) }}" class="prettyPhoto cm-preload" title="{{ post.title }}">
+                                    <img src='{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'firthImageFile')) }}' alt='{{ post.title }}'>
+                                </a>
+                                {% endif %}
                             </div>
                             {#<ul class="taxonomies margin-top-30 clearfix">
                                 <li><a href="#" title="Cleaning Tips">Cleaning Tips</a></li>

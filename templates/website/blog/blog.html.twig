@@ -1,5 +1,5 @@
 {% extends 'website/base.html.twig' %}
-
+{% block title  %}{% if option is defined %}{{ option.displayTitle }}{% endif %}{% endblock %}
 {% block body %}
     <div class="theme-page padding-bottom-100">
         <div class="row gray full-width page-header vertical-align-table">
