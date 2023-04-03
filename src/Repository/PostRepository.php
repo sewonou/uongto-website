@@ -58,6 +58,7 @@ class PostRepository extends ServiceEntityRepository
             ->andWhere('p.isActive = :val')
             ->andWhere('p.isPublished= :val')
             ->setParameters(['val'=>true, 'page'=>$page])
+            ->orderBy('p.id', 'DESC')
             ->getQuery()
             ->getResult()
             ;
