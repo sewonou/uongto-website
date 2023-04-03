@@ -1,17 +1,18 @@
 <div class="column column-1-4 cm-smart-column">
     <div class="cm-smart-column-wrapper">
+        {% if (option is defined) and (option.slug != "tenders") %}
         <h6 class="box-header page-margin-top">Les différentes catégories</h6>
         <ul class="categories clearfix">
+
             {% if categories is defined %}
                 {% for category in categories %}
                     <li><a href="#" title="{{ category.title }}">{{ category.title }}<span>{{ category.posts.count }}</span></a></li>
                 {% endfor %}
             {% endif %}
-
-
         </ul>
+        {% endif %}
         {% if latestPost is defined %}
-        <h6 class="box-header page-margin-top">Les dernières actualités</h6>
+        <h6 class="box-header {% if (option is defined) and (option.slug != "tenders") %}page-margin-top{% endif %}">Les dernières actualités</h6>
         <ul class="blog small margin-top-30 clearfix">
             {% for post in latestPost %}
             <li>
