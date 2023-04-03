@@ -49,7 +49,7 @@ class BlogPageController extends AbstractController
         $this->pagination->setEntityClass(Post::class)
             ->setLimit(5)
             ->setPage($page);
-        dump($option);
+        //dump($option);
         return $this->render('website/blog/blog.html.twig', [
             /*'posts' => $this->postRepo->findByActiveAndPublished(),*/
             'categories' => $categories,
