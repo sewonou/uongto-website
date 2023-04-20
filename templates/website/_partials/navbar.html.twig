@@ -25,7 +25,7 @@
                             <li><a href="{{ path('app_blog_page', {'pageCategory': "announcement"}) }}" title="Annonces">Annonces</a></li>
                             <li><a href="{{ path('app_blog_page', {'pageCategory': "tenders"}) }}" title="Appels d'offres">Appels d'offres</a></li>
                             <li><a href="{{ path('app_blog_page', {'pageCategory': "events"}) }}" title="Evènements">Evènements</a></li>
-                            <li><a href="#" title="Forum">Forum</a></li>
+                            {#<li><a href="#" title="Forum">Forum</a></li>#}
                         </ul>
                     </li>
 
@@ -47,7 +47,7 @@
                             <li><a href="{{ path('app_become_member_page') }}" title="Devenir membres">Devenir membres</a></li>
                             <li><a href="{{ path('app_partner_page') }}" title="Nos Partenaires">Nos Partenaires</a></li>
                             <li><a href="{{ path('app_become_member_page') }}" title="Nos réseaux">Nos réseaux</a></li>
-                            <li><a href="#" title="Cartographie">Cartographie</a></li>
+                            {#<li><a href="#" title="Cartographie">Cartographie</a></li>#}
                         </ul>
                     </li>
                     <li>
@@ -63,7 +63,7 @@
                     <li class="">
                         <a href="#" title="Financement">Plaidoyer</a>
                         <ul>
-                            <li><a href="#" title="Financement de la santé">Financement de la santé</a></li>
+                            <li><a href="{{ path('app_pleading_page', {'pageCategory': "pleading"}) }}" title="Financement de la santé">Financement de la santé</a></li>
                         </ul>
                     </li>
                     <li><a href="#" title="Dons" class="more" style="padding-left: 2px !important; margin-left: 12px; font-weight: bold !important;">Faire un don</a></li>
@@ -82,7 +82,7 @@
                                 <li><a href="{{ path('app_blog_page', {'pageCategory': "announcement"}) }}" title="Annonces">Annonces</a></li>
                                 <li><a href="{{ path('app_blog_page', {'pageCategory': "tenders"}) }}" title="Appels d'offres">Appels d'offres</a></li>
                                 <li><a href="{{ path('app_blog_page', {'pageCategory': "events"}) }}" title="Evènements">Evènements</a></li>
-                                <li><a href="#" title="Forum">Forum</a></li>
+                                {#<li><a href="#" title="Forum">Forum</a></li>#}
                             </ul>
                         </li>
 
@@ -106,7 +106,7 @@
                                 <li><a href="{{ path('app_become_member_page') }}" title="Devenir membres">Devenir membres</a></li>
                                 <li><a href="{{ path('app_partner_page') }}" title="Nos Partenaires">Nos Partenaires</a></li>
                                 <li><a href="{{ path('app_become_member_page') }}" title="Nos réseaux">Nos réseaux</a></li>
-                                <li><a href="#" title="Cartographie">Cartographie</a></li>
+                                {#<li><a href="#" title="Cartographie">Cartographie</a></li>#}
                             </ul>
                         </li>
                         <li>
@@ -124,7 +124,7 @@
                             <a href="#" title="Financement">Plaidoyer</a>
                             <a href="#" class="template-arrow-menu"></a>
                             <ul>
-                                <li><a href="#" title="Financement de la santé">Financement de la santé</a></li>
+                                <li><a href="{{ path('app_pleading_page', {'pageCategory': "pleading"}) }}" title="Financement de la santé">Financement de la santé</a></li>
                             </ul>
                         </li>
                         <li><a href="" title="Dons" class="more" style="padding-left: 2px !important; margin-left: 12px; font-weight: bold !important; ">Dons</a></li>

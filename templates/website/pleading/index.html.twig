@@ -1,0 +1,41 @@
+{% extends 'website/base.html.twig' %}
+{% block title  %}Plaidoyer pour le financement {% endblock %}
+{% block body %}
+    <div class="theme-page padding-bottom-100">
+        <div class="row gray full-width page-header vertical-align-table">
+            <div class="row">
+                <div class="page-header-left">
+                    <h1>{{ option.displayTitle }}</h1>
+                </div>
+                <div class="page-header-right">
+                    <div class="bread-crumb-container">
+                        <ul class="bread-crumb">
+                            <li><a title="Home" href="?page=home">Accueil</a></li>
+                            <li class="separator">&#47;</li>
+                            <li>{{ option.displayTitle }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="row page-margin-top-section">
+                {% if posts is defined and posts is not null %}
+                <ul class="services-list gray clearfix">
+                    {% for post in posts %}
+                    <li>
+                        <a href="#" title="House Cleaning">
+                            <img src="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'imageFile')) }}" alt="{{ post.slug }}">
+                        </a>
+                        <h4 class="box-header"><a href="?page=service_house_cleaning" title="House Cleaning">{{ post.title }}</a></h4>
+                        {% autoescape %}
+                        <p>{{ post.content | raw }}</p>
+|                        {% endautoescape %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -53,9 +53,11 @@
                             <div class="row margin-top-10">
                                 {{ post.content | raw  }}
                             </div>
-                            <div class="post-content-details-container clearfix">
-                                <a target="_blank" href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'firstDocumentFile')) }}" title="{{ post.firstDocument }}" class="more" style="font-weight: bold !important; ">Télécharger</a>
-                            </div>
+                            {% if post.secondImage is not null %}
+                                <div class="post-content-details-container clearfix">
+                                    <a target="_blank" href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'firstDocumentFile')) }}" title="{{ post.firstDocument }}" class="more" style="font-weight: bold !important; ">Télécharger</a>
+                                </div>
+                            {% endif %}
                             <div class="row">
                                 {% if post.secondImage is not null %}
                                 <a href="{% if app.environment == 'prod'  %}/public{% endif %}{{ asset(vich_uploader_asset(post, 'secondImageFile')) }}" class="prettyPhoto cm-preload" title="{{ post.title }}">
